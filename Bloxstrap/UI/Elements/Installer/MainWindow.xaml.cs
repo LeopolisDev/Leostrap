@@ -4,14 +4,14 @@ using Wpf.Ui.Mvvm.Contracts;
 using System.ComponentModel;
 using System.Windows;
 
-using Leotrap.UI.ViewModels.Installer;
-using Leotrap.UI.Elements.Installer.Pages;
-using Leotrap.UI.Elements.Base;
+using Leostrap.UI.ViewModels.Installer;
+using Leostrap.UI.Elements.Installer.Pages;
+using Leostrap.UI.Elements.Base;
 using System.Windows.Media.Animation;
 using System.Reflection.Metadata.Ecma335;
-using Leotrap.Resources;
+using Leostrap.Resources;
 
-namespace Leotrap.UI.Elements.Installer
+namespace Leostrap.UI.Elements.Installer
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

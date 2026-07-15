@@ -1,15 +1,15 @@
 ﻿using System.Windows.Forms;
 using System.Windows.Shell;
 
-using Leotrap.UI.Utility;
+using Leostrap.UI.Utility;
 
-namespace Leotrap.UI.Elements.Bootstrapper.Base
+namespace Leostrap.UI.Elements.Bootstrapper.Base
 {
     public class WinFormsDialogBase : Form, IBootstrapperDialog
     {
         public const int TaskbarProgressMaximum = 100;
 
-        public Leotrap.Bootstrapper? Bootstrapper { get; set; }
+        public Leostrap.Bootstrapper? Bootstrapper { get; set; }
 
         private bool _isClosing;
 

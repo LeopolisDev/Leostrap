@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Leotrap.Extensions
+namespace Leostrap.Extensions
 {
     static class CustomThemeTemplateEx
     {

@@ -1,8 +1,8 @@
 ﻿using System.Windows.Input;
-using Leotrap.Integrations;
+using Leostrap.Integrations;
 using CommunityToolkit.Mvvm.Input;
 
-namespace Leotrap.UI.ViewModels.ContextMenu
+namespace Leostrap.UI.ViewModels.ContextMenu
 {
     internal class ServerHistoryViewModel : NotifyPropertyChangedViewModel
     {

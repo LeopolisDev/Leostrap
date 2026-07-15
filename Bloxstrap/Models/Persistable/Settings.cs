@@ -1,10 +1,10 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace Leotrap.Models.Persistable
+namespace Leostrap.Models.Persistable
 {
     public class Settings
     {
-        // leotrap configuration
+        // leostrap configuration
         public BootstrapperStyle BootstrapperStyle { get; set; } = BootstrapperStyle.FluentDialog;
         public BootstrapperIcon BootstrapperIcon { get; set; } = BootstrapperIcon.IconBloxstrap;
         public string BootstrapperTitle { get; set; } = App.ProjectName;

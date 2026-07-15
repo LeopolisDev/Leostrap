@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Leotrap.Utility
+namespace Leostrap.Utility
 {
     internal static class PathValidator
     {

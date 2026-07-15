@@ -1,12 +1,12 @@
 > [!CAUTION]
-> The only official places to download Leotrap are this GitHub repository and [leotrap.com](https://leotrap.com). Any other websites offering downloads or claiming to be us are not owned by us.
+> The only official places to download Leostrap are this GitHub repository and [leostrap.com](https://leostrap.com). Any other websites offering downloads or claiming to be us are not owned by us.
 
 > [!IMPORTANT]
-> Leotrap is not under active development anymore. Any issues or pull requests opened may take a while to get a response.
+> Leostrap is not under active development anymore. Any issues or pull requests opened may take a while to get a response.
 
 <p align="center">
-    <img src="https://github.com/leotrap/leotrap/raw/main/Images/Leotrap-full-dark.png#gh-dark-mode-only" width="380">
-    <img src="https://github.com/leotrap/leotrap/raw/main/Images/Leotrap-full-light.png#gh-light-mode-only" width="380">
+    <img src="https://github.com/leostrap/leostrap/raw/main/Images/Leostrap-full-dark.png#gh-dark-mode-only" width="380">
+    <img src="https://github.com/leostrap/leostrap/raw/main/Images/Leostrap-full-light.png#gh-light-mode-only" width="380">
 </p>
 
 <div align="center">
@@ -23,11 +23,11 @@
 
 ----
 
-Leotrap is a third-party replacement for the standard Roblox bootstrapper, providing additional useful features and improvements.
+Leostrap is a third-party replacement for the standard Roblox bootstrapper, providing additional useful features and improvements.
 
-Running into a problem or need help with something? [Check out the Wiki](https://leotrap.com/wiki). If you can't find anything, or would like to suggest something, please [submit an issue](https://github.com/leotrap/leotrap/issues).
+Running into a problem or need help with something? [Check out the Wiki](https://leostrap.com/wiki). If you can't find anything, or would like to suggest something, please [submit an issue](https://github.com/leostrap/leostrap/issues).
 
-Leotrap is only supported for PCs running Windows.
+Leostrap is only supported for PCs running Windows.
 
 ## Frequently Asked Questions
 
@@ -37,7 +37,7 @@ Leotrap is only supported for PCs running Windows.
 
 **Q: Can using this get me banned?**
 
-**A:** No, it shouldn't. Bloxstrap doesn't interact with the Roblox client in the same way that exploits do. [Read more about that here.](https://bloxstraplabs.com/wiki/info/bloxstrap-and-bans)
+**A:** No, it shouldn't. Leostrap doesn't interact with the Roblox client in the same way that exploits do. [Read more about that here.](https://bloxstraplabs.com/wiki/info/leostrap-and-bans)
 ## Features
 
 - Hassle-free Discord Rich Presence to let your friends know what you're playing at a glance
@@ -46,39 +46,39 @@ Leotrap is only supported for PCs running Windows.
 - Ability to configure graphics fidelity and UI experience
 
 ## Installing
-Download the [latest release of Leotrap](https://github.com/leotrap/leotrap/releases/latest), and run it. Configure your preferences if needed, and install. That's about it!
+Download the [latest release of Leostrap](https://github.com/leostrap/leostrap/releases/latest), and run it. Configure your preferences if needed, and install. That's about it!
 
-Alternatively, you can install Bloxstrap via [Winget](https://winstall.app/apps/pizzaboxer.Bloxstrap) by running this in a Command Prompt window:
+Alternatively, you can install Leostrap via [Winget](https://winstall.app/apps/pizzaboxer.Leostrap) by running this in a Command Prompt window:
 ```
-> winget install leotrap
+> winget install leostrap
 ```
 
-You will also need the [.NET 6 Desktop Runtime](https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=win11-x64&apphost_version=6.0.36&gui=true). If you don't already have it installed, you'll be prompted to install it anyway. Be sure to install Bloxstrap after you've installed this.
+You will also need the [.NET 6 Desktop Runtime](https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=win11-x64&apphost_version=6.0.36&gui=true). If you don't already have it installed, you'll be prompted to install it anyway. Be sure to install Leostrap after you've installed this.
 
-It's not unlikely that Windows Smartscreen will show a popup when you run Leotrap for the first time. This happens because it's an unknown program, not because it's actually detected as being malicious. To dismiss it, just click on "More info" and then "Run anyway".
+It's not unlikely that Windows Smartscreen will show a popup when you run Leostrap for the first time. This happens because it's an unknown program, not because it's actually detected as being malicious. To dismiss it, just click on "More info" and then "Run anyway".
 
-Once installed, Leotrap is added to your Start Menu, where you can access the menu and reconfigure your preferences if needed.
+Once installed, Leostrap is added to your Start Menu, where you can access the menu and reconfigure your preferences if needed.
 
 ## Code
 
-Bloxstrap uses the [WPF UI](https://github.com/lepoco/wpfui) library for the user interface design. We currently use and maintain our own fork of WPF UI at [bloxstraplabs/wpfui](https://github.com/bloxstraplabs/wpfui).
+Leostrap uses the [WPF UI](https://github.com/lepoco/wpfui) library for the user interface design. We currently use and maintain our own fork of WPF UI at [bloxstraplabs/wpfui](https://github.com/bloxstraplabs/wpfui).
 
 
-[shield-repo-license]:  https://img.shields.io/github/license/bloxstraplabs/bloxstrap
-[shield-repo-workflow]: https://img.shields.io/github/actions/workflow/status/bloxstraplabs/bloxstrap/ci-release.yml?branch=main&label=builds
-[shield-repo-releases]: https://img.shields.io/github/downloads/bloxstraplabs/bloxstrap/latest/total?color=981bfe
-[shield-repo-latest]:   https://img.shields.io/github/v/release/bloxstraplabs/bloxstrap?color=7a39fb
+[shield-repo-license]:  https://img.shields.io/github/license/bloxstraplabs/leostrap
+[shield-repo-workflow]: https://img.shields.io/github/actions/workflow/status/bloxstraplabs/leostrap/ci-release.yml?branch=main&label=builds
+[shield-repo-releases]: https://img.shields.io/github/downloads/bloxstraplabs/leostrap/latest/total?color=981bfe
+[shield-repo-latest]:   https://img.shields.io/github/v/release/bloxstraplabs/leostrap?color=7a39fb
 
-[shield-crowdin-status]: https://badges.crowdin.net/bloxstrap/localized.svg
+[shield-crowdin-status]: https://badges.crowdin.net/leostrap/localized.svg
 [shield-discord-server]: https://img.shields.io/discord/1099468797410283540?logo=discord&logoColor=white&label=discord&color=4d3dff
 [shield-tenor-meme]:     https://img.shields.io/badge/mom_made-pizza_rolls-orange
 
-[repo-license]:  https://github.com/bloxstraplabs/bloxstrap/blob/main/LICENSE
-[repo-actions]:  https://github.com/bloxstraplabs/bloxstrap/actions
-[repo-releases]: https://github.com/bloxstraplabs/bloxstrap/releases
-[repo-latest]:   https://github.com/bloxstraplabs/bloxstrap/releases/latest
+[repo-license]:  https://github.com/bloxstraplabs/leostrap/blob/main/LICENSE
+[repo-actions]:  https://github.com/bloxstraplabs/leostrap/actions
+[repo-releases]: https://github.com/bloxstraplabs/leostrap/releases
+[repo-latest]:   https://github.com/bloxstraplabs/leostrap/releases/latest
 
-[crowdin-project]: https://crowdin.com/project/bloxstrap
+[crowdin-project]: https://crowdin.com/project/leostrap
 [discord-invite]:  https://discord.gg/nKjV3mGq6R
 [tenor-gif]:       https://media.tenor.com/FIkSGbGycmAAAAAd/manly-roblox.gif
 

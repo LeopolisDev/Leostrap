@@ -1,4 +1,4 @@
-﻿namespace Leotrap
+﻿namespace Leostrap
 {
     public static class GlobalCache
     {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Xml.Linq;
 
-namespace Leotrap.UI.Converters
+namespace Leostrap.UI.Converters
 {
     class EnumNameConverter : IValueConverter
     {

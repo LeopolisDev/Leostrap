@@ -7,11 +7,11 @@ using ICSharpCode.AvalonEdit.Editing;
 using ICSharpCode.AvalonEdit.Highlighting.Xshd;
 using ICSharpCode.AvalonEdit.Highlighting;
 
-using Leotrap.UI.Elements.Base;
-using Leotrap.UI.ViewModels.Editor;
+using Leostrap.UI.Elements.Base;
+using Leostrap.UI.ViewModels.Editor;
 using System.Windows;
 
-namespace Leotrap.UI.Elements.Editor
+namespace Leostrap.UI.Elements.Editor
 {
     /// <summary>
     /// Interaction logic for BootstrapperEditorWindow.xaml

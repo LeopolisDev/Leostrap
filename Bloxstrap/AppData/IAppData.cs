@@ -1,4 +1,4 @@
-﻿namespace Leotrap.AppData
+﻿namespace Leostrap.AppData
 {
     internal interface IAppData
     {

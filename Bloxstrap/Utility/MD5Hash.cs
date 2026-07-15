@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography;
 
-namespace Leotrap.Utility
+namespace Leostrap.Utility
 {
     public static class MD5Hash
     {

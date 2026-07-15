@@ -1,7 +1,7 @@
 ﻿using System.Windows;
-using Leotrap.Resources;
+using Leostrap.Resources;
 
-namespace Leotrap.Utility
+namespace Leostrap.Utility
 {
     internal static class Shortcut
     {

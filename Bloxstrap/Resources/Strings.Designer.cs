@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Leotrap.Resources {
+namespace Leostrap.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Leotrap.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Leotrap.Resources.Strings", typeof(Strings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Leostrap.Resources.Strings", typeof(Strings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -70,7 +70,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to These are the people who&apos;ve supported Leotrap through Ko-fi. A massive thank you to everyone here!
+        ///   Looks up a localized string similar to These are the people who&apos;ve supported Leostrap through Ko-fi. A massive thank you to everyone here!
         ///Every person here is ranked by their overall pledge..
         /// </summary>
         public static string About_Supporters_Description {
@@ -107,7 +107,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About Leotrap.
+        ///   Looks up a localized string similar to About Leostrap.
         /// </summary>
         public static string About_Title {
             get {
@@ -116,7 +116,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All of Leotrap&apos;s translations are crowdsourced through [Crowdin]({0}). Everyone listed here are people who generously volunteered their time and effort to help localise Leotrap. A massive thank you to everyone here!.
+        ///   Looks up a localized string similar to All of Leostrap&apos;s translations are crowdsourced through [Crowdin]({0}). Everyone listed here are people who generously volunteered their time and effort to help localise Leostrap. A massive thank you to everyone here!.
         /// </summary>
         public static string About_Translators_Description {
             get {
@@ -161,7 +161,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap was unable to automatically update to version {0}. Please update it manually by downloading and running it from the website..
+        ///   Looks up a localized string similar to Leostrap was unable to automatically update to version {0}. Please update it manually by downloading and running it from the website..
         /// </summary>
         public static string Bootstrapper_AutoUpdateFailed {
             get {
@@ -197,7 +197,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap tried to upgrade Roblox but can&apos;t because Roblox&apos;s files are still in use.
+        ///   Looks up a localized string similar to Leostrap tried to upgrade Roblox but can&apos;t because Roblox&apos;s files are still in use.
         ///
         ///Please close any applications that may be using Roblox&apos;s files, and relaunch..
         /// </summary>
@@ -208,7 +208,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You must first install Leotrap before uninstalling..
+        ///   Looks up a localized string similar to You must first install Leostrap before uninstalling..
         /// </summary>
         public static string Bootstrapper_FirstRunUninstall {
             get {
@@ -244,7 +244,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap does not have enough disk space to download and install Roblox. Please free up some disk space and try again..
+        ///   Looks up a localized string similar to Leostrap does not have enough disk space to download and install Roblox. Please free up some disk space and try again..
         /// </summary>
         public static string Bootstrapper_NotEnoughSpace {
             get {
@@ -325,7 +325,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Getting the latest Leotrap....
+        ///   Looks up a localized string similar to Getting the latest Leostrap....
         /// </summary>
         public static string Bootstrapper_Status_UpgradingBloxstrap {
             get {
@@ -361,7 +361,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap has successfully uninstalled.
+        ///   Looks up a localized string similar to Leostrap has successfully uninstalled.
         /// </summary>
         public static string Bootstrapper_SuccessfullyUninstalled {
             get {
@@ -370,7 +370,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Roblox is currently running, but must be closed before uninstalling Leotrap. Would you like to close Roblox now?.
+        ///   Looks up a localized string similar to Roblox is currently running, but must be closed before uninstalling Leostrap. Would you like to close Roblox now?.
         /// </summary>
         public static string Bootstrapper_Uninstall_RobloxRunning {
             get {
@@ -685,7 +685,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Roblox has not yet been installed. Please launch Roblox using Leotrap at least once before trying to use this option..
+        ///   Looks up a localized string similar to Roblox has not yet been installed. Please launch Roblox using Leostrap at least once before trying to use this option..
         /// </summary>
         public static string Common_RobloxNotInstalled {
             get {
@@ -1362,7 +1362,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap was unable to create shortcuts for the Desktop and Start menu. Try creating them later through the settings..
+        ///   Looks up a localized string similar to Leostrap was unable to create shortcuts for the Desktop and Start menu. Try creating them later through the settings..
         /// </summary>
         public static string Dialog_CannotCreateShortcuts {
             get {
@@ -1371,7 +1371,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A connection could not be made, which likely indicates a poor internet connection or a firewall block. If your connection is fine, please ensure that your antivirus isn&apos;t blocking Leotrap..
+        ///   Looks up a localized string similar to A connection could not be made, which likely indicates a poor internet connection or a firewall block. If your connection is fine, please ensure that your antivirus isn&apos;t blocking Leostrap..
         /// </summary>
         public static string Dialog_Connectivity_BadConnection {
             get {
@@ -1398,7 +1398,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Because Roblox needs to be installed or upgraded, Leotrap cannot continue..
+        ///   Looks up a localized string similar to Because Roblox needs to be installed or upgraded, Leostrap cannot continue..
         /// </summary>
         public static string Dialog_Connectivity_RobloxUpgradeNeeded {
             get {
@@ -1434,7 +1434,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap is unable to connect to {0}.
+        ///   Looks up a localized string similar to Leostrap is unable to connect to {0}.
         /// </summary>
         public static string Dialog_Connectivity_UnableToConnect {
             get {
@@ -1443,7 +1443,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap is unable to download Roblox.
+        ///   Looks up a localized string similar to Leostrap is unable to download Roblox.
         /// </summary>
         public static string Dialog_Connectivity_UnableToDownload {
             get {
@@ -1490,9 +1490,9 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check the [Leotrap Wiki]({0}) first to see if this problem has already been addressed with a fix.
+        ///   Looks up a localized string similar to Check the [Leostrap Wiki]({0}) first to see if this problem has already been addressed with a fix.
         ///
-        ///If not, then please report this exception to the maintainers of this fork. Do not report this to Leotrap&apos;s GitHub issues, as this is an unoffical build..
+        ///If not, then please report this exception to the maintainers of this fork. Do not report this to Leostrap&apos;s GitHub issues, as this is an unoffical build..
         /// </summary>
         public static string Dialog_Exception_Info_2_Alt {
             get {
@@ -1510,7 +1510,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap Exception.
+        ///   Looks up a localized string similar to Leostrap Exception.
         /// </summary>
         public static string Dialog_Exception_Title {
             get {
@@ -1559,7 +1559,7 @@ namespace Leotrap.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Roblox failed to launch.
         ///
-        ///This may or may not be a Leotrap issue. To find out, see [this help page]({0})..
+        ///This may or may not be a Leostrap issue. To find out, see [this help page]({0})..
         /// </summary>
         public static string Dialog_PlayerError_FailedLaunch {
             get {
@@ -1568,7 +1568,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap is unable to write to the Windows Registry. An antivirus is likely interfering and causing issues. Please check to make sure there isn&apos;t anything that would restrict Leotrap&apos;s operation..
+        ///   Looks up a localized string similar to Leostrap is unable to write to the Windows Registry. An antivirus is likely interfering and causing issues. Please check to make sure there isn&apos;t anything that would restrict Leostrap&apos;s operation..
         /// </summary>
         public static string Dialog_RegistryWriteError {
             get {
@@ -1604,7 +1604,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap (Classic).
+        ///   Looks up a localized string similar to Leostrap (Classic).
         /// </summary>
         public static string Enums_BootstrapperStyle_ClassicFluentDialog {
             get {
@@ -1622,7 +1622,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap (Glass).
+        ///   Looks up a localized string similar to Leostrap (Glass).
         /// </summary>
         public static string Enums_BootstrapperStyle_FluentAeroDialog {
             get {
@@ -1847,7 +1847,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap has been upgraded to v{0}.
+        ///   Looks up a localized string similar to Leostrap has been upgraded to v{0}.
         /// </summary>
         public static string InstallChecker_Updated {
             get {
@@ -1856,7 +1856,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The version of Leotrap you&apos;ve launched is different to the version you currently have installed.
+        ///   Looks up a localized string similar to The version of Leostrap you&apos;ve launched is different to the version you currently have installed.
         ///Would you like to upgrade your currently installed version?.
         /// </summary>
         public static string InstallChecker_VersionDifferentThanInstalled {
@@ -1866,7 +1866,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The version of Leotrap you&apos;ve launched is older than the version you currently have installed.
+        ///   Looks up a localized string similar to The version of Leostrap you&apos;ve launched is older than the version you currently have installed.
         ///Issues may occur and your settings may be altered. A reinstall is recommended.
         ///Are you sure you want to continue?.
         /// </summary>
@@ -1904,7 +1904,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configure Leotrap&apos;s settings.
+        ///   Looks up a localized string similar to Configure Leostrap&apos;s settings.
         /// </summary>
         public static string Installer_Completion_Settings_Title {
             get {
@@ -1913,11 +1913,11 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap has successfully been installed.
+        ///   Looks up a localized string similar to Leostrap has successfully been installed.
         ///
-        ///Roblox has not yet been installed, that will happen when you launch it with Leotrap for the first time. However, before you do that, you may want to configure Leotrap&apos;s settings first.
+        ///Roblox has not yet been installed, that will happen when you launch it with Leostrap for the first time. However, before you do that, you may want to configure Leostrap&apos;s settings first.
         ///
-        ///Also, avoid using the &quot;Roblox Player&quot; shortcut to launch Roblox, as Leotrap won&apos;t launch with Roblox. If you don&apos;t see Leotrap show when launching from the website, simply launch Roblox with Leotrap once from the desktop to fix it.
+        ///Also, avoid using the &quot;Roblox Player&quot; shortcut to launch Roblox, as Leostrap won&apos;t launch with Roblox. If you don&apos;t see Leostrap show when launching from the website, simply launch Roblox with Leostrap once from the desktop to fix it.
         ///
         ///What would you like to do?.
         /// </summary>
@@ -1937,9 +1937,9 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap has been installed to this location before and is still present, however the installer cannot overwrite the old executable. 
+        ///   Looks up a localized string similar to Leostrap has been installed to this location before and is still present, however the installer cannot overwrite the old executable. 
         ///
-        ///Please manually delete Leotrap.exe from the install location or try restarting your system, and then retry installation afterwards..
+        ///Please manually delete Leostrap.exe from the install location or try restarting your system, and then retry installation afterwards..
         /// </summary>
         public static string Installer_Install_CannotOverwrite {
             get {
@@ -2002,7 +2002,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap Installer.
+        ///   Looks up a localized string similar to Leostrap Installer.
         /// </summary>
         public static string Installer_Title {
             get {
@@ -2011,11 +2011,11 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thank you for downloading Leotrap. 
+        ///   Looks up a localized string similar to Thank you for downloading Leostrap. 
         ///
-        ///The only official websites to download Leotrap from are {0} and {1}, so please verify that you got it from an official source.
+        ///The only official websites to download Leostrap from are {0} and {1}, so please verify that you got it from an official source.
         ///
-        ///This installation process will be quick and simple, and you will be able to configure any of Leotrap&apos;s settings after installation..
+        ///This installation process will be quick and simple, and you will be able to configure any of Leostrap&apos;s settings after installation..
         /// </summary>
         public static string Installer_Welcome_MainText {
             get {
@@ -2042,7 +2042,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You are trying to install version {0} of Leotrap, but the latest version available is {1}. Would you like to download it?.
+        ///   Looks up a localized string similar to You are trying to install version {0} of Leostrap, but the latest version available is {1}. Would you like to download it?.
         /// </summary>
         public static string Installer_Welcome_UpdateNotice {
             get {
@@ -2069,7 +2069,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap Wiki.
+        ///   Looks up a localized string similar to Leostrap Wiki.
         /// </summary>
         public static string LaunchMenu_BloxstrapWiki {
             get {
@@ -2132,7 +2132,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No log file will be written for this launch because Leotrap is unable to write to the folder at &apos;{0}&apos;.
+        ///   Looks up a localized string similar to No log file will be written for this launch because Leostrap is unable to write to the folder at &apos;{0}&apos;.
         /// </summary>
         public static string Logger_NoWriteMode {
             get {
@@ -2159,7 +2159,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to These are the people who have made notable contributions to Leotrap, helping make it what it is..
+        ///   Looks up a localized string similar to These are the people who have made notable contributions to Leostrap, helping make it what it is..
         /// </summary>
         public static string Menu_About_Contributors_Description {
             get {
@@ -2303,7 +2303,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap is already running.
+        ///   Looks up a localized string similar to Leostrap is already running.
         /// </summary>
         public static string Menu_AlreadyRunning_Title {
             get {
@@ -2411,7 +2411,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configure how Leotrap should look..
+        ///   Looks up a localized string similar to Configure how Leostrap should look..
         /// </summary>
         public static string Menu_Appearance_Description {
             get {
@@ -2501,7 +2501,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap will automatically check and update itself when launching Roblox..
+        ///   Looks up a localized string similar to Leostrap will automatically check and update itself when launching Roblox..
         /// </summary>
         public static string Menu_Behaviour_AutoUpdate_Description {
             get {
@@ -2510,7 +2510,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Automatically update Leotrap.
+        ///   Looks up a localized string similar to Automatically update Leostrap.
         /// </summary>
         public static string Menu_Behaviour_AutoUpdate_Title {
             get {
@@ -2555,7 +2555,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configure what Leotrap should do when launching Roblox..
+        ///   Looks up a localized string similar to Configure what Leostrap should do when launching Roblox..
         /// </summary>
         public static string Menu_Behaviour_Description {
             get {
@@ -2595,7 +2595,7 @@ namespace Leotrap.Resources {
         /// </summary>
         public static string Menu_Bloxstrap_Analytics_Description {
             get {
-                return ResourceManager.GetString("Menu.Leotrap.Analytics.Description", resourceCulture);
+                return ResourceManager.GetString("Menu.Leostrap.Analytics.Description", resourceCulture);
             }
         }
         
@@ -2604,16 +2604,16 @@ namespace Leotrap.Resources {
         /// </summary>
         public static string Menu_Bloxstrap_Analytics_Title {
             get {
-                return ResourceManager.GetString("Menu.Leotrap.Analytics.Title", resourceCulture);
+                return ResourceManager.GetString("Menu.Leostrap.Analytics.Title", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configure options related to Leotrap&apos;s behaviour itself..
+        ///   Looks up a localized string similar to Configure options related to Leostrap&apos;s behaviour itself..
         /// </summary>
         public static string Menu_Bloxstrap_Description {
             get {
-                return ResourceManager.GetString("Menu.Leotrap.Description", resourceCulture);
+                return ResourceManager.GetString("Menu.Leostrap.Description", resourceCulture);
             }
         }
         
@@ -2622,25 +2622,25 @@ namespace Leotrap.Resources {
         /// </summary>
         public static string Menu_Bloxstrap_ExportData_Description {
             get {
-                return ResourceManager.GetString("Menu.Leotrap.ExportData.Description", resourceCulture);
+                return ResourceManager.GetString("Menu.Leostrap.ExportData.Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap configuration.
+        ///   Looks up a localized string similar to Leostrap configuration.
         /// </summary>
         public static string Menu_Bloxstrap_ExportData_ExportConfig {
             get {
-                return ResourceManager.GetString("Menu.Leotrap.ExportData.ExportConfig", resourceCulture);
+                return ResourceManager.GetString("Menu.Leostrap.ExportData.ExportConfig", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All Leotrap logs.
+        ///   Looks up a localized string similar to All Leostrap logs.
         /// </summary>
         public static string Menu_Bloxstrap_ExportData_ExportLogs {
             get {
-                return ResourceManager.GetString("Menu.Leotrap.ExportData.ExportLogs", resourceCulture);
+                return ResourceManager.GetString("Menu.Leostrap.ExportData.ExportLogs", resourceCulture);
             }
         }
         
@@ -2649,7 +2649,7 @@ namespace Leotrap.Resources {
         /// </summary>
         public static string Menu_Bloxstrap_ExportData_Title {
             get {
-                return ResourceManager.GetString("Menu.Leotrap.ExportData.Title", resourceCulture);
+                return ResourceManager.GetString("Menu.Leostrap.ExportData.Title", resourceCulture);
             }
         }
         
@@ -2878,7 +2878,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Allow Leotrap to manage Fast Flags.
+        ///   Looks up a localized string similar to Allow Leostrap to manage Fast Flags.
         /// </summary>
         public static string Menu_FastFlags_ManagerEnabled_Title {
             get {
@@ -2977,7 +2977,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap cannot be installed here. Please choose a different location, or resort to using the default location by clicking the reset button..
+        ///   Looks up a localized string similar to Leostrap cannot be installed here. Please choose a different location, or resort to using the default location by clicking the reset button..
         /// </summary>
         public static string Menu_InstallLocation_CantInstall {
             get {
@@ -2986,7 +2986,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The folder you&apos;ve chosen to install Leotrap to already exists and is NOT empty. It is strongly recommended for Leotrap to be installed to its own independent folder.
+        ///   Looks up a localized string similar to The folder you&apos;ve chosen to install Leostrap to already exists and is NOT empty. It is strongly recommended for Leostrap to be installed to its own independent folder.
         ///
         ///Changing to the following location is suggested:
         ///{0}
@@ -3010,7 +3010,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap does not have write access to the install location you&apos;ve selected. Please choose another location..
+        ///   Looks up a localized string similar to Leostrap does not have write access to the install location you&apos;ve selected. Please choose another location..
         /// </summary>
         public static string Menu_InstallLocation_NoWritePerms {
             get {
@@ -3145,7 +3145,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Allows for Leotrap to detect what Roblox game you&apos;re playing. Certain features may require this..
+        ///   Looks up a localized string similar to Allows for Leostrap to detect what Roblox game you&apos;re playing. Certain features may require this..
         /// </summary>
         public static string Menu_Integrations_EnableActivityTracking_Description {
             get {
@@ -3451,7 +3451,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configure how Leotrap can be readily launched..
+        ///   Looks up a localized string similar to Configure how Leostrap can be readily launched..
         /// </summary>
         public static string Menu_Shortcuts_Description {
             get {
@@ -3460,7 +3460,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Allows you to use Leotrap&apos;s range of Roblox icons for your shortcuts. [See how.]({0}).
+        ///   Looks up a localized string similar to Allows you to use Leostrap&apos;s range of Roblox icons for your shortcuts. [See how.]({0}).
         /// </summary>
         public static string Menu_Shortcuts_ExtractIcons_Description {
             get {
@@ -3536,7 +3536,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leotrap Settings.
+        ///   Looks up a localized string similar to Leostrap Settings.
         /// </summary>
         public static string Menu_Title {
             get {
@@ -3563,7 +3563,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to They&apos;ll be kept where Leotrap was installed, and will automatically be restored on a reinstall..
+        ///   Looks up a localized string similar to They&apos;ll be kept where Leostrap was installed, and will automatically be restored on a reinstall..
         /// </summary>
         public static string Uninstaller_KeepData_Description {
             get {
@@ -3581,11 +3581,11 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uninstalling will remove Leotrap from your system, and automatically reconfigure the default Roblox launcher if it&apos;s still installed.
+        ///   Looks up a localized string similar to Uninstalling will remove Leostrap from your system, and automatically reconfigure the default Roblox launcher if it&apos;s still installed.
         ///
-        ///The uninstall process might leave some things behind, so you may need to manually clean up the leftover files where Leotrap was installed.
+        ///The uninstall process might leave some things behind, so you may need to manually clean up the leftover files where Leostrap was installed.
         ///
-        ///Leotrap was installed at &quot;{1}&quot;..
+        ///Leostrap was installed at &quot;{1}&quot;..
         /// </summary>
         public static string Uninstaller_Text {
             get {
@@ -3594,7 +3594,7 @@ namespace Leotrap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uninstall Leotrap.
+        ///   Looks up a localized string similar to Uninstall Leostrap.
         /// </summary>
         public static string Uninstaller_Title {
             get {

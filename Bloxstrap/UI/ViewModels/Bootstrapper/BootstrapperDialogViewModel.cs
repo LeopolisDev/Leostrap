@@ -5,7 +5,7 @@ using System.Windows.Shell;
 
 using CommunityToolkit.Mvvm.Input;
 
-namespace Leotrap.UI.ViewModels.Bootstrapper
+namespace Leostrap.UI.ViewModels.Bootstrapper
 {
     public class BootstrapperDialogViewModel : NotifyPropertyChangedViewModel
     {

@@ -1,6 +1,6 @@
-﻿using Leotrap.Enums.FlagPresets;
+﻿using Leostrap.Enums.FlagPresets;
 
-namespace Leotrap
+namespace Leostrap
 {
     public class FastFlagManager : JsonManager<Dictionary<string, object>>
     {

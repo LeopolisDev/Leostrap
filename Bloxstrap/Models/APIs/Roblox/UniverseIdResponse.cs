@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Models.APIs.Roblox
+﻿namespace Leostrap.Models.APIs.Roblox
 {
     // lmao its just one property
     public class UniverseIdResponse

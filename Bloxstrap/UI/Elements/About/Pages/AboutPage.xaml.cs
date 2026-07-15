@@ -1,9 +1,9 @@
-﻿using Leotrap.UI.ViewModels.About;
+﻿using Leostrap.UI.ViewModels.About;
 
 using System.Windows.Input;
 using System.Windows.Media.Animation;
 
-namespace Leotrap.UI.Elements.About.Pages
+namespace Leostrap.UI.Elements.About.Pages
 {
     /// <summary>
     /// Interaction logic for AboutPage.xaml

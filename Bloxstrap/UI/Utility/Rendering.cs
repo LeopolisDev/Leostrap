@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace Leotrap.UI.Utility
+namespace Leostrap.UI.Utility
 {
     static class Rendering
     {

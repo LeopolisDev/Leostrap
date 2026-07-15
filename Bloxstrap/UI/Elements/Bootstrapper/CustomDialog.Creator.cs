@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Xml.Linq;
 
-namespace Leotrap.UI.Elements.Bootstrapper
+namespace Leostrap.UI.Elements.Bootstrapper
 {
     public partial class CustomDialog
     {
@@ -22,7 +22,7 @@ namespace Leotrap.UI.Elements.Bootstrapper
 
         private static Dictionary<string, HandleXmlElementDelegate> _elementHandlerMap = new Dictionary<string, HandleXmlElementDelegate>()
         {
-            ["LeotrapCustomBootstrapper"] = HandleXmlElement_BloxstrapCustomBootstrapper_Fake,
+            ["LeostrapCustomBootstrapper"] = HandleXmlElement_BloxstrapCustomBootstrapper_Fake,
             ["TitleBar"] = HandleXmlElement_TitleBar,
             ["Button"] = HandleXmlElement_Button,
             ["ProgressBar"] = HandleXmlElement_ProgressBar,
@@ -81,19 +81,19 @@ namespace Leotrap.UI.Elements.Bootstrapper
         private static void AssertThemeVersion(string? versionStr)
         {
             if (string.IsNullOrEmpty(versionStr))
-                throw new CustomThemeException("CustomTheme.Errors.VersionNotSet", "LeotrapCustomBootstrapper");
+                throw new CustomThemeException("CustomTheme.Errors.VersionNotSet", "LeostrapCustomBootstrapper");
 
             if (!uint.TryParse(versionStr, out uint version))
-                throw new CustomThemeException("CustomTheme.Errors.VersionNotNumber", "LeotrapCustomBootstrapper");
+                throw new CustomThemeException("CustomTheme.Errors.VersionNotNumber", "LeostrapCustomBootstrapper");
 
             switch (version)
             {
                 case Version:
                     break;
                 case 0: // Themes made between Oct 19, 2024 to Mar 11, 2025 (on the feature/custom-bootstrappers branch)
-                    throw new CustomThemeException("CustomTheme.Errors.VersionNotSupported", "LeotrapCustomBootstrapper", version);
+                    throw new CustomThemeException("CustomTheme.Errors.VersionNotSupported", "LeostrapCustomBootstrapper", version);
                 default:
-                    throw new CustomThemeException("CustomTheme.Errors.VersionNotRecognised", "LeotrapCustomBootstrapper", version);
+                    throw new CustomThemeException("CustomTheme.Errors.VersionNotRecognised", "LeostrapCustomBootstrapper", version);
             }
         }
 
@@ -102,8 +102,8 @@ namespace Leotrap.UI.Elements.Bootstrapper
             if (_initialised)
                 throw new CustomThemeException("CustomTheme.Errors.DialogAlreadyInitialised");
 
-            if (xml.Name != "LeotrapCustomBootstrapper")
-                throw new CustomThemeException("CustomTheme.Errors.InvalidRoot", "LeotrapCustomBootstrapper");
+            if (xml.Name != "LeostrapCustomBootstrapper")
+                throw new CustomThemeException("CustomTheme.Errors.InvalidRoot", "LeostrapCustomBootstrapper");
 
             AssertThemeVersion(xml.Attribute("Version")?.Value);
 

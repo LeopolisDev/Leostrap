@@ -1,6 +1,6 @@
 ﻿using System.Windows.Data;
 
-namespace Leotrap.UI.Converters
+namespace Leostrap.UI.Converters
 {
     internal class RangeConverter : IValueConverter
     {

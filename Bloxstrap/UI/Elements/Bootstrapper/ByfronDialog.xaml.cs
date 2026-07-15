@@ -5,10 +5,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shell;
 
-using Leotrap.UI.Elements.Bootstrapper.Base;
-using Leotrap.UI.ViewModels.Bootstrapper;
+using Leostrap.UI.Elements.Bootstrapper.Base;
+using Leostrap.UI.ViewModels.Bootstrapper;
 
-namespace Leotrap.UI.Elements.Bootstrapper
+namespace Leostrap.UI.Elements.Bootstrapper
 {
     /// <summary>
     /// Interaction logic for ByfronDialog.xaml
@@ -17,7 +17,7 @@ namespace Leotrap.UI.Elements.Bootstrapper
     {
         private readonly ByfronDialogViewModel _viewModel;
 
-        public Leotrap.Bootstrapper? Bootstrapper { get; set; }
+        public Leostrap.Bootstrapper? Bootstrapper { get; set; }
 
         private bool _isClosing;
 
@@ -118,7 +118,7 @@ namespace Leotrap.UI.Elements.Bootstrapper
                 _viewModel.Foreground = new SolidColorBrush(Color.FromRgb(57, 59, 61));
                 _viewModel.IconColor = new SolidColorBrush(Color.FromRgb(57, 59, 61));
                 _viewModel.ProgressBarBackground = new SolidColorBrush(Color.FromRgb(189, 190, 190));
-                _viewModel.ByfronLogoLocation = new BitmapImage(new Uri("pack://application:,,,/Resources/IconLeotrap.ico"));
+                _viewModel.ByfronLogoLocation = new BitmapImage(new Uri("pack://application:,,,/Resources/IconLeostrap.ico"));
             }
 
             InitializeComponent();

@@ -1,12 +1,12 @@
-﻿namespace Leotrap.UI.ViewModels.Installer
+﻿namespace Leostrap.UI.ViewModels.Installer
 {
     public class WelcomeViewModel : NotifyPropertyChangedViewModel
     {
         // formatting is done here instead of in xaml, it's just a bit easier
         public string MainText => String.Format(
             Strings.Installer_Welcome_MainText,
-            "[github.com/leotrap/leotrap](https://github.com/leotrap/leotrap)",
-            "[leotrap.com](https://leotrap.com)"
+            "[github.com/leostrap/leostrap](https://github.com/leostrap/leostrap)",
+            "[leostrap.com](https://leostrap.com)"
         );
 
         public string VersionNotice { get; private set; } = "";

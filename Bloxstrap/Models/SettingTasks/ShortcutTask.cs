@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Models.SettingTasks
+﻿namespace Leostrap.Models.SettingTasks
 {
     public class ShortcutTask : BoolBaseTask
     {

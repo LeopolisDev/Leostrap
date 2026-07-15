@@ -5,7 +5,7 @@ using Wpf.Ui.Controls;
 using Wpf.Ui.Mvvm.Contracts;
 using Wpf.Ui.Mvvm.Services;
 
-namespace Leotrap.UI.Elements.Base
+namespace Leostrap.UI.Elements.Base
 {
     public abstract class WpfUiWindow : UiWindow
     {

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Bootstrapper.AutoUpdateFailed" xml:space="preserve">
-    <value>Leotrap se nije uspio automatski ažurirati na verziju {0}. Molimo ažurirajte ju ručno tako da je preuzmete i pokrenete sa web-stranice.</value>
+    <value>Leostrap se nije uspio automatski ažurirati na verziju {0}. Molimo ažurirajte ju ručno tako da je preuzmete i pokrenete sa web-stranice.</value>
   </data>
   <data name="Bootstrapper.ConfirmLaunch" xml:space="preserve">
     <value>Roblox je trenutno pokrenut, pokretanje nove instance ćete ga ugasiti. Jeste li sigurni da želite nastaviti sa pokretanjem?</value>
@@ -127,13 +127,13 @@
     <value>Roblox trenutno možda ne radi. Pogledajte {0} za više informacija.</value>
   </data>
   <data name="Dialog.Connectivity.BadConnection" xml:space="preserve">
-    <value>Veza se nije mogla uspostaviti, što vjerojatno ukazuje na nestabilnu internetsku vezu ili blokadu vatrozida. Ako je Vaša veza u redu, molimo provjerite blokira li Vaš antivirus Leotrap.</value>
+    <value>Veza se nije mogla uspostaviti, što vjerojatno ukazuje na nestabilnu internetsku vezu ili blokadu vatrozida. Ako je Vaša veza u redu, molimo provjerite blokira li Vaš antivirus Leostrap.</value>
   </data>
   <data name="Bootstrapper.FirstRunUninstall" xml:space="preserve">
-    <value>Morate prvo instalirati Leotrap prije deinstaliranja.</value>
+    <value>Morate prvo instalirati Leostrap prije deinstaliranja.</value>
   </data>
   <data name="Bootstrapper.NotEnoughSpace" xml:space="preserve">
-    <value>Leotrap nema dovoljno prostora na disku kako bi preuzeo i instalirao Roblox. Molimo, oslobodite dio prostora na disku te pokušajte ponovno.</value>
+    <value>Leostrap nema dovoljno prostora na disku kako bi preuzeo i instalirao Roblox. Molimo, oslobodite dio prostora na disku te pokušajte ponovno.</value>
   </data>
   <data name="Bootstrapper.Status.ApplyingModifications" xml:space="preserve">
     <value>Primjenjuju se modifikacije za Roblox...</value>
@@ -158,7 +158,7 @@
     <value>Nadograđuje se {product}...</value>
   </data>
   <data name="Bootstrapper.Status.UpgradingBloxstrap" xml:space="preserve">
-    <value>Dohvaća se najnoviji Leotrap...</value>
+    <value>Dohvaća se najnoviji Leostrap...</value>
   </data>
   <data name="Bootstrapper.Status.WaitingOtherInstances" xml:space="preserve">
     <value>Čekanje ostalih instanca...</value>
@@ -172,10 +172,10 @@
     <comment>Text for style previews that use text button that says "Cancel"</comment>
   </data>
   <data name="Bootstrapper.SuccessfullyUninstalled" xml:space="preserve">
-    <value>Leotrap je uspješno deinstaliran</value>
+    <value>Leostrap je uspješno deinstaliran</value>
   </data>
   <data name="Bootstrapper.Uninstall.RobloxRunning" xml:space="preserve">
-    <value>Roblox je trenutno pokrenut, ali mora biti zatvoren prije nego što se Leotrap deinstalira. Želite li ugasiti Roblox sada?</value>
+    <value>Roblox je trenutno pokrenut, ali mora biti zatvoren prije nego što se Leostrap deinstalira. Želite li ugasiti Roblox sada?</value>
   </data>
   <data name="Bootstrapper.WMFNotFound" xml:space="preserve">
     <value>Roblox zahtijeva upotrebu Windows Media Foundation komponenta. Izgleda da Vam nedostaju, vjerojatno zato što koristite N izadnje Windows-a. Molimo, prvo ih instalirajte, a zatim pokrenite Roblox.</value>
@@ -279,7 +279,7 @@ Kliknite za više informacija</value>
     <value>Greška sa povezivanjem</value>
   </data>
   <data name="Dialog.Connectivity.UnableToConnect" xml:space="preserve">
-    <value>Leotrap se ne može povezati na {0}</value>
+    <value>Leostrap se ne može povezati na {0}</value>
     <comment>{0} is the name of a service (i.e. Roblox, GitHub)</comment>
   </data>
   <data name="Dialog.Exception.CopyLogContents" xml:space="preserve">
@@ -294,7 +294,7 @@ Kliknite za više informacija</value>
 Ako ne postoji, molimo da prijavite ovu iznimku preko [GitHub problema]({1}) zajedno sa log datotekom.</value>
   </data>
   <data name="Dialog.Exception.Title" xml:space="preserve">
-    <value>Leotrap Izuzetak</value>
+    <value>Leostrap Izuzetak</value>
   </data>
   <data name="Common.Custom" xml:space="preserve">
     <value>Prilagođeno</value>
@@ -309,10 +309,10 @@ Ako ne postoji, molimo da prijavite ovu iznimku preko [GitHub problema]({1}) zaj
     <value>Lažni Byfron (2023)</value>
   </data>
   <data name="Enums.BootstrapperStyle.ClassicFluentDialog" xml:space="preserve">
-    <value>Leotrap (Klasično)</value>
+    <value>Leostrap (Klasično)</value>
   </data>
   <data name="Enums.BootstrapperStyle.FluentAeroDialog" xml:space="preserve">
-    <value>Leotrap (Stakleno)</value>
+    <value>Leostrap (Stakleno)</value>
   </data>
   <data name="Enums.BootstrapperStyle.LegacyDialog2008" xml:space="preserve">
     <value>Nasledje (2008-2011)</value>
@@ -378,7 +378,7 @@ Ako ne postoji, molimo da prijavite ovu iznimku preko [GitHub problema]({1}) zaj
     <value>Svjetlo</value>
   </data>
   <data name="InstallChecker.Updated" xml:space="preserve">
-    <value>Leotrap je nadograđen na v{0}</value>
+    <value>Leostrap je nadograđen na v{0}</value>
   </data>
   <data name="InstallChecker.VersionDifferentThanInstalled" xml:space="preserve">
     <value>Verzija Bloxstrapa koju ste pokrenuli drukčija je od verzije koju imate instaliranu. Želite li nadograditi svoju trenutno instaliranu verziju?</value>
@@ -436,7 +436,7 @@ Ako ne postoji, molimo da prijavite ovu iznimku preko [GitHub problema]({1}) zaj
     <value>Imajte na umu da se sve vaše promjene neće odmah primijeniti dok ne zatvorite sve trenutno otvorene instance Robloxa.</value>
   </data>
   <data name="Menu.AlreadyRunning.Title" xml:space="preserve">
-    <value>Leotrap je već pokrenut</value>
+    <value>Leostrap je već pokrenut</value>
   </data>
   <data name="Menu.Appearance.Bootstrapper.Description" xml:space="preserve">
     <value>Možete ga prilagoditi da izgleda drugačije, retro ili čak samo kao Roblox.</value>
@@ -487,10 +487,10 @@ Ako ne postoji, molimo da prijavite ovu iznimku preko [GitHub problema]({1}) zaj
     <value>Izgled</value>
   </data>
   <data name="Menu.Behaviour.AutoUpdate.Description" xml:space="preserve">
-    <value>Leotrap će se automatski provjeravati i ažurirati prilikom pokretanja Robloxa.</value>
+    <value>Leostrap će se automatski provjeravati i ažurirati prilikom pokretanja Robloxa.</value>
   </data>
   <data name="Menu.Behaviour.AutoUpdate.Title" xml:space="preserve">
-    <value>Automatski ažuriraj Leotrap</value>
+    <value>Automatski ažuriraj Leostrap</value>
   </data>
   <data name="Menu.Behaviour.ConfirmLaunches.Description" xml:space="preserve">
     <value>Spriječite zatvaranje postojeće igre zbog slučajnog pokretanja druge.</value>
@@ -499,7 +499,7 @@ Ako ne postoji, molimo da prijavite ovu iznimku preko [GitHub problema]({1}) zaj
     <value>Zatraži potvrdu prilikom pokretanja druge Roblox instance</value>
   </data>
   <data name="Menu.Behaviour.Description" xml:space="preserve">
-    <value>Konfigurirajte što Leotrap treba učiniti kad pokreće Roblox.</value>
+    <value>Konfigurirajte što Leostrap treba učiniti kad pokreće Roblox.</value>
   </data>
   <data name="Menu.Behaviour.ForceRobloxReinstall.Description" xml:space="preserve">
     <value>Roblox će biti svježe instaliran pri sljedećem pokretanju.</value>
@@ -602,10 +602,10 @@ Jeste li sigurni da želite nastaviti?</value>
     <value>Datoteke ikona</value>
   </data>
   <data name="Menu.InstallLocation.CantInstall" xml:space="preserve">
-    <value>Leotrap ne može biti instaliran ovdje. Molimo, odaberite drugu lokaciju, ili koristite zadanu lokaciju tako da kliknete gumb za resetiranje.</value>
+    <value>Leostrap ne može biti instaliran ovdje. Molimo, odaberite drugu lokaciju, ili koristite zadanu lokaciju tako da kliknete gumb za resetiranje.</value>
   </data>
   <data name="Menu.InstallLocation.NotEmpty" xml:space="preserve">
-    <value>Mapa koju ste odabrali za instalaciju Bloxstrapa već postoji i NIJE prazna. Toplo se preporučuje da se Leotrap instalira u nezavisnoj mapi.
+    <value>Mapa koju ste odabrali za instalaciju Bloxstrapa već postoji i NIJE prazna. Toplo se preporučuje da se Leostrap instalira u nezavisnoj mapi.
 
 Promjena na iduću lokaciju je preporučena: {0}
 
@@ -616,7 +616,7 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Morate postaviti lokaciju instalacije</value>
   </data>
   <data name="Menu.InstallLocation.NoWritePerms" xml:space="preserve">
-    <value>Leotrap nema write pristup lokaciji koju ste odabrali. Molimo odaberite drugu lokaciju.</value>
+    <value>Leostrap nema write pristup lokaciji koju ste odabrali. Molimo odaberite drugu lokaciju.</value>
   </data>
   <data name="Menu.Integrations.ActivityTracking" xml:space="preserve">
     <value>Praćenje aktivnosti</value>
@@ -755,7 +755,7 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Postavke spremljenje!</value>
   </data>
   <data name="Menu.Title" xml:space="preserve">
-    <value>Leotrap postavke</value>
+    <value>Leostrap postavke</value>
   </data>
   <data name="Dialog.LanguageSelector.Header" xml:space="preserve">
     <value>Odaberi preferirani jezik</value>
@@ -776,7 +776,7 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Renderiranje i Grafika</value>
   </data>
   <data name="Menu.FastFlags.ManagerEnabled.Title" xml:space="preserve">
-    <value>Dozvoli Leotrap-u da upravlja s Fast Flags</value>
+    <value>Dozvoli Leostrap-u da upravlja s Fast Flags</value>
   </data>
   <data name="Menu.FastFlags.ManagerEnabled.Description" xml:space="preserve">
     <value>Onemogućavanje će spriječiti da se bilo što ovdje konfigurirano primjeni na Roblox.</value>
@@ -800,7 +800,7 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Nivo 3 (Najviše)</value>
   </data>
   <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
-    <value>Leotrap ne može preuzeti Roblox</value>
+    <value>Leostrap ne može preuzeti Roblox</value>
   </data>
   <data name="Dialog.Connectivity.UnableToDownloadReason" xml:space="preserve">
     <value>Roblox se trenutno ne može preuzeti. Molimo pročitajte sljedeću stranicu za pomoć za više informacija: {0}</value>
@@ -821,7 +821,7 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Unos za '{0}' nije valjan jer vrijednost mora biti cijeli broj</value>
   </data>
   <data name="Logger.NoWriteMode" xml:space="preserve">
-    <value>Log datoteka neće biti napisana za ovaj pokret jer Leotrap ne može pisati u folderu na '{0}'</value>
+    <value>Log datoteka neće biti napisana za ovaj pokret jer Leostrap ne može pisati u folderu na '{0}'</value>
   </data>
   <data name="Common.Default" xml:space="preserve">
     <value>Zadano</value>
@@ -855,11 +855,11 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Dalje</value>
   </data>
   <data name="Installer.Welcome.MainText" xml:space="preserve">
-    <value>Hvala što ste preuzeli Leotrap.
+    <value>Hvala što ste preuzeli Leostrap.
 
 Jedine službene web-stranice za preuzimanje Bloxstrapa su {0} i {1}, molimo Vas da provjerite jeste li ga preuzeli sa službenog izvora.
 
-Proces instalacije će biti brz i jednostavan, i moći ćete konfigurirati bilo koje Leotrap postavke nakon instalacije.</value>
+Proces instalacije će biti brz i jednostavan, i moći ćete konfigurirati bilo koje Leostrap postavke nakon instalacije.</value>
     <comment>{0} and {1} are URLs</comment>
   </data>
   <data name="Installer.Welcome.NextToContinue" xml:space="preserve">
@@ -887,16 +887,16 @@ Proces instalacije će biti brz i jednostavan, i moći ćete konfigurirati bilo 
     <value>Start Meni ikona</value>
   </data>
   <data name="Installer.Completion.Text" xml:space="preserve">
-    <value>Leotrap se je uspješno instalirao.
+    <value>Leostrap se je uspješno instalirao.
 
-Roblox još nije bio instaliran, to će se dogoditi kada ga pokrenete s Bloxstrapom prvi put. Ali, prije nego li to napravite, možda biste htjeli prvo konfigurirati Leotrap postavke.
+Roblox još nije bio instaliran, to će se dogoditi kada ga pokrenete s Bloxstrapom prvi put. Ali, prije nego li to napravite, možda biste htjeli prvo konfigurirati Leostrap postavke.
 
-Isto tako, izbjegnite koristiti "Roblox Player" prečac za pokretanje Roblox-a, jer se Leotrap neće pokrenuti s Roblox-om. Ako ne vidite Leotrap kako se pojavljuje kada pokrećete s web-stranice, samo pokrenite Roblox sa Bloxstrapom jedan put s desktopa da biste to popravili.
+Isto tako, izbjegnite koristiti "Roblox Player" prečac za pokretanje Roblox-a, jer se Leostrap neće pokrenuti s Roblox-om. Ako ne vidite Leostrap kako se pojavljuje kada pokrećete s web-stranice, samo pokrenite Roblox sa Bloxstrapom jedan put s desktopa da biste to popravili.
 
 Što biste htjeli napraviti?</value>
   </data>
   <data name="Installer.Completion.Settings.Title" xml:space="preserve">
-    <value>Konfigurirajte Leotrap postavke</value>
+    <value>Konfigurirajte Leostrap postavke</value>
   </data>
   <data name="Installer.Completion.Settings.Description" xml:space="preserve">
     <value>Igrajte se sa svim značajkama koje Vam nudi</value>
@@ -908,20 +908,20 @@ Isto tako, izbjegnite koristiti "Roblox Player" prečac za pokretanje Roblox-a, 
     <value>Prebacit će Vas u desktop aplikaciju kad je sve gotovo</value>
   </data>
   <data name="Uninstaller.Title" xml:space="preserve">
-    <value>Deinstaliraj Leotrap</value>
+    <value>Deinstaliraj Leostrap</value>
   </data>
   <data name="Uninstaller.Text" xml:space="preserve">
-    <value>Deinstaliranje će ukloniti Leotrap s Vašeg sustava i automatski rekonfigurirati zadani Roblox pokretač ako je još i dalje instaliran.
+    <value>Deinstaliranje će ukloniti Leostrap s Vašeg sustava i automatski rekonfigurirati zadani Roblox pokretač ako je još i dalje instaliran.
 
-Moguće je da će proces deinstalacije ostaviti neke stvari, pa ćete možda morati ručno počistiti preostale datoteke gdje je Leotrap bio instaliran.
+Moguće je da će proces deinstalacije ostaviti neke stvari, pa ćete možda morati ručno počistiti preostale datoteke gdje je Leostrap bio instaliran.
 
-Leotrap je bio instaliran kod "{1}".</value>
+Leostrap je bio instaliran kod "{1}".</value>
   </data>
   <data name="Uninstaller.KeepData.Label" xml:space="preserve">
     <value>Zadrži moje postavke i modifikacije</value>
   </data>
   <data name="Uninstaller.KeepData.Description" xml:space="preserve">
-    <value>Biti će zadržani na mjestu gdje je Leotrap bio instaliran, i bit će automatski vraćeni na reinstalaciji.</value>
+    <value>Biti će zadržani na mjestu gdje je Leostrap bio instaliran, i bit će automatski vraćeni na reinstalaciji.</value>
   </data>
   <data name="Uninstaller.Uninstall" xml:space="preserve">
     <value>Deinstaliraj</value>
@@ -942,10 +942,10 @@ Leotrap je bio instaliran kod "{1}".</value>
     <value>Trenutno nemate WebView2 runtime instaliran. Neke Roblox-ove značajke neće raditi ispravno bez toga, poput desktop aplikacije. Želite li to sada preuzeti?</value>
   </data>
   <data name="Dialog.CannotCreateShortcuts" xml:space="preserve">
-    <value>Leotrap nije mogao kreirati prečace za Desktop i Start Meni. Pokušajte ih kreirati kasnije preko postavki.</value>
+    <value>Leostrap nije mogao kreirati prečace za Desktop i Start Meni. Pokušajte ih kreirati kasnije preko postavki.</value>
   </data>
   <data name="Dialog.Exception.Info.2.Alt" xml:space="preserve">
-    <value>Prvo provjerite [Leotrap Wiki]({0}) kako biste vidjeli je li ovaj problem već bio rješen.
+    <value>Prvo provjerite [Leostrap Wiki]({0}) kako biste vidjeli je li ovaj problem već bio rješen.
 
 Ako nije, onda molimo da prijavite ovu iznimku održavateljima ovog fork-a. Nemojte ovo prijaviti na Bloxstrapove GitHub probleme, jer ovo nije službena inačica.</value>
     <comment>"fork" in general means "a variation of" or "a different version of". You can alternatively write the first sentence as "...to the maintainers of this version."</comment>
@@ -954,7 +954,7 @@ Ako nije, onda molimo da prijavite ovu iznimku održavateljima ovog fork-a. Nemo
     <value>Ovo su opći prečaci koji pokažu izbornik za pokretanje s više izbora. Prečaci za specifične funkcije mogu biti kreirane kasnije u postavkama.</value>
   </data>
   <data name="Menu.Shortcuts.Description" xml:space="preserve">
-    <value>Konfigurirajte kako Leotrap može biti spremno pokrenut.</value>
+    <value>Konfigurirajte kako Leostrap može biti spremno pokrenut.</value>
   </data>
   <data name="Menu.Shortcuts.General.Title" xml:space="preserve">
     <value>Općenito</value>
@@ -1016,7 +1016,7 @@ Ovo može, ali ne mora biti Bloxstrapov problem. Kako biste saznali, pogledajte 
     <value>Podržavatelji</value>
   </data>
   <data name="About.Supporters.Description" xml:space="preserve">
-    <value>Ovo su ljudi koji podržavaju Leotrap preko Ko-fi. Veliko hvala svima ovdje!
+    <value>Ovo su ljudi koji podržavaju Leostrap preko Ko-fi. Veliko hvala svima ovdje!
 Svaka osoba ovdje je rangirana svojim sveukupnim zalogom.</value>
   </data>
   <data name="JsonManager.SettingsLoadFailed" xml:space="preserve">
@@ -1047,12 +1047,12 @@ Svaka osoba ovdje je rangirana svojim sveukupnim zalogom.</value>
     <value>Za ovaj pokret, Roblox se neće provjeriti za nadogradnje i promjene modifikacijama se neće primijeniti.</value>
   </data>
   <data name="Dialog.Connectivity.RobloxUpgradeNeeded" xml:space="preserve">
-    <value>Leotrap ne može nastaviti zato što Roblox treba biti instaliran ili nadograđen.</value>
+    <value>Leostrap ne može nastaviti zato što Roblox treba biti instaliran ili nadograđen.</value>
   </data>
   <data name="Installer.Install.CannotOverwrite" xml:space="preserve">
-    <value>Leotrap se je prije instalirao na ovu lokaciju i još dalje je prisutan, ali instalator ne može prebrisati staru izvršnu datoteku.
+    <value>Leostrap se je prije instalirao na ovu lokaciju i još dalje je prisutan, ali instalator ne može prebrisati staru izvršnu datoteku.
 
-Molimo ručno izbrišite Leotrap.exe iz lokacije instalacije ili pokušajte ponovno pokrenuti Vaš sustav, i onda ponovno probajte instalirati nakon.</value>
+Molimo ručno izbrišite Leostrap.exe iz lokacije instalacije ili pokušajte ponovno pokrenuti Vaš sustav, i onda ponovno probajte instalirati nakon.</value>
   </data>
   <data name="Common.NotAvailable" xml:space="preserve">
     <value>Nije dostupno</value>
@@ -1064,7 +1064,7 @@ Molimo ručno izbrišite Leotrap.exe iz lokacije instalacije ili pokušajte pono
     <value>Konfigurirajte parametre aplikacije kao što je ponašanje DPI skaliranja i [optimizacije cijelog zaslona]({0}).</value>
   </data>
   <data name="Common.RobloxNotInstalled" xml:space="preserve">
-    <value>Roblox još nije bio instaliran. Molimo pokrenite Roblox koristeći Leotrap barem jednom prije pokušavanja korištenja ove opcije.</value>
+    <value>Roblox još nije bio instaliran. Molimo pokrenite Roblox koristeći Leostrap barem jednom prije pokušavanja korištenja ove opcije.</value>
   </data>
   <data name="Installer.ShouldCancel" xml:space="preserve">
     <value>Jeste li sigurni da želite prekinuti instalaciju?</value>
@@ -1085,7 +1085,7 @@ Molimo ručno izbrišite Leotrap.exe iz lokacije instalacije ili pokušajte pono
     <value>Dopušta Vam da koristite Bloxstrapov raspon Roblox ikona za Vaše prečace. [Pogledajte kako.]({0})</value>
   </data>
   <data name="Dialog.RegistryWriteError" xml:space="preserve">
-    <value>Leotrap ne može pisati u Windows Registar. Antivirus se vjerojatno miješa i proizvodi poteškoće. Molimo provjerite postoji li išta što bi moglo ograničiti Bloxstrapove operacije.</value>
+    <value>Leostrap ne može pisati u Windows Registar. Antivirus se vjerojatno miješa i proizvodi poteškoće. Molimo provjerite postoji li išta što bi moglo ograničiti Bloxstrapove operacije.</value>
   </data>
   <data name="About.Supporters.Monthly" xml:space="preserve">
     <value>Mjesečno</value>
@@ -1093,13 +1093,13 @@ Molimo ručno izbrišite Leotrap.exe iz lokacije instalacije ili pokušajte pono
   <data name="About.Supporters.OneOff" xml:space="preserve">
     <value>Jednokratno</value>
   </data>
-  <data name="Menu.Leotrap.Description" xml:space="preserve">
+  <data name="Menu.Leostrap.Description" xml:space="preserve">
     <value>Konfigurirajte postavke vezane za samo Bloxstrapovo ponašanje.</value>
   </data>
-  <data name="Menu.Leotrap.Analytics.Title" xml:space="preserve">
+  <data name="Menu.Leostrap.Analytics.Title" xml:space="preserve">
     <value>Uključi slanje analitike</value>
   </data>
-  <data name="Menu.Leotrap.Analytics.Description" xml:space="preserve">
+  <data name="Menu.Leostrap.Analytics.Description" xml:space="preserve">
     <value>Anonimno je i nije ništa zlo, obećajemo. Za uvid u ono što pokupljamo i zašto, pogledajte našu [politiku privatnosti]({0}).</value>
   </data>
   <data name="Common.Analytics" xml:space="preserve">
@@ -1123,7 +1123,7 @@ Kada uključen, automatski će pokrenuti Roblox nakon zatvaranja postavki, i pon
 Želite li uključiti testni mod?</value>
   </data>
   <data name="About.Translators.Description" xml:space="preserve">
-    <value>Svi Bloxstrapovi prijevodi su crowdsourcani preko [Crowdin-a]({0}). Svi navedeni ovdje su ljudi koji su velikodušno volontirali svoje vrijeme i trud kako bi pomogli lokalizirati Leotrap. Veliko hvala svima ovdje!</value>
+    <value>Svi Bloxstrapovi prijevodi su crowdsourcani preko [Crowdin-a]({0}). Svi navedeni ovdje su ljudi koji su velikodušno volontirali svoje vrijeme i trud kako bi pomogli lokalizirati Leostrap. Veliko hvala svima ovdje!</value>
   </data>
   <data name="Common.Navigation.Install" xml:space="preserve">
     <value>Instaliraj</value>
@@ -1143,7 +1143,7 @@ Kada uključen, automatski će pokrenuti Roblox nakon zatvaranja postavki, i pon
     <value>Prilagođeno</value>
   </data>
   <data name="Bootstrapper.FilesInUse" xml:space="preserve">
-    <value>Leotrap je pokušao ažurirati Roblox, ali ne može jer se Robloxove datoteke još dalje koriste.
+    <value>Leostrap je pokušao ažurirati Roblox, ali ne može jer se Robloxove datoteke još dalje koriste.
 
 Molimo zatvorite bilo koju aplikaciju koja bi mogla koristiti Robloxove datoteke, i ponovno pokrenite.</value>
     <comment>This is *not* for when Roblox is still running when trying to upgrade. This applies to files being open (i.e. image assets)</comment>
@@ -1154,20 +1154,20 @@ Molimo zatvorite bilo koju aplikaciju koja bi mogla koristiti Robloxove datoteke
   </data>
   <data name="Common.Export" xml:space="preserve">
     <value>Izvezi</value>
-    <comment>Currently used under the "Leotrap" settings tab for the button to export diagnostic data</comment>
+    <comment>Currently used under the "Leostrap" settings tab for the button to export diagnostic data</comment>
   </data>
-  <data name="Menu.Leotrap.ExportData.Title" xml:space="preserve">
+  <data name="Menu.Leostrap.ExportData.Title" xml:space="preserve">
     <value>Izvezi dijagnostičke podatke</value>
   </data>
-  <data name="Menu.Leotrap.ExportData.Description" xml:space="preserve">
+  <data name="Menu.Leostrap.ExportData.Description" xml:space="preserve">
     <value>Skupi imformacije koje se mogu prenesti online kako bi se mogao riješiti problem koji imate.</value>
   </data>
-  <data name="Menu.Leotrap.ExportData.ExportConfig" xml:space="preserve">
-    <value>Leotrap konfiguracija</value>
+  <data name="Menu.Leostrap.ExportData.ExportConfig" xml:space="preserve">
+    <value>Leostrap konfiguracija</value>
     <comment>Label that appears next to a checkbox</comment>
   </data>
-  <data name="Menu.Leotrap.ExportData.ExportLogs" xml:space="preserve">
-    <value>Svi Leotrap zapisi</value>
+  <data name="Menu.Leostrap.ExportData.ExportLogs" xml:space="preserve">
+    <value>Svi Leostrap zapisi</value>
     <comment>Label that appears next to a checkbox</comment>
   </data>
   <data name="App.OSDeprecation.Win7_81" xml:space="preserve">
@@ -1351,7 +1351,7 @@ Molimo zatvorite bilo koju aplikaciju koja bi mogla koristiti Robloxove datoteke
   <data name="CustomTheme.Errors.SetupFailed" xml:space="preserve">
     <value>Neuspjelo postavljanje prilagođenog pokretača: {0}.
 Prebacivanje na zadani {1}.</value>
-    <comment>{0} is the error reason, {1} is the theme name (e.g. Leotrap (Classic))</comment>
+    <comment>{0} is the error reason, {1} is the theme name (e.g. Leostrap (Classic))</comment>
   </data>
   <data name="Menu.Appearance.CustomThemes.NoneSelected" xml:space="preserve">
     <value>Nije odabrana niti jedna prilagođena tema.</value>
@@ -1397,7 +1397,7 @@ Prebacivanje na zadani {1}.</value>
     <value>{product} se gasi</value>
   </data>
   <data name="LaunchMenu.BloxstrapWiki" xml:space="preserve">
-    <value>Leotrap Wiki</value>
+    <value>Leostrap Wiki</value>
   </data>
   <data name="LaunchMenu.RobloxCommunity" xml:space="preserve">
     <value>Roblox Zajednica</value>

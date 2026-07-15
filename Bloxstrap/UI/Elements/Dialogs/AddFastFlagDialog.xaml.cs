@@ -1,8 +1,8 @@
 ﻿using Microsoft.Win32;
 using System.Windows;
-using Leotrap.Resources;
+using Leostrap.Resources;
 
-namespace Leotrap.UI.Elements.Dialogs
+namespace Leostrap.UI.Elements.Dialogs
 {
     /// <summary>
     /// Interaction logic for AddFastFlagDialog.xaml

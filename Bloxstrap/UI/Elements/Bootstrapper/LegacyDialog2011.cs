@@ -1,8 +1,8 @@
 using System.Windows.Forms;
 
-using Leotrap.UI.Elements.Bootstrapper.Base;
+using Leostrap.UI.Elements.Bootstrapper.Base;
 
-namespace Leotrap.UI.Elements.Bootstrapper
+namespace Leostrap.UI.Elements.Bootstrapper
 {
     // https://youtu.be/3K9oCEMHj2s?t=35
 

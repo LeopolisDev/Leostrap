@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Models
+﻿namespace Leostrap.Models
 {
     public class CustomIntegration
     {

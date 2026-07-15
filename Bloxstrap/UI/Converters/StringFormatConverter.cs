@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace Leotrap.UI.Converters
+namespace Leostrap.UI.Converters
 {
     public class StringFormatConverter : IValueConverter
     {

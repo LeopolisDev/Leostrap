@@ -6,7 +6,7 @@ using System.Windows.Threading;
 
 using Microsoft.Win32;
 
-namespace Leotrap
+namespace Leostrap
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -14,15 +14,15 @@ namespace Leotrap
     public partial class App : Application
     {
 #if QA_BUILD
-        public const string ProjectName = "Leotrap-QA";
+        public const string ProjectName = "Leostrap-QA";
 #else
-        public const string ProjectName = "Leotrap";
+        public const string ProjectName = "Leostrap";
 #endif
-        public const string ProjectOwner = "Leotrap";
-        public const string ProjectRepository = "leotrap/leotrap";
-        public const string ProjectDownloadLink = "https://leotrap.com";
-        public const string ProjectHelpLink = "https://leotrap.com/wiki/help/";
-        public const string ProjectSupportLink = "https://github.com/leotrap/leotrap/issues/new";
+        public const string ProjectOwner = "Leostrap";
+        public const string ProjectRepository = "leostrap/leostrap";
+        public const string ProjectDownloadLink = "https://leostrap.com";
+        public const string ProjectHelpLink = "https://leostrap.com/wiki/help/";
+        public const string ProjectSupportLink = "https://github.com/leostrap/leostrap/issues/new";
 
         public const string RobloxPlayerAppName = "RobloxPlayerBeta";
         public const string RobloxStudioAppName = "RobloxStudioBeta";
@@ -148,10 +148,10 @@ namespace Leotrap
         {
             // dont let user switch web environment if debug mode is not on
             if (Settings.Prop.WebEnvironment == WebEnvironment.Production || !Settings.Prop.DeveloperMode)
-                return "services.leotrap.com";
+                return "services.leostrap.com";
 
             string? sub = Settings.Prop.WebEnvironment.GetDescription();
-                return $"services-{sub}.leotrap.com";
+                return $"services-{sub}.leostrap.com";
         }
 
         public static bool CanSendLogs()

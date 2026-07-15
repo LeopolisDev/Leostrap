@@ -5,7 +5,7 @@ using Microsoft.Win32;
 
 using CommunityToolkit.Mvvm.Input;
 
-namespace Leotrap.UI.ViewModels.Settings
+namespace Leostrap.UI.ViewModels.Settings
 {
     public class IntegrationsViewModel : NotifyPropertyChangedViewModel
     {

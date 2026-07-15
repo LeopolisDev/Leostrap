@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Leotrap.UI.Elements.Bootstrapper
+namespace Leostrap.UI.Elements.Bootstrapper
 {
     partial class LegacyDialog2011
     {

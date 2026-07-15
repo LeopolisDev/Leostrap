@@ -1,5 +1,5 @@
-﻿using Leotrap.UI.Elements.Bootstrapper.Base;
-using Leotrap.UI.ViewModels.Bootstrapper;
+﻿using Leostrap.UI.Elements.Bootstrapper.Base;
+using Leostrap.UI.ViewModels.Bootstrapper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +19,7 @@ using System.Windows.Shapes;
 using System.Windows.Shell;
 using System.Windows.Threading;
 
-namespace Leotrap.UI.Elements.Bootstrapper
+namespace Leostrap.UI.Elements.Bootstrapper
 {
     /// <summary>
     /// Interaction logic for FluentDialog.xaml
@@ -28,7 +28,7 @@ namespace Leotrap.UI.Elements.Bootstrapper
     {
         private readonly FluentDialogViewModel _viewModel;
 
-        public Leotrap.Bootstrapper? Bootstrapper { get; set; }
+        public Leostrap.Bootstrapper? Bootstrapper { get; set; }
 
         private bool _isClosing;
 

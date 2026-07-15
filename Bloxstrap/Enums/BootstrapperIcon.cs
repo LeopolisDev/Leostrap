@@ -1,9 +1,9 @@
-﻿namespace Leotrap.Enums
+﻿namespace Leostrap.Enums
 {
     public enum BootstrapperIcon
     {
-        [EnumName(StaticName = "Leotrap")]
-        IconLeotrap,
+        [EnumName(StaticName = "Leostrap")]
+        IconLeostrap,
         IconBloxstrap,
         [EnumName(StaticName = "2008")]
         Icon2008,

@@ -1,8 +1,8 @@
 ﻿using System.Windows.Controls;
 
-using Leotrap.UI.ViewModels.Settings;
+using Leostrap.UI.ViewModels.Settings;
 
-namespace Leotrap.UI.Elements.Settings.Pages
+namespace Leostrap.UI.Elements.Settings.Pages
 {
     /// <summary>
     /// Interaction logic for IntegrationsPage.xaml

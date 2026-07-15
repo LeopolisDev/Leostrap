@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Leotrap.Enums
+namespace Leostrap.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum WebEnvironment

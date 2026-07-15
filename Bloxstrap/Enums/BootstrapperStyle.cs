@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Enums
+﻿namespace Leostrap.Enums
 {
     public enum BootstrapperStyle
     {
@@ -8,7 +8,7 @@
         ProgressDialog,
         ClassicFluentDialog,
         ByfronDialog,
-        [EnumName(StaticName = "Leotrap")]
+        [EnumName(StaticName = "Leostrap")]
         FluentDialog,
         FluentAeroDialog,
         CustomDialog

@@ -1,4 +1,4 @@
-﻿namespace Leotrap.UI.Elements.Bootstrapper
+﻿namespace Leostrap.UI.Elements.Bootstrapper
 {
     partial class VistaDialog
     {

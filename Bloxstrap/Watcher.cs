@@ -1,8 +1,8 @@
-﻿using Leotrap.AppData;
-using Leotrap.Integrations;
-using Leotrap.Models;
+﻿using Leostrap.AppData;
+using Leostrap.Integrations;
+using Leostrap.Models;
 
-namespace Leotrap
+namespace Leostrap
 {
     public class Watcher : IDisposable
     {

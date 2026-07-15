@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
 
-namespace Leotrap.Utility
+namespace Leostrap.Utility
 {
     static class WindowsRegistry
     {
@@ -30,7 +30,7 @@ namespace Leotrap.Utility
         }
 
         /// <summary>
-        /// Registers Roblox Player protocols for Leotrap
+        /// Registers Roblox Player protocols for Leostrap
         /// </summary>
         public static void RegisterPlayer() => RegisterPlayer(Paths.Application, "-player \"%1\"");
 
@@ -41,7 +41,7 @@ namespace Leotrap.Utility
         }
 
         /// <summary>
-        /// Registers all Roblox Studio classes for Leotrap
+        /// Registers all Roblox Studio classes for Leostrap
         /// </summary>
         public static void RegisterStudio()
         {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
 
-namespace Leotrap.Extensions
+namespace Leostrap.Extensions
 {
     public static class RegistryKeyEx
     {

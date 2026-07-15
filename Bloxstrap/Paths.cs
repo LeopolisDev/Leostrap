@@ -1,4 +1,4 @@
-﻿namespace Leotrap
+﻿namespace Leostrap
 {
     static class Paths
     {

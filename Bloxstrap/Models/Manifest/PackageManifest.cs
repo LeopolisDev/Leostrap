@@ -4,7 +4,7 @@
  * Copyright (c) 2015-present MaximumADHD
 */
 
-namespace Leotrap.Models.Manifest
+namespace Leostrap.Models.Manifest
 {
     public class PackageManifest : List<Package>
     {

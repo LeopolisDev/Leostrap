@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Models.Persistable
+﻿namespace Leostrap.Models.Persistable
 {
     public class WindowState
     {

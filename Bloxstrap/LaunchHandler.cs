@@ -3,10 +3,10 @@
 using Windows.Win32;
 using Windows.Win32.Foundation;
 
-using Leotrap.UI.Elements.Dialogs;
-using Leotrap.Enums;
+using Leostrap.UI.Elements.Dialogs;
+using Leostrap.Enums;
 
-namespace Leotrap
+namespace Leostrap
 {
     public static class LaunchHandler
     {
@@ -115,7 +115,7 @@ namespace Leotrap
             else
             {
 #if QA_BUILD
-                Frontend.ShowMessageBox("You are about to install a QA build of Leotrap. The red window border indicates that this is a QA build.\n\nQA builds are handled completely separately of your standard installation, like a virtual environment.", MessageBoxImage.Information);
+                Frontend.ShowMessageBox("You are about to install a QA build of Leostrap. The red window border indicates that this is a QA build.\n\nQA builds are handled completely separately of your standard installation, like a virtual environment.", MessageBoxImage.Information);
 #endif
 
                 new LanguageSelectorDialog().ShowDialog();
@@ -319,7 +319,7 @@ namespace Leotrap
             App.Logger.WriteLine(LOG_IDENT, "Initializing bootstrapper");
             App.Bootstrapper = new Bootstrapper(launchMode)
             {
-                MutexNamePrefix = "Leotrap-BackgroundUpdater",
+                MutexNamePrefix = "Leostrap-BackgroundUpdater",
                 QuitIfMutexExists = true
             };
 
@@ -328,7 +328,7 @@ namespace Leotrap
             Task.Run(() =>
             {
                 App.Logger.WriteLine(LOG_IDENT, "Started event waiter");
-                using (EventWaitHandle handle = new EventWaitHandle(false, EventResetMode.AutoReset, "Leotrap-BackgroundUpdaterKillEvent"))
+                using (EventWaitHandle handle = new EventWaitHandle(false, EventResetMode.AutoReset, "Leostrap-BackgroundUpdaterKillEvent"))
                     handle.WaitOne();
 
                 App.Logger.WriteLine(LOG_IDENT, "Received close event, killing it all!");

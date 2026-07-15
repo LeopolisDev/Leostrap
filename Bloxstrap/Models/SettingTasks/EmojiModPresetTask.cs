@@ -1,8 +1,8 @@
 ﻿using System.Windows;
 
-using Leotrap.Models.SettingTasks.Base;
+using Leostrap.Models.SettingTasks.Base;
 
-namespace Leotrap.Models.SettingTasks
+namespace Leostrap.Models.SettingTasks
 {
     public class EmojiModPresetTask : EnumBaseTask<EmojiType>
     {

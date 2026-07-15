@@ -2,10 +2,10 @@
 using System.Windows.Forms;
 using System.Windows.Shell;
 
-using Leotrap.UI.ViewModels.Bootstrapper;
-using Leotrap.UI.Elements.Bootstrapper.Base;
+using Leostrap.UI.ViewModels.Bootstrapper;
+using Leostrap.UI.Elements.Bootstrapper.Base;
 
-namespace Leotrap.UI.Elements.Bootstrapper
+namespace Leostrap.UI.Elements.Bootstrapper
 {
     /// <summary>
     /// Interaction logic for ClassicFluentDialog.xaml
@@ -14,7 +14,7 @@ namespace Leotrap.UI.Elements.Bootstrapper
     {
         private readonly BootstrapperDialogViewModel _viewModel;
 
-        public Leotrap.Bootstrapper? Bootstrapper { get; set; }
+        public Leostrap.Bootstrapper? Bootstrapper { get; set; }
 
         private bool _isClosing;
 

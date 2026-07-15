@@ -1,4 +1,4 @@
-﻿namespace Leotrap
+﻿namespace Leostrap
 {
     public class JsonManager<T> where T : class, new()
     {

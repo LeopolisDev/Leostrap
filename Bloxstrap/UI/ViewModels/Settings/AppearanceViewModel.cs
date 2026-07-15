@@ -8,11 +8,11 @@ using ICSharpCode.SharpZipLib.Zip;
 
 using Microsoft.Win32;
 
-using Leotrap.UI.Elements.Settings;
-using Leotrap.UI.Elements.Editor;
-using Leotrap.UI.Elements.Dialogs;
+using Leostrap.UI.Elements.Settings;
+using Leostrap.UI.Elements.Editor;
+using Leostrap.UI.Elements.Dialogs;
 
-namespace Leotrap.UI.ViewModels.Settings
+namespace Leostrap.UI.ViewModels.Settings
 {
     public class AppearanceViewModel : NotifyPropertyChangedViewModel
     {

@@ -1,4 +1,4 @@
-﻿namespace Leotrap.AppData
+﻿namespace Leostrap.AppData
 {
     public class RobloxStudioData : CommonAppData, IAppData
     {

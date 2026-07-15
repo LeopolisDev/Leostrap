@@ -1,10 +1,10 @@
 ﻿using System.Windows;
 using System.Windows.Input;
 
-using Leotrap.UI.ViewModels.Settings;
+using Leostrap.UI.ViewModels.Settings;
 using Wpf.Ui.Mvvm.Contracts;
 
-namespace Leotrap.UI.Elements.Settings.Pages
+namespace Leostrap.UI.Elements.Settings.Pages
 {
     /// <summary>
     /// Interaction logic for FastFlagsPage.xaml

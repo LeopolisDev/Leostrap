@@ -1,7 +1,7 @@
 ﻿using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 
-namespace Leotrap.UI.ViewModels
+namespace Leostrap.UI.ViewModels
 {
     public static class GlobalViewModel
     {

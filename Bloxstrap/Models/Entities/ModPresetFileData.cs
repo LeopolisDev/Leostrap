@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Windows.Markup;
 
-namespace Leotrap.Models.Entities
+namespace Leostrap.Models.Entities
 {
     public class ModPresetFileData
     {

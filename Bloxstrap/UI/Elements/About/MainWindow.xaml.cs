@@ -2,7 +2,7 @@
 using Wpf.Ui.Controls.Interfaces;
 using Wpf.Ui.Mvvm.Contracts;
 
-namespace Leotrap.UI.Elements.About
+namespace Leostrap.UI.Elements.About
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Leotrap
+namespace Leostrap
 {
     static class Resource
     {

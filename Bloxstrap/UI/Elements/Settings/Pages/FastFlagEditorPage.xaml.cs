@@ -5,11 +5,11 @@ using System.Collections.ObjectModel;
 
 using Wpf.Ui.Mvvm.Contracts;
 
-using Leotrap.UI.Elements.Dialogs;
+using Leostrap.UI.Elements.Dialogs;
 using Newtonsoft.Json.Linq;
 using System.Xml.Linq;
 
-namespace Leotrap.UI.Elements.Settings.Pages
+namespace Leostrap.UI.Elements.Settings.Pages
 {
     /// <summary>
     /// Interaction logic for FastFlagEditorPage.xaml

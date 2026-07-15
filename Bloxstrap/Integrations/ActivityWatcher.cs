@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Integrations
+﻿namespace Leostrap.Integrations
 {
     public class ActivityWatcher : IDisposable
     {

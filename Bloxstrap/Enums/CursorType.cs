@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Enums
+﻿namespace Leostrap.Enums
 {
     public enum CursorType
     {

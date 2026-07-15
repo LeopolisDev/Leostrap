@@ -1,6 +1,6 @@
 ﻿using System.Windows.Media;
 
-namespace Leotrap.Models
+namespace Leostrap.Models
 {
     public class BootstrapperIconEntry
     {

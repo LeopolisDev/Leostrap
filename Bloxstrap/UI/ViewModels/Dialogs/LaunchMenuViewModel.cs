@@ -2,9 +2,9 @@
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 
-using Leotrap.UI.Elements.About;
+using Leostrap.UI.Elements.About;
 
-namespace Leotrap.UI.ViewModels.Installer
+namespace Leostrap.UI.ViewModels.Installer
 {
     public class LaunchMenuViewModel
     {

@@ -1,8 +1,8 @@
-﻿using Leotrap.Integrations;
-using Leotrap.UI.Elements.About;
-using Leotrap.UI.Elements.ContextMenu;
+﻿using Leostrap.Integrations;
+using Leostrap.UI.Elements.About;
+using Leostrap.UI.Elements.ContextMenu;
 
-namespace Leotrap.UI
+namespace Leostrap.UI
 {
     public class NotifyIconWrapper : IDisposable
     {

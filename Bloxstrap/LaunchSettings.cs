@@ -1,4 +1,4 @@
-﻿using Leotrap.Enums;
+﻿using Leostrap.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Windows;
 
-namespace Leotrap
+namespace Leostrap
 {
     public class LaunchSettings
     {

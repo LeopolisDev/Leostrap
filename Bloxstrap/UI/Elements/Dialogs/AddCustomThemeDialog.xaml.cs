@@ -1,10 +1,10 @@
-﻿using Leotrap.UI.Elements.Base;
-using Leotrap.UI.ViewModels.Dialogs;
+﻿using Leostrap.UI.Elements.Base;
+using Leostrap.UI.ViewModels.Dialogs;
 using Microsoft.Win32;
 using System.IO.Compression;
 using System.Windows;
 
-namespace Leotrap.UI.Elements.Dialogs
+namespace Leostrap.UI.Elements.Dialogs
 {
     /// <summary>
     /// Interaction logic for AddCustomThemeDialog.xaml

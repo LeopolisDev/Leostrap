@@ -1,7 +1,7 @@
-﻿using Leotrap.Models.Entities;
-using Leotrap.Models.SettingTasks.Base;
+﻿using Leostrap.Models.Entities;
+using Leostrap.Models.SettingTasks.Base;
 
-namespace Leotrap.Models.SettingTasks
+namespace Leostrap.Models.SettingTasks
 {
     public class EnumModPresetTask<T> : EnumBaseTask<T> where T : struct, Enum
     {

@@ -1,11 +1,11 @@
 ﻿using System.Web;
 using System.Windows;
 using System.Windows.Input;
-using Leotrap.AppData;
-using Leotrap.Models.APIs;
+using Leostrap.AppData;
+using Leostrap.Models.APIs;
 using CommunityToolkit.Mvvm.Input;
 
-namespace Leotrap.Models.Entities
+namespace Leostrap.Models.Entities
 {
     public class ActivityData
     {

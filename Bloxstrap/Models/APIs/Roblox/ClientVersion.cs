@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Models.APIs.Roblox
+﻿namespace Leostrap.Models.APIs.Roblox
 {
     public class ClientVersion
     {

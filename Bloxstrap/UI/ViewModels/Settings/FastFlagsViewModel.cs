@@ -3,9 +3,9 @@ using System.Windows.Input;
 
 using CommunityToolkit.Mvvm.Input;
 
-using Leotrap.Enums.FlagPresets;
+using Leostrap.Enums.FlagPresets;
 
-namespace Leotrap.UI.ViewModels.Settings
+namespace Leostrap.UI.ViewModels.Settings
 {
     public class FastFlagsViewModel : NotifyPropertyChangedViewModel
     {

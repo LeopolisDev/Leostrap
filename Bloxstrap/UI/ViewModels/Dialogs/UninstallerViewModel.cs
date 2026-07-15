@@ -1,9 +1,9 @@
 ﻿using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 
-using Leotrap.Resources;
+using Leostrap.Resources;
 
-namespace Leotrap.UI.ViewModels.Dialogs
+namespace Leostrap.UI.ViewModels.Dialogs
 {
     public class UninstallerViewModel
     {

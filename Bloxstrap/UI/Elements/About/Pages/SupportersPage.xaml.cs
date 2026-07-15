@@ -1,8 +1,8 @@
 ﻿using System.Windows;
 
-using Leotrap.UI.ViewModels.About;
+using Leostrap.UI.ViewModels.About;
 
-namespace Leotrap.UI.Elements.About.Pages
+namespace Leostrap.UI.Elements.About.Pages
 {
     /// <summary>
     /// Interaction logic for SupportersPage.xaml

@@ -1,4 +1,4 @@
-﻿namespace Leotrap
+﻿namespace Leostrap
 {
     internal class HttpClientLoggingHandler : MessageProcessingHandler
     {

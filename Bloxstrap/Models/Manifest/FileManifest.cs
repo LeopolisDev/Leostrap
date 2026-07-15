@@ -1,6 +1,6 @@
-﻿using Leotrap.RobloxInterfaces;
+﻿using Leostrap.RobloxInterfaces;
 
-namespace Leotrap.Models.Manifest
+namespace Leostrap.Models.Manifest
 {
     public class FileManifest : List<ManifestFile>
     {

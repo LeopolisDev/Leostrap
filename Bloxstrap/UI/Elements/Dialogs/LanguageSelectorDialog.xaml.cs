@@ -11,9 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Leotrap.UI.ViewModels.Dialogs;
+using Leostrap.UI.ViewModels.Dialogs;
 
-namespace Leotrap.UI.Elements.Dialogs
+namespace Leostrap.UI.Elements.Dialogs
 {
     /// <summary>
     /// Interaction logic for LanguageSelectorDialog.xaml

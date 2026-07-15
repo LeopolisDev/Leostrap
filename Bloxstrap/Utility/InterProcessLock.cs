@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Leotrap.Utility
+namespace Leostrap.Utility
 {
     public class InterProcessLock : IDisposable
     {
@@ -16,7 +16,7 @@ namespace Leotrap.Utility
 
         public InterProcessLock(string name, TimeSpan timeout)
         {
-            Mutex = new Mutex(false, "Leotrap-" + name);
+            Mutex = new Mutex(false, "Leostrap-" + name);
 
             try
             {

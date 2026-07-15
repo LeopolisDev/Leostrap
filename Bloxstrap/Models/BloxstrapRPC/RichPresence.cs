@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Models.BloxstrapRPC
+﻿namespace Leostrap.Models.BloxstrapRPC
 {
     class RichPresence
     {

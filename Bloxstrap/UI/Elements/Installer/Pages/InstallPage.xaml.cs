@@ -1,9 +1,9 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-using Leotrap.UI.ViewModels.Installer;
+using Leostrap.UI.ViewModels.Installer;
 
-namespace Leotrap.UI.Elements.Installer.Pages
+namespace Leostrap.UI.Elements.Installer.Pages
 {
     /// <summary>
     /// Interaction logic for WelcomePage.xaml

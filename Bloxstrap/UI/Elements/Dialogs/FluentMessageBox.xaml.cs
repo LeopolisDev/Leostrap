@@ -7,9 +7,9 @@ using System.Windows.Media.Imaging;
 using Windows.Win32;
 using Windows.Win32.Foundation;
 
-using Leotrap.UI.Utility;
+using Leostrap.UI.Utility;
 
-namespace Leotrap.UI.Elements.Dialogs
+namespace Leostrap.UI.Elements.Dialogs
 {
     // wpfui does have its own messagebox control but it SUCKS so heres this instead
 

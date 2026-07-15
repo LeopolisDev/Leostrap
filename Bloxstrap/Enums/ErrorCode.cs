@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Enums
+﻿namespace Leostrap.Enums
 {
     // https://learn.microsoft.com/en-us/windows/win32/msi/error-codes
     // https://i-logic.com/serial/errorcodes.htm

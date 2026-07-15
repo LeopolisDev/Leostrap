@@ -1,4 +1,4 @@
-﻿namespace Leotrap.UI.ViewModels.Settings
+﻿namespace Leostrap.UI.ViewModels.Settings
 {
     public class ShortcutsViewModel : NotifyPropertyChangedViewModel
     {

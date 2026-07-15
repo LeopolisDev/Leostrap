@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Models.APIs.Config
+﻿namespace Leostrap.Models.APIs.Config
 {
     public class SupporterGroup
     {

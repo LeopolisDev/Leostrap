@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Leotrap.Models.SettingTasks.Base
+namespace Leostrap.Models.SettingTasks.Base
 {
     public abstract class BoolBaseTask : BaseTask
     {

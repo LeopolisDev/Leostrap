@@ -4,7 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using ICSharpCode.SharpZipLib.Zip;
 using Microsoft.Win32;
 
-namespace Leotrap.UI.ViewModels.Settings
+namespace Leostrap.UI.ViewModels.Settings
 {
     public class BloxstrapViewModel : NotifyPropertyChangedViewModel
     {
@@ -42,7 +42,7 @@ namespace Leotrap.UI.ViewModels.Settings
 
             var dialog = new SaveFileDialog 
             { 
-                FileName = $"Leotrap-export-{timestamp}.zip",
+                FileName = $"Leostrap-export-{timestamp}.zip",
                 Filter = $"{Strings.FileTypes_ZipArchive}|*.zip" 
             };
 

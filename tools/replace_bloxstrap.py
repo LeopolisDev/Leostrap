@@ -8,21 +8,31 @@ allowed_exts = {'.cs', '.csproj', '.sln', '.py', '.ps1', '.md', '.xaml', '.json'
 
 skip_dir_parts = ['\\bin\\', '\\obj\\', '.git\\', '/bin/', '/obj/']
 
-url_indicators = ['http://', 'https://', 'github.com', 'bloxstraplabs', 'raw.githubusercontent.com', 'img.shields.io']
+url_indicators = []
 
 patterns = [
-    (re.compile(r'\bBloxstrap\b'), 'Leotrap'),
-    (re.compile(r'\bbloxstrap\b'), 'leotrap'),
+    (re.compile(r'\bBloxstrap\b'), 'Leostrap'),
+    (re.compile(r'\bbloxstrap\b'), 'leostrap'),
+    (re.compile(r'\bLeostrap\b'), 'Leostrap'),
+    (re.compile(r'\bleostrap\b'), 'leostrap'),
+    (re.compile(r'Leostrap'), 'Leostrap'),
+    (re.compile(r'leostrap'), 'leostrap'),
 ]
 
 # additional simple replacements to catch punctuation-adjacent tokens
 extra_replaces = [
-    ('Leotrap-', 'Leotrap-'),
-    ('leotrap-', 'leotrap-'),
-    ('Leotrap.', 'Leotrap.'),
-    ('leotrap.', 'leotrap.'),
-    ('Leotrap/', 'Leotrap/'),
-    ('leotrap/', 'leotrap/'),
+    ('Leostrap-', 'Leostrap-'),
+    ('leostrap-', 'leostrap-'),
+    ('Leostrap.', 'Leostrap.'),
+    ('leostrap.', 'leostrap.'),
+    ('Leostrap/', 'Leostrap/'),
+    ('leostrap/', 'leostrap/'),
+    ('Leostrap-', 'Leostrap-'),
+    ('leostrap-', 'leostrap-'),
+    ('Leostrap.', 'Leostrap.'),
+    ('leostrap.', 'leostrap.'),
+    ('Leostrap/', 'Leostrap/'),
+    ('leostrap/', 'leostrap/'),
 ]
 
 changed_files = []

@@ -2,7 +2,7 @@
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace Leotrap.UI.ViewModels.Bootstrapper
+namespace Leostrap.UI.ViewModels.Bootstrapper
 {
     public class ClassicFluentDialogViewModel : BootstrapperDialogViewModel
     {

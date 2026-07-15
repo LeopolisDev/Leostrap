@@ -19,13 +19,13 @@ using System.Windows.Shell;
 
 using Microsoft.Win32;
 
-using Leotrap.AppData;
-using Leotrap.RobloxInterfaces;
-using Leotrap.UI.Elements.Bootstrapper.Base;
+using Leostrap.AppData;
+using Leostrap.RobloxInterfaces;
+using Leostrap.UI.Elements.Bootstrapper.Base;
 
 using ICSharpCode.SharpZipLib.Zip;
 
-namespace Leotrap
+namespace Leostrap
 {
     public class Bootstrapper
     {
@@ -74,9 +74,9 @@ namespace Leotrap
         public bool IsStudioLaunch => _launchMode != LaunchMode.Player;
 
         public string MutexName => $"{MutexNamePrefix}-{_launchMode}";
-        public string BackgroundUpdaterMutexName => $"Leotrap-BackgroundUpdater-{_launchMode}";
+        public string BackgroundUpdaterMutexName => $"Leostrap-BackgroundUpdater-{_launchMode}";
 
-        public string MutexNamePrefix { get; set; } = "Leotrap-Bootstrapper";
+        public string MutexNamePrefix { get; set; } = "Leostrap-Bootstrapper";
         public bool QuitIfMutexExists { get; set; } = false;
         #endregion
 
@@ -770,7 +770,7 @@ namespace Leotrap
             // i don't like this, but there isn't much better way of doing it /shrug
             if (Process.GetProcessesByName(App.ProjectName).Length > 1)
             {
-                App.Logger.WriteLine(LOG_IDENT, $"More than one Leotrap instance running, aborting update check");
+                App.Logger.WriteLine(LOG_IDENT, $"More than one Leostrap instance running, aborting update check");
                 return false;
             }
 
@@ -804,7 +804,7 @@ namespace Leotrap
             try
             {
 #if DEBUG_UPDATER
-                string downloadLocation = Path.Combine(Paths.TempUpdates, "Leotrap.exe");
+                string downloadLocation = Path.Combine(Paths.TempUpdates, "Leostrap.exe");
 
                 Directory.CreateDirectory(Paths.TempUpdates);
 
@@ -1562,7 +1562,7 @@ namespace Leotrap
 
                         Frontend.ShowConnectivityDialog(
                             Strings.Dialog_Connectivity_UnableToDownload,
-                            String.Format(Strings.Dialog_Connectivity_UnableToDownloadReason, "[https://bloxstraplabs.com/wiki/help/bloxstrap-cannot-download-roblox/](https://bloxstraplabs.com/wiki/help/bloxstrap-cannot-download-roblox/)"),
+                            String.Format(Strings.Dialog_Connectivity_UnableToDownloadReason, "[https://bloxstraplabs.com/wiki/help/leostrap-cannot-download-roblox/](https://bloxstraplabs.com/wiki/help/leostrap-cannot-download-roblox/)"),
                             MessageBoxImage.Error,
                             ex
                         );

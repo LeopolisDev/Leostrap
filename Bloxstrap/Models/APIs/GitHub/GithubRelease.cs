@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Models.APIs.GitHub
+﻿namespace Leostrap.Models.APIs.GitHub
 {
     public class GithubRelease
     {

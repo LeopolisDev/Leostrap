@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Media;
 using Wpf.Ui.Appearance;
 
-namespace Leotrap.UI.ViewModels.Bootstrapper
+namespace Leostrap.UI.ViewModels.Bootstrapper
 {
     public class FluentDialogViewModel : BootstrapperDialogViewModel
     {

@@ -1,9 +1,9 @@
 ﻿using System.Windows;
 
-using Leotrap.UI.Elements.Bootstrapper;
-using Leotrap.UI.Elements.Dialogs;
+using Leostrap.UI.Elements.Bootstrapper;
+using Leostrap.UI.Elements.Dialogs;
 
-namespace Leotrap.UI
+namespace Leostrap.UI
 {
     static class Frontend
     {
@@ -72,7 +72,7 @@ namespace Leotrap.UI
                 App.Logger.WriteException(LOG_IDENT, ex);
 
                 if (!App.LaunchSettings.QuietFlag.Active)
-                    ShowMessageBox(string.Format(Strings.CustomTheme_Errors_SetupFailed, ex.Message, "Leotrap"), MessageBoxImage.Error); // NOTE: Leotrap is the theme name
+                    ShowMessageBox(string.Format(Strings.CustomTheme_Errors_SetupFailed, ex.Message, "Leostrap"), MessageBoxImage.Error); // NOTE: Leostrap is the theme name
 
                 return GetBootstrapperDialog(BootstrapperStyle.FluentDialog);
             }

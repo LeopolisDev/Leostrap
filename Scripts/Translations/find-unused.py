@@ -1,6 +1,6 @@
 import re, glob
 
-directory = input("Enter project path (the one containing Leotrap.csproj): ")
+directory = input("Enter project path (the one containing Leostrap.csproj): ")
 
 existing = []
 found = []

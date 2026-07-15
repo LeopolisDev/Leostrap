@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Leotrap.Properties {
+namespace Leostrap.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

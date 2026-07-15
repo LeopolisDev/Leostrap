@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Models.Attributes
+﻿namespace Leostrap.Models.Attributes
 {
     [AttributeUsage(AttributeTargets.Assembly)]
     public class BuildMetadataAttribute : Attribute

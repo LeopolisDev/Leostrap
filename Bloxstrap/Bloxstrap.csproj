@@ -6,9 +6,9 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>True</UseWindowsForms>
-    <AssemblyName>Leotrap</AssemblyName>
-    <RootNamespace>Leotrap</RootNamespace>
-    <ApplicationIcon>Leotrap.ico</ApplicationIcon>
+    <AssemblyName>Leostrap</AssemblyName>
+    <RootNamespace>Leostrap</RootNamespace>
+    <ApplicationIcon>Leostrap.ico</ApplicationIcon>
     <Version>1.0</Version>
     <FileVersion>1.0</FileVersion>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -17,7 +17,7 @@
   </PropertyGroup>
     
   <ItemGroup>
-    <Resource Include="Leotrap.ico" />
+    <Resource Include="Leostrap.ico" />
     <Resource Include="Resources\Fonts\NotoSansThai-VariableFont_wdth,wght.ttf" />
     <Resource Include="Resources\Fonts\Rubik-VariableFont_wght.ttf" />
     <Resource Include="Resources\BootstrapperStyles\ByfronDialog\ByfronLogoDark.jpg" />
@@ -40,7 +40,7 @@
     <EmbeddedResource Include="Resources\Icon2017.ico" />
     <EmbeddedResource Include="Resources\Icon2019.ico" />
     <EmbeddedResource Include="Resources\Icon2022.ico" />
-    <EmbeddedResource Include="Resources\IconLeotrap.ico" />
+    <EmbeddedResource Include="Resources\IconLeostrap.ico" />
     <EmbeddedResource Include="Resources\IconEarly2015.ico" />
     <EmbeddedResource Include="Resources\IconLate2015.ico" />
     <EmbeddedResource Include="Resources\Mods\Cursor\From2006\ArrowCursor.png" />
@@ -74,7 +74,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AssemblyAttribute Include="Leotrap.Models.Attributes.BuildMetadataAttribute">
+    <AssemblyAttribute Include="Leostrap.Models.Attributes.BuildMetadataAttribute">
       <_Parameter1>$([System.DateTime]::UtcNow.ToString("s"))Z</_Parameter1>
       <_Parameter2>$(COMPUTERNAME)\$(USERNAME)</_Parameter2>
       <_Parameter3>$(CommitHash)</_Parameter3>

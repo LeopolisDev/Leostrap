@@ -6,9 +6,9 @@ using Windows.Win32;
 using Windows.Win32.Foundation;
 using Windows.Win32.UI.WindowsAndMessaging;
 
-using Leotrap.Integrations;
+using Leostrap.Integrations;
 
-namespace Leotrap.UI.Elements.ContextMenu
+namespace Leostrap.UI.Elements.ContextMenu
 {
     /// <summary>
     /// Interaction logic for NotifyIconMenu.xaml

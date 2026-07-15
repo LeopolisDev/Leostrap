@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Models.RobloxApi
+﻿namespace Leostrap.Models.RobloxApi
 {
     /// <summary>
     /// Roblox.Users.Api.GetUserResponse

@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Utility
+﻿namespace Leostrap.Utility
 {
     internal static class Http
     {

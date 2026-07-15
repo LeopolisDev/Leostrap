@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Exceptions
+﻿namespace Leostrap.Exceptions
 {
     public class InvalidChannelException : Exception
     {

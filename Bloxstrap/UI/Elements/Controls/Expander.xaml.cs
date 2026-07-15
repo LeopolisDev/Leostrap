@@ -15,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Wpf.Ui.Common;
 
-namespace Leotrap.UI.Elements.Controls
+namespace Leostrap.UI.Elements.Controls
 {
   /// <summary>
   /// Interaction logic for Expander.xaml

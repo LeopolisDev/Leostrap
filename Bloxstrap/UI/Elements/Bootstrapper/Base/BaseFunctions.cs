@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Leotrap.UI.Elements.Bootstrapper.Base
+namespace Leostrap.UI.Elements.Bootstrapper.Base
 {
     static class BaseFunctions
     {

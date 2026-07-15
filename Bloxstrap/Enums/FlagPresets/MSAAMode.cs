@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Enums.FlagPresets
+﻿namespace Leostrap.Enums.FlagPresets
 {
     public enum MSAAMode
     {

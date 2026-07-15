@@ -12,10 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-using Leotrap.Integrations;
-using Leotrap.UI.ViewModels.ContextMenu;
+using Leostrap.Integrations;
+using Leostrap.UI.ViewModels.ContextMenu;
 
-namespace Leotrap.UI.Elements.ContextMenu
+namespace Leostrap.UI.Elements.ContextMenu
 {
     /// <summary>
     /// Interaction logic for ServerInformation.xaml

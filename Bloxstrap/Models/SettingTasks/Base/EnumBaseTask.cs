@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Models.SettingTasks.Base
+﻿namespace Leostrap.Models.SettingTasks.Base
 {
     public abstract class EnumBaseTask<T> : BaseTask where T : struct, Enum
     {

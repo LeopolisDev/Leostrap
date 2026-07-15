@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using Microsoft.Win32;
 
-namespace Leotrap
+namespace Leostrap
 {
     internal class Installer
     {
@@ -83,7 +83,7 @@ namespace Leotrap
                 uninstallKey.SetValueSafe("URLUpdateInfo", App.ProjectDownloadLink);
             }
 
-            // only register player, for the scenario where the user installs leotrap, closes it,
+            // only register player, for the scenario where the user installs leostrap, closes it,
             // and then launches from the website expecting it to work
             // studio can be implicitly registered when it's first launched manually or if its configuration files are present
             WindowsRegistry.RegisterPlayer();
@@ -521,7 +521,7 @@ namespace Leotrap
                     }
 
                     string oldDesktopPath = Path.Combine(Paths.Desktop, "Play Roblox.lnk");
-                    string oldStartPath = Path.Combine(Paths.WindowsStartMenu, "Leotrap");
+                    string oldStartPath = Path.Combine(Paths.WindowsStartMenu, "Leostrap");
 
                     if (File.Exists(oldDesktopPath))
                         File.Move(oldDesktopPath, DesktopShortcut, true);
@@ -540,7 +540,7 @@ namespace Leotrap
                         Shortcut.Create(Paths.Application, "", StartMenuShortcut);
                     }
 
-                    Registry.CurrentUser.DeleteSubKeyTree("Software\\Leotrap", false);
+                    Registry.CurrentUser.DeleteSubKeyTree("Software\\Leostrap", false);
 
                     WindowsRegistry.RegisterPlayer();
                 }
@@ -630,7 +630,7 @@ namespace Leotrap
                         releaseNoteVersion = currentVer;
                     }
 
-                    Utilities.ShellExecute($"https://github.com/{App.ProjectRepository}/wiki/Release-notes-for-Bloxstrap-v{releaseNoteVersion}");
+                    Utilities.ShellExecute($"https://github.com/{App.ProjectRepository}/wiki/Release-notes-for-Leostrap-v{releaseNoteVersion}");
                 }
 #pragma warning restore CS0162 // Unreachable code detected
             }

@@ -9,10 +9,10 @@ using Windows.Win32.Foundation;
 
 using CommunityToolkit.Mvvm.Input;
 
-using Leotrap.Models.SettingTasks;
-using Leotrap.AppData;
+using Leostrap.Models.SettingTasks;
+using Leostrap.AppData;
 
-namespace Leotrap.UI.ViewModels.Settings
+namespace Leostrap.UI.ViewModels.Settings
 {
     public class ModsViewModel : NotifyPropertyChangedViewModel
     {

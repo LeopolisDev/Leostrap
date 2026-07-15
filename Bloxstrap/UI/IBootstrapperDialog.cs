@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using System.Windows.Shell;
 
-namespace Leotrap.UI
+namespace Leostrap.UI
 {
     public interface IBootstrapperDialog
     {

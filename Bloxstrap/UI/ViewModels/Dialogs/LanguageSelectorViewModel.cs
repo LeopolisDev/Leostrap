@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 using CommunityToolkit.Mvvm.Input;
 
-namespace Leotrap.UI.ViewModels.Dialogs
+namespace Leostrap.UI.ViewModels.Dialogs
 {
     internal class LanguageSelectorViewModel
     {

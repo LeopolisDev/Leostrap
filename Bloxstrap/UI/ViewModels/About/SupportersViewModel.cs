@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Leotrap.UI.ViewModels.About
+namespace Leostrap.UI.ViewModels.About
 {
     public class SupportersViewModel : NotifyPropertyChangedViewModel
     {

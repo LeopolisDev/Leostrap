@@ -1,9 +1,9 @@
 ﻿using System.Windows;
 using System.Windows.Input;
-using Leotrap.UI.Elements.About;
+using Leostrap.UI.Elements.About;
 using CommunityToolkit.Mvvm.Input;
 
-namespace Leotrap.UI.ViewModels.Settings
+namespace Leostrap.UI.ViewModels.Settings
 {
     public class MainWindowViewModel : NotifyPropertyChangedViewModel
     {

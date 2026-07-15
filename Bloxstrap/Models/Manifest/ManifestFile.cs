@@ -1,4 +1,4 @@
-﻿namespace Leotrap.Models.Manifest
+﻿namespace Leostrap.Models.Manifest
 {
     public class ManifestFile
     {

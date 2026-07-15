@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Leotrap.Models.SettingTasks
+namespace Leostrap.Models.SettingTasks
 {
     public class ExtractIconsTask : BoolBaseTask
     {
@@ -22,7 +22,7 @@ namespace Leotrap.Models.SettingTasks
 
                 foreach (string name in resourceNames)
                 {
-                    string path = Path.Combine(_path, name.Replace("Leotrap.Resources.", ""));
+                    string path = Path.Combine(_path, name.Replace("Leostrap.Resources.", ""));
                     var stream = assembly.GetManifestResourceStream(name)!;
 
                     using var memoryStream = new MemoryStream();

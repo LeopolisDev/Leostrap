@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Bootstrapper.AutoUpdateFailed" xml:space="preserve">
-    <value>Leotrap ei pystynyt automaattisesti päivittämään versioon {0}. Ole hyvä ja päivitä se manuaalisesti lataamalla ja suorittamalla sen verkkosivulta.</value>
+    <value>Leostrap ei pystynyt automaattisesti päivittämään versioon {0}. Ole hyvä ja päivitä se manuaalisesti lataamalla ja suorittamalla sen verkkosivulta.</value>
   </data>
   <data name="Bootstrapper.ConfirmLaunch" xml:space="preserve">
     <value>Roblox on tällä hetkellä käynnissä, ja toisen instanssin käynnistäminen tulee sulkemaan aiemman. Oletko varma, että haluat jatkaa?</value>
@@ -130,7 +130,7 @@
     <value>Yhteyttä ei voitu luoda, mikä todennäköisesti merkitsee huonoa internetyhteyttä tai palomuurin estoon. Jos yhteytesi on kunnossa, varmista, ettei virustentorjuntasi estä Bloxstrapia.</value>
   </data>
   <data name="Bootstrapper.FirstRunUninstall" xml:space="preserve">
-    <value>Sinun pitää asentaa Leotrap ennen poistamista.</value>
+    <value>Sinun pitää asentaa Leostrap ennen poistamista.</value>
   </data>
   <data name="Bootstrapper.NotEnoughSpace" xml:space="preserve">
     <value>Bloxstrapilla ei ole tarpeeksi levytilaa ladatakseen ja asentaakseen Robloxin. Vapauta levytilaa ja yritä uudelleen.</value>
@@ -158,7 +158,7 @@
     <value>Päivitetään {product}...</value>
   </data>
   <data name="Bootstrapper.Status.UpgradingBloxstrap" xml:space="preserve">
-    <value>Haetaan uusinta Leotrap-versiota...</value>
+    <value>Haetaan uusinta Leostrap-versiota...</value>
   </data>
   <data name="Bootstrapper.Status.WaitingOtherInstances" xml:space="preserve">
     <value>Odotetaan muita instansseja...</value>
@@ -172,7 +172,7 @@
     <comment>Text for style previews that use text button that says "Cancel"</comment>
   </data>
   <data name="Bootstrapper.SuccessfullyUninstalled" xml:space="preserve">
-    <value>Leotrap poistettiin onnistuneesti</value>
+    <value>Leostrap poistettiin onnistuneesti</value>
   </data>
   <data name="Bootstrapper.Uninstall.RobloxRunning" xml:space="preserve">
     <value>Roblox on tällä hetkellä käynnissä, mutta se pitää sulkea ennen Bloxstrapin poistamista. Haluatko sulkea Robloxin nyt?</value>
@@ -279,7 +279,7 @@ Klikkaa saadaksesi lisätietoja</value>
     <value>Yhteysvirhe</value>
   </data>
   <data name="Dialog.Connectivity.UnableToConnect" xml:space="preserve">
-    <value>Leotrap ei voi yhdistää kohteeseen {0}</value>
+    <value>Leostrap ei voi yhdistää kohteeseen {0}</value>
     <comment>{0} is the name of a service (i.e. Roblox, GitHub)</comment>
   </data>
   <data name="Dialog.Exception.CopyLogContents" xml:space="preserve">
@@ -294,7 +294,7 @@ Klikkaa saadaksesi lisätietoja</value>
 Jos se ei ole, ilmoita tästä poikkeuksesta [GitHub issue]({1}) yhdessä lokitiedoston kanssa.</value>
   </data>
   <data name="Dialog.Exception.Title" xml:space="preserve">
-    <value>Leotrap-poikkeus</value>
+    <value>Leostrap-poikkeus</value>
   </data>
   <data name="Common.Custom" xml:space="preserve">
     <value>Mukautettu</value>
@@ -309,10 +309,10 @@ Jos se ei ole, ilmoita tästä poikkeuksesta [GitHub issue]({1}) yhdessä lokiti
     <value>Feikki Byfron (2023)</value>
   </data>
   <data name="Enums.BootstrapperStyle.ClassicFluentDialog" xml:space="preserve">
-    <value>Leotrap (Klassinen)</value>
+    <value>Leostrap (Klassinen)</value>
   </data>
   <data name="Enums.BootstrapperStyle.FluentAeroDialog" xml:space="preserve">
-    <value>Leotrap (Lasi)</value>
+    <value>Leostrap (Lasi)</value>
   </data>
   <data name="Enums.BootstrapperStyle.LegacyDialog2008" xml:space="preserve">
     <value>Vanha (2008 - 2011)</value>
@@ -378,7 +378,7 @@ Jos se ei ole, ilmoita tästä poikkeuksesta [GitHub issue]({1}) yhdessä lokiti
     <value>Vaalea</value>
   </data>
   <data name="InstallChecker.Updated" xml:space="preserve">
-    <value>Leotrap on päivitetty versioon v{0}</value>
+    <value>Leostrap on päivitetty versioon v{0}</value>
   </data>
   <data name="InstallChecker.VersionDifferentThanInstalled" xml:space="preserve">
     <value>Bloxstrapin versio, jonka käynnistit, eroaa asennetusta versiosta.
@@ -437,7 +437,7 @@ Haluatko päivittää tällä hetkellä asennetun version?</value>
     <value>Huomioi, etteivät kaikki muutoksesi astu voimaan, kunnes suljet kaikki käynnissä olevat Roblox-instanssit.</value>
   </data>
   <data name="Menu.AlreadyRunning.Title" xml:space="preserve">
-    <value>Leotrap on jo käynnissä</value>
+    <value>Leostrap on jo käynnissä</value>
   </data>
   <data name="Menu.Appearance.Bootstrapper.Description" xml:space="preserve">
     <value>Voit saada sen näyttämään erilaiselta, retrolta, tai jopa juuri kuin Robloxilta.</value>
@@ -488,10 +488,10 @@ Haluatko päivittää tällä hetkellä asennetun version?</value>
     <value>Ulkonäkö</value>
   </data>
   <data name="Menu.Behaviour.AutoUpdate.Description" xml:space="preserve">
-    <value>Leotrap automaattisesti tarkistaa ja päivittää itsensä, kun Roblox avataan.</value>
+    <value>Leostrap automaattisesti tarkistaa ja päivittää itsensä, kun Roblox avataan.</value>
   </data>
   <data name="Menu.Behaviour.AutoUpdate.Title" xml:space="preserve">
-    <value>Päivitä Leotrap automaattisesti</value>
+    <value>Päivitä Leostrap automaattisesti</value>
   </data>
   <data name="Menu.Behaviour.ConfirmLaunches.Description" xml:space="preserve">
     <value>Estä valmiiksi käynnissä olevan pelin sulkemisen sen takia, että vahingossa käynnistit toisen.</value>
@@ -802,7 +802,7 @@ Vastaus 'Ei' ohittaa tämän varoituksen ja jatkaa asentamista.</value>
     <value>Taso 3 (Korkein)</value>
   </data>
   <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
-    <value>Leotrap ei voi ladata Robloxia</value>
+    <value>Leostrap ei voi ladata Robloxia</value>
   </data>
   <data name="Dialog.Connectivity.UnableToDownloadReason" xml:space="preserve">
     <value>Robloxia ei voi ladata tällä hetkellä. Ole hyvä ja lue seuraava ohjesivu saadaksesi lisätietoja: {0}</value>
@@ -823,7 +823,7 @@ Vastaus 'Ei' ohittaa tämän varoituksen ja jatkaa asentamista.</value>
     <value>Merkintä flagille '{0}' ei kelpaa, koska arvon pitää olla numero</value>
   </data>
   <data name="Logger.NoWriteMode" xml:space="preserve">
-    <value>Lokitiedostoa ei tulla kirjoittamaan tälle käynnistykselle, koska Leotrap ei voi kirjoittaa kansioon '{0}'</value>
+    <value>Lokitiedostoa ei tulla kirjoittamaan tälle käynnistykselle, koska Leostrap ei voi kirjoittaa kansioon '{0}'</value>
   </data>
   <data name="Common.Default" xml:space="preserve">
     <value>Oletus</value>
@@ -889,11 +889,11 @@ Tämä asennusprosessi tulee olemaan nopea ja yksinkertainen, ja voit konfiguroi
     <value>Käynnistysvalikon kuvake</value>
   </data>
   <data name="Installer.Completion.Text" xml:space="preserve">
-    <value>Leotrap asennettiin onnistuneesti.
+    <value>Leostrap asennettiin onnistuneesti.
 
 Roblox ei ole vielä asennettu, se tapahtuu vasta, kun käynnistät sen Bloxstrapin avulla ensimmäisen kerran. Kuitenkin ennen kuin teet näin, saattaisit tahtoa määrittää Bloxstrapin asetukset ensin.
 
-Muuten, vältä käyttämästä "Roblox Player" -pikakuvaketta käynnistääksesi Robloxin, koska Leotrap ei silloin käynnisty Robloxin mukana. Jos et näe Bloxstrapin ilmestyvän käynnistäessä pelin verkkosivustolta, käynnistä Roblox Bloxstrapin avulla työpöydältä kerran korjataksesi sen.
+Muuten, vältä käyttämästä "Roblox Player" -pikakuvaketta käynnistääksesi Robloxin, koska Leostrap ei silloin käynnisty Robloxin mukana. Jos et näe Bloxstrapin ilmestyvän käynnistäessä pelin verkkosivustolta, käynnistä Roblox Bloxstrapin avulla työpöydältä kerran korjataksesi sen.
 
 Mitä tahtoisit tehdä?</value>
   </data>
@@ -915,15 +915,15 @@ Mitä tahtoisit tehdä?</value>
   <data name="Uninstaller.Text" xml:space="preserve">
     <value>Poistaminen poistaa Bloxstrapin järjestelmästäsi ja määrittää automaattisesti Robloxin oletusasetukset, jos se on vielä asennettu.
 
-Poistoprosessi saattaa jättää joitain asioita jäljelle, joten voit joutua manuaalisesti siivoamaan jääneitä tiedostoja sieltä mistä Leotrap oli asennettu.
+Poistoprosessi saattaa jättää joitain asioita jäljelle, joten voit joutua manuaalisesti siivoamaan jääneitä tiedostoja sieltä mistä Leostrap oli asennettu.
 
-Leotrap asennettiin osoitteeseen "{1}".</value>
+Leostrap asennettiin osoitteeseen "{1}".</value>
   </data>
   <data name="Uninstaller.KeepData.Label" xml:space="preserve">
     <value>Säilytä asetukseni ja modini</value>
   </data>
   <data name="Uninstaller.KeepData.Description" xml:space="preserve">
-    <value>Ne pidetään siellä, missä Leotrap asennettiin ja palautetaan uudelleenasennuksen yhteydessä.</value>
+    <value>Ne pidetään siellä, missä Leostrap asennettiin ja palautetaan uudelleenasennuksen yhteydessä.</value>
   </data>
   <data name="Uninstaller.Uninstall" xml:space="preserve">
     <value>Poista asennus</value>
@@ -944,7 +944,7 @@ Leotrap asennettiin osoitteeseen "{1}".</value>
     <value>Sinulla ei tällä hetkellä ole WebView2-ajoympäristöä asennettuna. Jotkin Robloxin ominaisuudet, kuten työpöytäohjelma, eivät toimi ilman sitä. Haluaisitko ladata sen nyt?</value>
   </data>
   <data name="Dialog.CannotCreateShortcuts" xml:space="preserve">
-    <value>Leotrap ei pystynyt luomaan pikakuvakkeita työpöydälle ja aloitusvalikkoon. Yritä luoda ne myöhemmin asetuksista.</value>
+    <value>Leostrap ei pystynyt luomaan pikakuvakkeita työpöydälle ja aloitusvalikkoon. Yritä luoda ne myöhemmin asetuksista.</value>
   </data>
   <data name="Dialog.Exception.Info.2.Alt" xml:space="preserve">
     <value>Tarkista [Bloxstrapin wiki]({0}) ensin nähdäksesi, onko tämä ongelma jo korjattu.
@@ -956,7 +956,7 @@ Jos ei, ole hyvä ja raportoi tämä poikkeus tämän forkin ylläpitäjille. Ä
     <value>Nämä ovat yleisiä pikakuvakkeita, jotka tuovat esiin monivalintaisen käynnistysvalikon. Pikakuvakkeet tietyille toiminnoille voidaan luoda myöhemmin asetuksista.</value>
   </data>
   <data name="Menu.Shortcuts.Description" xml:space="preserve">
-    <value>Määritä, miten Leotrap voidaan käynnistää helposti.</value>
+    <value>Määritä, miten Leostrap voidaan käynnistää helposti.</value>
   </data>
   <data name="Menu.Shortcuts.General.Title" xml:space="preserve">
     <value>Yleinen</value>
@@ -999,14 +999,14 @@ Jos ei, ole hyvä ja raportoi tämä poikkeus tämän forkin ylläpitäjille. Ä
     <value>Sinulla on tallentamattomia muutoksia. Oletko varma, että tahdot sulkea tallentamatta?</value>
   </data>
   <data name="InstallChecker.VersionLessThanInstalled" xml:space="preserve">
-    <value>Käynnistämäsi Leotrap-versio on vanhempi kuin versio, joka sinulla on tällä hetkenä asennettuna.
+    <value>Käynnistämäsi Leostrap-versio on vanhempi kuin versio, joka sinulla on tällä hetkenä asennettuna.
 Ongelmia voi esiintyä ja asetuksesi saattavat muuttua. Uudelleenasennus on suositeltavaa.
 Oletko varma, että tahdot jatkaa?</value>
   </data>
   <data name="Dialog.PlayerError.FailedLaunch" xml:space="preserve">
     <value>Robloxin käynnistys epäonnistui.
 
-Tämä saattaa olla Leotrap-ongelma. Selvittääksesi, katso [tämä ohjesivu]({0}).</value>
+Tämä saattaa olla Leostrap-ongelma. Selvittääksesi, katso [tämä ohjesivu]({0}).</value>
   </data>
   <data name="Common.NetworkError" xml:space="preserve">
     <value>Dataa ei voitu ladata verkkovirheen vuoksi.</value>
@@ -1049,12 +1049,12 @@ Jokainen henkilö tässä on sijoitettu kokonaislahjoituksensa mukaisesti.</valu
     <value>Tänä käynnistyksenä Robloxin päivityksiä ei tarkisteta, eivätkä muutokset modeihin astu voimaan.</value>
   </data>
   <data name="Dialog.Connectivity.RobloxUpgradeNeeded" xml:space="preserve">
-    <value>Koska Roblox on asennettava tai päivitettävä, Leotrap ei voi jatkaa.</value>
+    <value>Koska Roblox on asennettava tai päivitettävä, Leostrap ei voi jatkaa.</value>
   </data>
   <data name="Installer.Install.CannotOverwrite" xml:space="preserve">
-    <value>Leotrap on asennettu tähän sijaintiin ennen ja on edelleen läsnä, mutta asennusohjelma ei voi korvata vanhaa ohjelmaa.
+    <value>Leostrap on asennettu tähän sijaintiin ennen ja on edelleen läsnä, mutta asennusohjelma ei voi korvata vanhaa ohjelmaa.
 
-Ole hyvä ja poista Leotrap.exe manuaalisesti asennussijainnista tai käynnistä järjestelmäsi uudelleen ja yritä sitten asentaa uudelleen.</value>
+Ole hyvä ja poista Leostrap.exe manuaalisesti asennussijainnista tai käynnistä järjestelmäsi uudelleen ja yritä sitten asentaa uudelleen.</value>
   </data>
   <data name="Common.NotAvailable" xml:space="preserve">
     <value>Ei saatavilla</value>
@@ -1087,7 +1087,7 @@ Ole hyvä ja poista Leotrap.exe manuaalisesti asennussijainnista tai käynnistä
     <value>Antaa sinun käyttää Bloxstrapin Roblox-ikonien valikoimaa pikakuvakkeissasi. [Katso, miten.]({0})</value>
   </data>
   <data name="Dialog.RegistryWriteError" xml:space="preserve">
-    <value>Leotrap ei pysty kirjoittamaan Windowsin rekisteriin. Antivirusohjelma todennäköisesti häiritsee ja aiheuttaa ongelmia. Ole hyvä ja tarkista, ettei ole mitään, joka rajoittaisi Bloxstrapin toimintaa.</value>
+    <value>Leostrap ei pysty kirjoittamaan Windowsin rekisteriin. Antivirusohjelma todennäköisesti häiritsee ja aiheuttaa ongelmia. Ole hyvä ja tarkista, ettei ole mitään, joka rajoittaisi Bloxstrapin toimintaa.</value>
   </data>
   <data name="About.Supporters.Monthly" xml:space="preserve">
     <value>Kuukausittainen</value>
@@ -1095,13 +1095,13 @@ Ole hyvä ja poista Leotrap.exe manuaalisesti asennussijainnista tai käynnistä
   <data name="About.Supporters.OneOff" xml:space="preserve">
     <value>Kertamaksu</value>
   </data>
-  <data name="Menu.Leotrap.Description" xml:space="preserve">
+  <data name="Menu.Leostrap.Description" xml:space="preserve">
     <value>Määritä Bloxstrapin käyttäytymiseen liittyviä asetuksia.</value>
   </data>
-  <data name="Menu.Leotrap.Analytics.Title" xml:space="preserve">
+  <data name="Menu.Leostrap.Analytics.Title" xml:space="preserve">
     <value>Ota analytiikan lähetys käyttöön</value>
   </data>
-  <data name="Menu.Leotrap.Analytics.Description" xml:space="preserve">
+  <data name="Menu.Leostrap.Analytics.Description" xml:space="preserve">
     <value>Se on anonyymiä eikä mitään pahaa, lupaamme. Lisätietoja siitä, mitä me keräämme ja miksi löytyy [yksityisyyskäytännöstämme]({0}).</value>
   </data>
   <data name="Common.Analytics" xml:space="preserve">
@@ -1145,9 +1145,9 @@ Haluaisitko ottaa testaustilan käyttöön?</value>
     <value>Mukautettu</value>
   </data>
   <data name="Bootstrapper.FilesInUse" xml:space="preserve">
-    <value>Leotrap yritti päivittää Robloxin, mutta ei voi, koska Robloxin tiedostot ovat vielä käytössä.
+    <value>Leostrap yritti päivittää Robloxin, mutta ei voi, koska Robloxin tiedostot ovat vielä käytössä.
 
-Sulje kaikki sovellukset, jotka saattavat käyttää Robloxin tiedostoja, ja käynnistä Leotrap sitten uudelleen.</value>
+Sulje kaikki sovellukset, jotka saattavat käyttää Robloxin tiedostoja, ja käynnistä Leostrap sitten uudelleen.</value>
     <comment>This is *not* for when Roblox is still running when trying to upgrade. This applies to files being open (i.e. image assets)</comment>
   </data>
   <data name="FileTypes.ZipArchive" xml:space="preserve">
@@ -1156,19 +1156,19 @@ Sulje kaikki sovellukset, jotka saattavat käyttää Robloxin tiedostoja, ja kä
   </data>
   <data name="Common.Export" xml:space="preserve">
     <value>Vie</value>
-    <comment>Currently used under the "Leotrap" settings tab for the button to export diagnostic data</comment>
+    <comment>Currently used under the "Leostrap" settings tab for the button to export diagnostic data</comment>
   </data>
-  <data name="Menu.Leotrap.ExportData.Title" xml:space="preserve">
+  <data name="Menu.Leostrap.ExportData.Title" xml:space="preserve">
     <value>Vie diagnostiikkadata</value>
   </data>
-  <data name="Menu.Leotrap.ExportData.Description" xml:space="preserve">
+  <data name="Menu.Leostrap.ExportData.Description" xml:space="preserve">
     <value>Kerää tietoja, joita voi ladata verkkoon kokemasi ongelman vianmäärityksen takia.</value>
   </data>
-  <data name="Menu.Leotrap.ExportData.ExportConfig" xml:space="preserve">
+  <data name="Menu.Leostrap.ExportData.ExportConfig" xml:space="preserve">
     <value>Bloxstrapin konfiguraatio</value>
     <comment>Label that appears next to a checkbox</comment>
   </data>
-  <data name="Menu.Leotrap.ExportData.ExportLogs" xml:space="preserve">
+  <data name="Menu.Leostrap.ExportData.ExportLogs" xml:space="preserve">
     <value>Kaikki Bloxstrapin lokit</value>
     <comment>Label that appears next to a checkbox</comment>
   </data>
@@ -1353,7 +1353,7 @@ Sulje kaikki sovellukset, jotka saattavat käyttää Robloxin tiedostoja, ja kä
   <data name="CustomTheme.Errors.SetupFailed" xml:space="preserve">
     <value>Mukautetun käynnistysohjelman asettaminen epäonnistui: {0}.
 Palataan oletukseen {1}.</value>
-    <comment>{0} is the error reason, {1} is the theme name (e.g. Leotrap (Classic))</comment>
+    <comment>{0} is the error reason, {1} is the theme name (e.g. Leostrap (Classic))</comment>
   </data>
   <data name="Menu.Appearance.CustomThemes.NoneSelected" xml:space="preserve">
     <value>Mukautettua teemaa ei ole valittu.</value>
@@ -1399,7 +1399,7 @@ Palataan oletukseen {1}.</value>
     <value>Sammutetaan {product}</value>
   </data>
   <data name="LaunchMenu.BloxstrapWiki" xml:space="preserve">
-    <value>Leotrap Wiki</value>
+    <value>Leostrap Wiki</value>
   </data>
   <data name="LaunchMenu.RobloxCommunity" xml:space="preserve">
     <value>Roblox-yhteisö</value>
