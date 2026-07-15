@@ -7,7 +7,7 @@ namespace Leotrap.UI.ViewModels.Bootstrapper
     public class ByfronDialogViewModel : BootstrapperDialogViewModel
     {
         // Using dark theme for default values.
-        public ImageSource ByfronLogoLocation { get; set; } = new BitmapImage(new Uri("pack://application:,,,/Resources/BootstrapperStyles/ByfronDialog/ByfronLogoDark.jpg"));
+        public ImageSource ByfronLogoLocation { get; set; } = new BitmapImage(new Uri("pack://application:,,,/Resources/IconLeotrap.ico"));
         public Thickness DialogBorder { get; set; } = new Thickness(0);
         public Brush Background { get; set; } = Brushes.Black;
         public Brush Foreground { get; set; } = new SolidColorBrush(Color.FromRgb(239, 239, 239));
