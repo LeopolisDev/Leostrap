@@ -53,7 +53,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 RenderOptions.BitmapScalingMode="HighQuality"
-                Source="{Binding Icon, Mode=OneWay}" />
+                Source="pack://application:,,,/Leostrap.ico" />
 
             <TextBlock
                 Grid.Row="1"
