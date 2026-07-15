@@ -1,4 +1,4 @@
-﻿<ui:UiPage x:Class="Leotrap.UI.Elements.Installer.Pages.CompletionPage"
+<ui:UiPage x:Class="Leotrap.UI.Elements.Installer.Pages.CompletionPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -30,3 +30,4 @@
         </ui:CardAction>
     </StackPanel>
 </ui:UiPage>
+
