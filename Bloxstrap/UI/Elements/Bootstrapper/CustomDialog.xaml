@@ -17,6 +17,7 @@
     Background="{ui:ThemeResource ApplicationBackgroundBrush}"
     ExtendsContentIntoTitleBar="True"
     ResizeMode="NoResize"
+    Icon="pack://application:,,,/Leotrap.ico"
     WindowBackdropType="Disable"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">

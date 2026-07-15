@@ -8,6 +8,7 @@
         Height="400"
         ResizeMode="NoResize"
         WindowStyle="None"
+        Icon="pack://application:,,,/Leotrap.ico"
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Background="Transparent"

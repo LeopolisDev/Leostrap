@@ -17,6 +17,7 @@
     Closing="UiWindow_Closing"
     ExtendsContentIntoTitleBar="True"
     ResizeMode="NoResize"
+    Icon="pack://application:,,,/Leotrap.ico"
     WindowBackdropType="{Binding Path=WindowBackdropType, Mode=OneTime}"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
