@@ -38,7 +38,7 @@
 				"FontFamily": "FontFamily"
 			}
 		},
-		"BloxstrapCustomBootstrapper": {
+		"LeotrapCustomBootstrapper": {
 			"SuperClass": "Control",
 			"IsCreatable": true,
 			"Attributes": {

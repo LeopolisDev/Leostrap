@@ -1,12 +1,12 @@
 > [!CAUTION]
-> The only official places to download Bloxstrap are this GitHub repository and [bloxstraplabs.com](https://bloxstraplabs.com). Any other websites offering downloads or claiming to be us are not owned by us.
+> The only official places to download Leotrap are this GitHub repository and [leotrap.com](https://leotrap.com). Any other websites offering downloads or claiming to be us are not owned by us.
 
 > [!IMPORTANT]
 > Leotrap is not under active development anymore. Any issues or pull requests opened may take a while to get a response.
 
 <p align="center">
-    <img src="https://github.com/bloxstraplabs/bloxstrap/raw/main/Images/Bloxstrap-full-dark.png#gh-dark-mode-only" width="380">
-    <img src="https://github.com/bloxstraplabs/bloxstrap/raw/main/Images/Bloxstrap-full-light.png#gh-light-mode-only" width="380">
+    <img src="https://github.com/leotrap/leotrap/raw/main/Images/Leotrap-full-dark.png#gh-dark-mode-only" width="380">
+    <img src="https://github.com/leotrap/leotrap/raw/main/Images/Leotrap-full-light.png#gh-light-mode-only" width="380">
 </p>
 
 <div align="center">
@@ -25,7 +25,7 @@
 
 Leotrap is a third-party replacement for the standard Roblox bootstrapper, providing additional useful features and improvements.
 
-Running into a problem or need help with something? [Check out the Wiki](https://bloxstraplabs.com/wiki). If you can't find anything, or would like to suggest something, please [submit an issue](https://github.com/bloxstraplabs/bloxstrap/issues).
+Running into a problem or need help with something? [Check out the Wiki](https://leotrap.com/wiki). If you can't find anything, or would like to suggest something, please [submit an issue](https://github.com/leotrap/leotrap/issues).
 
 Leotrap is only supported for PCs running Windows.
 
@@ -46,7 +46,7 @@ Leotrap is only supported for PCs running Windows.
 - Ability to configure graphics fidelity and UI experience
 
 ## Installing
-Download the [latest release of Bloxstrap](https://github.com/bloxstraplabs/bloxstrap/releases/latest), and run it. Configure your preferences if needed, and install. That's about it!
+Download the [latest release of Leotrap](https://github.com/leotrap/leotrap/releases/latest), and run it. Configure your preferences if needed, and install. That's about it!
 
 Alternatively, you can install Bloxstrap via [Winget](https://winstall.app/apps/pizzaboxer.Bloxstrap) by running this in a Command Prompt window:
 ```

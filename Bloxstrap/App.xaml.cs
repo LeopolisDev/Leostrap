@@ -19,10 +19,10 @@ namespace Leotrap
         public const string ProjectName = "Leotrap";
 #endif
         public const string ProjectOwner = "Leotrap";
-        public const string ProjectRepository = "bloxstraplabs/bloxstrap";
-        public const string ProjectDownloadLink = "https://bloxstraplabs.com";
-        public const string ProjectHelpLink = "https://bloxstraplabs.com/wiki/help/";
-        public const string ProjectSupportLink = "https://github.com/bloxstraplabs/bloxstrap/issues/new";
+        public const string ProjectRepository = "leotrap/leotrap";
+        public const string ProjectDownloadLink = "https://leotrap.com";
+        public const string ProjectHelpLink = "https://leotrap.com/wiki/help/";
+        public const string ProjectSupportLink = "https://github.com/leotrap/leotrap/issues/new";
 
         public const string RobloxPlayerAppName = "RobloxPlayerBeta";
         public const string RobloxStudioAppName = "RobloxStudioBeta";
@@ -148,10 +148,10 @@ namespace Leotrap
         {
             // dont let user switch web environment if debug mode is not on
             if (Settings.Prop.WebEnvironment == WebEnvironment.Production || !Settings.Prop.DeveloperMode)
-                return "services.bloxstraplabs.com";
+                return "services.leotrap.com";
 
             string? sub = Settings.Prop.WebEnvironment.GetDescription();
-            return $"services-{sub}.bloxstraplabs.com";
+                return $"services-{sub}.leotrap.com";
         }
 
         public static bool CanSendLogs()
