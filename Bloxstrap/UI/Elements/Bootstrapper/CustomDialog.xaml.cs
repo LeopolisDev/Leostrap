@@ -1,10 +1,10 @@
-﻿using Bloxstrap.UI.Elements.Bootstrapper.Base;
-using Bloxstrap.UI.ViewModels.Bootstrapper;
+﻿using Leotrap.UI.Elements.Bootstrapper.Base;
+using Leotrap.UI.ViewModels.Bootstrapper;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Windows.Shell;
 
-namespace Bloxstrap.UI.Elements.Bootstrapper
+namespace Leotrap.UI.Elements.Bootstrapper
 {
     /// <summary>
     /// Interaction logic for CustomDialog.xaml
@@ -13,7 +13,7 @@ namespace Bloxstrap.UI.Elements.Bootstrapper
     {
         private readonly BootstrapperDialogViewModel _viewModel;
 
-        public Bloxstrap.Bootstrapper? Bootstrapper { get; set; }
+        public Leotrap.Bootstrapper? Bootstrapper { get; set; }
 
         private bool _isClosing;
 

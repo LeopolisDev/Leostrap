@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Bloxstrap.UI.ViewModels.About
+namespace Leotrap.UI.ViewModels.About
 {
     public class SupportersViewModel : NotifyPropertyChangedViewModel
     {

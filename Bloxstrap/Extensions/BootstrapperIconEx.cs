@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace Bloxstrap.Extensions
+namespace Leotrap.Extensions
 {
     static class BootstrapperIconEx
     {

@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.AppData
+﻿namespace Leotrap.AppData
 {
     public class RobloxStudioData : CommonAppData, IAppData
     {

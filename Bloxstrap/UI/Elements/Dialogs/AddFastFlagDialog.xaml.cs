@@ -1,8 +1,8 @@
 ﻿using Microsoft.Win32;
 using System.Windows;
-using Bloxstrap.Resources;
+using Leotrap.Resources;
 
-namespace Bloxstrap.UI.Elements.Dialogs
+namespace Leotrap.UI.Elements.Dialogs
 {
     /// <summary>
     /// Interaction logic for AddFastFlagDialog.xaml

@@ -9,10 +9,10 @@ using Windows.Win32.Foundation;
 
 using CommunityToolkit.Mvvm.Input;
 
-using Bloxstrap.Models.SettingTasks;
-using Bloxstrap.AppData;
+using Leotrap.Models.SettingTasks;
+using Leotrap.AppData;
 
-namespace Bloxstrap.UI.ViewModels.Settings
+namespace Leotrap.UI.ViewModels.Settings
 {
     public class ModsViewModel : NotifyPropertyChangedViewModel
     {

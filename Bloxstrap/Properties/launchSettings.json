@@ -1,33 +1,33 @@
 {
   "profiles": {
-    "Bloxstrap (Launch)": {
+    "Leotrap (Launch)": {
       "commandName": "Project"
     },
-    "Bloxstrap (Quiet Launch)": {
+    "Leotrap (Quiet Launch)": {
       "commandName": "Project",
       "commandLineArgs": "-quiet"
     },
-    "Bloxstrap (Uninstall)": {
+    "Leotrap (Uninstall)": {
       "commandName": "Project",
       "commandLineArgs": "-uninstall"
     },
-    "Bloxstrap (Quiet Uninstall)": {
+    "Leotrap (Quiet Uninstall)": {
       "commandName": "Project",
       "commandLineArgs": "-uninstall -quiet"
     },
-    "Bloxstrap (Menu)": {
+    "Leotrap (Menu)": {
       "commandName": "Project",
       "commandLineArgs": "-menu"
     },
-    "Bloxstrap (Deeplink)": {
+    "Leotrap (Deeplink)": {
       "commandName": "Project",
       "commandLineArgs": "-player \"roblox://experiences/start?placeId=13700835620\""
     },
-    "Bloxstrap (Studio Launch)": {
+    "Leotrap (Studio Launch)": {
       "commandName": "Project",
       "commandLineArgs": "-studio"
     },
-    "Bloxstrap (Watcher)": {
+    "Leotrap (Watcher)": {
       "commandName": "Project",
       "commandLineArgs": "-watcher"
     }

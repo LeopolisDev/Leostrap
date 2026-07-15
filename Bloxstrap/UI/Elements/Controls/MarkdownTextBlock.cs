@@ -1,4 +1,4 @@
-﻿using Bloxstrap.UI.ViewModels;
+﻿using Leotrap.UI.ViewModels;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Markup;
@@ -8,7 +8,7 @@ using Markdig.Syntax.Inlines;
 using Markdig;
 using System.Windows.Media;
 
-namespace Bloxstrap.UI.Elements.Controls
+namespace Leotrap.UI.Elements.Controls
 {
     /// <summary>
     /// TextBlock with markdown support.

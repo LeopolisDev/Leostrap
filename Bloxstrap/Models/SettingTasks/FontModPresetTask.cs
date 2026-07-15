@@ -1,6 +1,6 @@
-﻿using Bloxstrap.Models.SettingTasks.Base;
+﻿using Leotrap.Models.SettingTasks.Base;
 
-namespace Bloxstrap.Models.SettingTasks
+namespace Leotrap.Models.SettingTasks
 {
     public class FontModPresetTask : StringBaseTask
     {

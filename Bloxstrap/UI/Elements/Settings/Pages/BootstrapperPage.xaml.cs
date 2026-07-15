@@ -13,9 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using Bloxstrap.UI.ViewModels.Settings;
+using Leotrap.UI.ViewModels.Settings;
 
-namespace Bloxstrap.UI.Elements.Settings.Pages
+namespace Leotrap.UI.Elements.Settings.Pages
 {
     /// <summary>
     /// Interaction logic for BehaviourPage.xaml

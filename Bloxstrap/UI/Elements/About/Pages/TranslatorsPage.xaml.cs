@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.UI.Elements.About.Pages
+﻿namespace Leotrap.UI.Elements.About.Pages
 {
     /// <summary>
     /// Interaction logic for TranslatorsPage.xaml

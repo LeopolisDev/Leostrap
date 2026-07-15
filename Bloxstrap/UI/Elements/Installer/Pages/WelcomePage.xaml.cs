@@ -1,7 +1,7 @@
 ﻿using System.Windows;
-using Bloxstrap.UI.ViewModels.Installer;
+using Leotrap.UI.ViewModels.Installer;
 
-namespace Bloxstrap.UI.Elements.Installer.Pages
+namespace Leotrap.UI.Elements.Installer.Pages
 {
     /// <summary>
     /// Interaction logic for WelcomePage.xaml

@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap
+﻿namespace Leotrap
 {
     public static class GlobalCache
     {

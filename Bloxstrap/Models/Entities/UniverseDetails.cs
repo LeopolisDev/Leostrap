@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Models.Entities
+﻿namespace Leotrap.Models.Entities
 {
     /// <summary>
     /// Explicit loading. Load from cache before and after a fetch.

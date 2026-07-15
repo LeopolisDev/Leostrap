@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Bloxstrap
+namespace Leotrap
 {
     internal static class Locale
     {

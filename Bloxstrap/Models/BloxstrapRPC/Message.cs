@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Models.BloxstrapRPC;
+﻿namespace Leotrap.Models.BloxstrapRPC;
 
 public class Message
 {

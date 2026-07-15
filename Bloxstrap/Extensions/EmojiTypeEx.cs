@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Extensions
+﻿namespace Leotrap.Extensions
 {
     static class EmojiTypeEx
     {

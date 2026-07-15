@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Forms;
 
-namespace Bloxstrap.UI.Utility
+namespace Leotrap.UI.Utility
 {
     public static class WindowScaling
     {

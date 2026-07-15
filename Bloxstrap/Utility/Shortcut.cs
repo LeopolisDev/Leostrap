@@ -1,7 +1,7 @@
 ﻿using System.Windows;
-using Bloxstrap.Resources;
+using Leotrap.Resources;
 
-namespace Bloxstrap.Utility
+namespace Leotrap.Utility
 {
     internal static class Shortcut
     {

@@ -2,7 +2,7 @@
 > The only official places to download Bloxstrap are this GitHub repository and [bloxstraplabs.com](https://bloxstraplabs.com). Any other websites offering downloads or claiming to be us are not owned by us.
 
 > [!IMPORTANT]
-> Bloxstrap is not under active development anymore. Any issues or pull requests opened may take a while to get a response.
+> Leotrap is not under active development anymore. Any issues or pull requests opened may take a while to get a response.
 
 <p align="center">
     <img src="https://github.com/bloxstraplabs/bloxstrap/raw/main/Images/Bloxstrap-full-dark.png#gh-dark-mode-only" width="380">
@@ -23,11 +23,11 @@
 
 ----
 
-Bloxstrap is a third-party replacement for the standard Roblox bootstrapper, providing additional useful features and improvements.
+Leotrap is a third-party replacement for the standard Roblox bootstrapper, providing additional useful features and improvements.
 
 Running into a problem or need help with something? [Check out the Wiki](https://bloxstraplabs.com/wiki). If you can't find anything, or would like to suggest something, please [submit an issue](https://github.com/bloxstraplabs/bloxstrap/issues).
 
-Bloxstrap is only supported for PCs running Windows.
+Leotrap is only supported for PCs running Windows.
 
 ## Frequently Asked Questions
 
@@ -50,14 +50,14 @@ Download the [latest release of Bloxstrap](https://github.com/bloxstraplabs/blox
 
 Alternatively, you can install Bloxstrap via [Winget](https://winstall.app/apps/pizzaboxer.Bloxstrap) by running this in a Command Prompt window:
 ```
-> winget install bloxstrap
+> winget install leotrap
 ```
 
 You will also need the [.NET 6 Desktop Runtime](https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=win11-x64&apphost_version=6.0.36&gui=true). If you don't already have it installed, you'll be prompted to install it anyway. Be sure to install Bloxstrap after you've installed this.
 
-It's not unlikely that Windows Smartscreen will show a popup when you run Bloxstrap for the first time. This happens because it's an unknown program, not because it's actually detected as being malicious. To dismiss it, just click on "More info" and then "Run anyway".
+It's not unlikely that Windows Smartscreen will show a popup when you run Leotrap for the first time. This happens because it's an unknown program, not because it's actually detected as being malicious. To dismiss it, just click on "More info" and then "Run anyway".
 
-Once installed, Bloxstrap is added to your Start Menu, where you can access the menu and reconfigure your preferences if needed.
+Once installed, Leotrap is added to your Start Menu, where you can access the menu and reconfigure your preferences if needed.
 
 ## Code
 

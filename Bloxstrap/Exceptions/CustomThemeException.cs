@@ -1,11 +1,11 @@
-﻿using Bloxstrap.Extensions;
+﻿using Leotrap.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bloxstrap.Exceptions
+namespace Leotrap.Exceptions
 {
     internal class CustomThemeException : Exception
     {

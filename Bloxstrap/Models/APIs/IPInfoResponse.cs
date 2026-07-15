@@ -1,4 +1,4 @@
-namespace Bloxstrap.Models.APIs
+namespace Leotrap.Models.APIs
 {
     public class IPInfoResponse
     {

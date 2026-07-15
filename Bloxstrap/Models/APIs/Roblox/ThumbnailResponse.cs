@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Models.APIs.Roblox
+﻿namespace Leotrap.Models.APIs.Roblox
 {
     /// <summary>
     /// Roblox.Web.Responses.Thumbnails.ThumbnailResponse

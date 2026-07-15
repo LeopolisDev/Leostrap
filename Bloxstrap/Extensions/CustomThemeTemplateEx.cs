@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Bloxstrap.Extensions
+namespace Leotrap.Extensions
 {
     static class CustomThemeTemplateEx
     {

@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap
+﻿namespace Leotrap
 {
     public class JsonManager<T> where T : class, new()
     {

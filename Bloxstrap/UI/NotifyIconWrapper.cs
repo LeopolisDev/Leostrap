@@ -1,8 +1,8 @@
-﻿using Bloxstrap.Integrations;
-using Bloxstrap.UI.Elements.About;
-using Bloxstrap.UI.Elements.ContextMenu;
+﻿using Leotrap.Integrations;
+using Leotrap.UI.Elements.About;
+using Leotrap.UI.Elements.ContextMenu;
 
-namespace Bloxstrap.UI
+namespace Leotrap.UI
 {
     public class NotifyIconWrapper : IDisposable
     {

@@ -1,4 +1,4 @@
-﻿using Bloxstrap.Enums;
+﻿using Leotrap.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Windows;
 
-namespace Bloxstrap
+namespace Leotrap
 {
     public class LaunchSettings
     {

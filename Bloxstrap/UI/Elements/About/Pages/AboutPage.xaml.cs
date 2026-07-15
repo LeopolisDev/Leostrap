@@ -1,9 +1,9 @@
-﻿using Bloxstrap.UI.ViewModels.About;
+﻿using Leotrap.UI.ViewModels.About;
 
 using System.Windows.Input;
 using System.Windows.Media.Animation;
 
-namespace Bloxstrap.UI.Elements.About.Pages
+namespace Leotrap.UI.Elements.About.Pages
 {
     /// <summary>
     /// Interaction logic for AboutPage.xaml

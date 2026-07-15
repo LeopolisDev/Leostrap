@@ -5,7 +5,7 @@ body:
     attributes:
       value: |
         > [!IMPORTANT]
-        > Bloxstrap isn't actively maintained anymore. We might not get to your report unless it may be important (like if it's about a feature breaking). Sorry about that.
+        > Leotrap isn't actively maintained anymore. We might not get to your report unless it may be important (like if it's about a feature breaking). Sorry about that.
         > If your problem keeps happening, it can typically be fixed by [reinstalling](https://bloxstraplabs.com/wiki/help/uninstalling-bloxstrap/).
         ### **Instructions**
         - Before you open this report, please [check the Wiki first](https://bloxstraplabs.com/wiki/help). Most common problems will be addressed here.
@@ -20,13 +20,13 @@ body:
       options:
         - label: I have read the instructions, and I didn't find a solution in any of the links above.
           required: true
-        - label: I am using the latest version of Bloxstrap.
+        - label: I am using the latest version of Leotrap.
           required: true
   - type: input
     id: version
     attributes:
-      label: Bloxstrap Version
-      description: "What version of Bloxstrap are you using? Find it in the 'About' section of the Settings"
+      label: Leotrap Version
+      description: "What version of Leotrap are you using? Find it in the 'About' section of the Settings"
       placeholder: "v1.0.0 (for example)"
     validations:
       required: true
@@ -50,7 +50,7 @@ body:
   - type: textarea
     id: log
     attributes:
-      label: Bloxstrap Log
-      description: If you're getting a 'Bloxstrap Exception' error, upload your log file here. Open it, then select all (Ctrl+A), then copy and paste here. Otherwise, leave it empty.
+      label: Leotrap Log
+      description: If you're getting a 'Leotrap Exception' error, upload your log file here. Open it, then select all (Ctrl+A), then copy and paste here. Otherwise, leave it empty.
       value: "N/A"
       render: text

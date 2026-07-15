@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.RobloxInterfaces
+﻿namespace Leotrap.RobloxInterfaces
 {
     public static class Deployment
     {

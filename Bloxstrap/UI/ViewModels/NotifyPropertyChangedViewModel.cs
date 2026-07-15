@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Bloxstrap.UI.ViewModels
+namespace Leotrap.UI.ViewModels
 {
     public class NotifyPropertyChangedViewModel : INotifyPropertyChanged
     {

@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Models
+﻿namespace Leotrap.Models
 {
     internal class ThumbnailCacheEntry
     {

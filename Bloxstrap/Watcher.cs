@@ -1,8 +1,8 @@
-﻿using Bloxstrap.AppData;
-using Bloxstrap.Integrations;
-using Bloxstrap.Models;
+﻿using Leotrap.AppData;
+using Leotrap.Integrations;
+using Leotrap.Models;
 
-namespace Bloxstrap
+namespace Leotrap
 {
     public class Watcher : IDisposable
     {

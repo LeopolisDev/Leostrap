@@ -72,7 +72,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AssemblyAttribute Include="Bloxstrap.Models.Attributes.BuildMetadataAttribute">
+    <AssemblyAttribute Include="Leotrap.Models.Attributes.BuildMetadataAttribute">
       <_Parameter1>$([System.DateTime]::UtcNow.ToString("s"))Z</_Parameter1>
       <_Parameter2>$(COMPUTERNAME)\$(USERNAME)</_Parameter2>
       <_Parameter3>$(CommitHash)</_Parameter3>

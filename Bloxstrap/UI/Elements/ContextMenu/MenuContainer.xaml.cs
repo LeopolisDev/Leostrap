@@ -6,9 +6,9 @@ using Windows.Win32;
 using Windows.Win32.Foundation;
 using Windows.Win32.UI.WindowsAndMessaging;
 
-using Bloxstrap.Integrations;
+using Leotrap.Integrations;
 
-namespace Bloxstrap.UI.Elements.ContextMenu
+namespace Leotrap.UI.Elements.ContextMenu
 {
     /// <summary>
     /// Interaction logic for NotifyIconMenu.xaml

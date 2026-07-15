@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Models.APIs.Config
+﻿namespace Leotrap.Models.APIs.Config
 {
     public class Supporter
     {

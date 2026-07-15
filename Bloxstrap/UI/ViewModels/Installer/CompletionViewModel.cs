@@ -2,11 +2,11 @@
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 
-using Bloxstrap.Resources;
+using Leotrap.Resources;
 
 using Microsoft.Win32;
 
-namespace Bloxstrap.UI.ViewModels.Installer
+namespace Leotrap.UI.ViewModels.Installer
 {
     public class CompletionViewModel
     {

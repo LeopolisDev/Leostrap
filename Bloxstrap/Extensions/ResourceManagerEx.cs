@@ -1,6 +1,6 @@
 ﻿using System.Resources;
 
-namespace Bloxstrap.Extensions
+namespace Leotrap.Extensions
 {
     static class ResourceManagerEx
     {

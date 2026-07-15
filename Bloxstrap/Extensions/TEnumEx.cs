@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Reflection;
 
-namespace Bloxstrap.Extensions
+namespace Leotrap.Extensions
 {
     internal static class TEnumEx
     {

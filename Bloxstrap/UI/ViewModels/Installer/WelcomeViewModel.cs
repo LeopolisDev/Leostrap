@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.UI.ViewModels.Installer
+﻿namespace Leotrap.UI.ViewModels.Installer
 {
     public class WelcomeViewModel : NotifyPropertyChangedViewModel
     {

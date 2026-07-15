@@ -1,4 +1,4 @@
-﻿using Bloxstrap.UI.Elements.Bootstrapper;
+﻿using Leotrap.UI.Elements.Bootstrapper;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace Bloxstrap.UI.ViewModels.Editor
+namespace Leotrap.UI.ViewModels.Editor
 {
     public class BootstrapperEditorWindowViewModel : NotifyPropertyChangedViewModel
     {
