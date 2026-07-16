@@ -9,8 +9,8 @@
     <AssemblyName>Leostrap</AssemblyName>
     <RootNamespace>Leostrap</RootNamespace>
     <ApplicationIcon>Leostrap.ico</ApplicationIcon>
-    <Version>1.2.2</Version>
-    <FileVersion>1.2.2</FileVersion>
+    <Version>1.3.0</Version>
+    <FileVersion>1.3.0</FileVersion>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
