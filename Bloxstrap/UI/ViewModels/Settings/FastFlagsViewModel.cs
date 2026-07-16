@@ -45,6 +45,12 @@ namespace Leostrap.UI.ViewModels.Settings
             set => App.FastFlags.SetPreset("Rendering.UncapFps", value ? "9999" : null);
         }
 
+        public bool GraySky
+        {
+            get => App.FastFlags.GetPreset("Rendering.GraySky") == "True";
+            set => App.FastFlags.SetPreset("Rendering.GraySky", value ? "True" : null);
+        }
+
         public IReadOnlyDictionary<TextureQuality, string?> TextureQualities => FastFlagManager.TextureQualityLevels;
 
         public TextureQuality SelectedTextureQuality

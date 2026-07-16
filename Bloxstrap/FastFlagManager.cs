@@ -21,6 +21,7 @@ namespace Leostrap
             { "Rendering.ManualFullscreen", "FFlagHandleAltEnterFullscreenManually" },
             { "Rendering.DisableScaling", "DFFlagDisableDPIScale" },
             { "Rendering.UncapFps", "DFIntTaskSchedulerTargetFps" },
+            { "Rendering.GraySky", "FFlagDebugSkyGray" },
             { "Rendering.MSAA", "FIntDebugForceMSAASamples" },
 
             { "Rendering.TextureQuality.OverrideEnabled", "DFFlagTextureQualityOverrideEnabled" },

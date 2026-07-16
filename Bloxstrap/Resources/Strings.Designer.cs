@@ -2894,6 +2894,15 @@ namespace Leostrap.Resources {
                 return ResourceManager.GetString("Menu.FastFlags.Presets.Categories.Rendering", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Roblox Settings.
+        /// </summary>
+        public static string Menu_FastFlags_Presets_Categories_RobloxSettings {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.Categories.RobloxSettings", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Direct3D [exclusive fullscreen]({0}) using Alt+Enter is enabled by default..
@@ -2937,6 +2946,24 @@ namespace Leostrap.Resources {
         public static string Menu_FastFlags_Presets_UncapFps_Title {
             get {
                 return ResourceManager.GetString("Menu.FastFlags.Presets.UncapFps.Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Replaces the default skybox with a flat gray sky..
+        /// </summary>
+        public static string Menu_FastFlags_Presets_GraySky_Description {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.GraySky.Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Gray sky.
+        /// </summary>
+        public static string Menu_FastFlags_Presets_GraySky_Title {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.GraySky.Title", resourceCulture);
             }
         }
 
