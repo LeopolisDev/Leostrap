@@ -104,6 +104,36 @@
     </ItemGroup>
   </Target>
 
+  <Target Name="BuildByeBanAsync" BeforeTargets="Publish">
+    <PropertyGroup>
+      <ByeBanAsyncProjectDir>$(MSBuildProjectDirectory)\ByeBanAsync</ByeBanAsyncProjectDir>
+      <ByeBanAsyncExe>$(ByeBanAsyncProjectDir)\target\release\ByeBanAsync.exe</ByeBanAsyncExe>
+      <_CargoExe>$(UserProfile)\.cargo\bin\cargo.exe</_CargoExe>
+    </PropertyGroup>
+
+    <Message Text="Building ByeBanAsync helper for publish" Importance="High" Condition="!Exists('$(ByeBanAsyncExe)')" />
+    <Exec
+      WorkingDirectory="$(ByeBanAsyncProjectDir)"
+      Command="&quot;$(_CargoExe)&quot; build --release"
+      Condition="!Exists('$(ByeBanAsyncExe)') and Exists('$(_CargoExe)') and Exists('$(ByeBanAsyncProjectDir)\Cargo.toml')" />
+  </Target>
+
+  <Target Name="CopyByeBanAsyncToPublish" AfterTargets="Publish">
+    <PropertyGroup>
+      <ByeBanAsyncProjectDir>$(MSBuildProjectDirectory)\ByeBanAsync</ByeBanAsyncProjectDir>
+      <ByeBanAsyncExe>$(ByeBanAsyncProjectDir)\target\release\ByeBanAsync.exe</ByeBanAsyncExe>
+    </PropertyGroup>
+
+    <Copy
+      SourceFiles="$(ByeBanAsyncExe)"
+      DestinationFiles="$(PublishDir)ByeBanAsync.exe"
+      Condition="Exists('$(ByeBanAsyncExe)') and '$(PublishDir)' != ''" />
+
+    <Error
+      Text="Could not find ByeBanAsync.exe. Install Cargo and build the helper project at $(ByeBanAsyncProjectDir) before publishing."
+      Condition="!Exists('$(ByeBanAsyncExe)')" />
+  </Target>
+
   <ItemGroup>
     <Compile Update="Resources\Strings.Designer.cs">
       <DesignTime>True</DesignTime>
