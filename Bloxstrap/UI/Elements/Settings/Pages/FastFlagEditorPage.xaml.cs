@@ -388,17 +388,47 @@ namespace Leostrap.UI.Elements.Settings.Pages
 
         private static string? FindByeBanAsyncExecutable()
         {
-            string repoRoot = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", ".."));
-
-            var candidates = new[]
+            string[] searchRoots =
             {
-                Path.Combine(AppContext.BaseDirectory, "ByeBanAsync.exe"),
-                Path.Combine(AppContext.BaseDirectory, "ByeBanAsync", "ByeBanAsync.exe"),
-                Path.Combine(repoRoot, "ByeBanAsync", "target", "release", "ByeBanAsync.exe"),
-                Path.Combine(repoRoot, "ByeBanAsync", "target", "debug", "ByeBanAsync.exe")
+                AppContext.BaseDirectory,
+                Directory.GetCurrentDirectory(),
+                FindRepoRoot() ?? ""
             };
 
-            return candidates.FirstOrDefault(File.Exists);
+            foreach (string searchRoot in searchRoots.Where(root => !string.IsNullOrWhiteSpace(root)).Distinct(StringComparer.OrdinalIgnoreCase))
+            {
+                var candidates = new[]
+                {
+                    Path.Combine(searchRoot, "ByeBanAsync.exe"),
+                    Path.Combine(searchRoot, "ByeBanAsync", "ByeBanAsync.exe"),
+                    Path.Combine(searchRoot, "ByeBanAsync", "target", "release", "ByeBanAsync.exe"),
+                    Path.Combine(searchRoot, "ByeBanAsync", "target", "debug", "ByeBanAsync.exe")
+                };
+
+                string? match = candidates.FirstOrDefault(File.Exists);
+                if (match is not null)
+                    return match;
+            }
+
+            return null;
+        }
+
+        private static string? FindRepoRoot()
+        {
+            var current = new DirectoryInfo(AppContext.BaseDirectory);
+
+            while (current is not null)
+            {
+                if (File.Exists(Path.Combine(current.FullName, "Bloxstrap.sln")) ||
+                    File.Exists(Path.Combine(current.FullName, "ByeBanAsync", "Cargo.toml")))
+                {
+                    return current.FullName;
+                }
+
+                current = current.Parent;
+            }
+
+            return null;
         }
 
         private static async Task RunByeBanAsync()
