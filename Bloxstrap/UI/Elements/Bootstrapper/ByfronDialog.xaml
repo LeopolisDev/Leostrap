@@ -29,7 +29,7 @@
                 </Path>
             </Button>
             <TextBlock Margin="15" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="10" FontFamily="{StaticResource Rubik}" Text="{Binding VersionText}" Foreground="{Binding Foreground}" Visibility="{Binding VersionTextVisibility, Mode=OneWay}" />
-            <Image Source="pack://application:,,,/Leostrap.ico" RenderOptions.BitmapScalingMode="HighQuality" Width="96" Height="96" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,44,0,0" />
+            <Image Source="{Binding Icon, Mode=OneWay}" RenderOptions.BitmapScalingMode="HighQuality" Width="96" Height="96" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,44,0,0" />
             <Grid Margin="0,0,0,29" VerticalAlignment="Bottom">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
