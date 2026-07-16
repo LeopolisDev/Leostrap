@@ -438,7 +438,9 @@ namespace Leostrap.UI.Elements.Settings.Pages
             string? exePath = FindByeBanAsyncExecutable();
 
             if (exePath is null)
-                throw new FileNotFoundException("Could not find ByeBanAsync.exe. Build the ByeBanAsync project first.");
+                throw new FileNotFoundException(
+                    "Could not find ByeBanAsync.exe. Build the ByeBanAsync Rust project first and place the exe next to Bloxstrap or in ByeBanAsync\\target\\release."
+                );
 
             App.Logger.WriteLine(LOG_IDENT, $"Launching ByeBanAsync from {exePath}");
 
