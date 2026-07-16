@@ -54,7 +54,7 @@ namespace Leostrap.Extensions
 
             return icon switch
             {
-                BootstrapperIcon.IconLeostrap => Properties.Resources.IconLeostrap,
+                BootstrapperIcon.IconLeostrap => Properties.Resources.IconBloxstrap,
                 BootstrapperIcon.Icon2008 => Properties.Resources.Icon2008,
                 BootstrapperIcon.Icon2011 => Properties.Resources.Icon2011,
                 BootstrapperIcon.IconEarly2015 => Properties.Resources.IconEarly2015,

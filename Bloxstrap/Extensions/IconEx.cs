@@ -25,7 +25,7 @@ namespace Leostrap.Extensions
                 {
                     App.Logger.WriteException("IconEx::GetImageSource", ex);
                     Frontend.ShowMessageBox(string.Format(Strings.Dialog_IconLoadFailed, ex.Message));
-                    return BootstrapperIcon.IconLeostrap.GetIcon().GetImageSource(false);
+                    return BootstrapperIcon.IconBloxstrap.GetIcon().GetImageSource(false);
                 }
             }
             else

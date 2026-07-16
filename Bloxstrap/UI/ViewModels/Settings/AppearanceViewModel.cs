@@ -120,7 +120,7 @@ namespace Leostrap.UI.ViewModels.Settings
                 if (String.IsNullOrEmpty(value))
                 {
                     if (App.Settings.Prop.BootstrapperIcon == BootstrapperIcon.IconCustom)
-                        App.Settings.Prop.BootstrapperIcon = BootstrapperIcon.IconLeostrap;
+                        App.Settings.Prop.BootstrapperIcon = BootstrapperIcon.IconBloxstrap;
                 }
                 else
                 {
