@@ -22,6 +22,7 @@ fn main() {
         }
     }
     colored::control::set_override(true);
+    let auto_exit = env::args().any(|arg| arg == "--no-pause" || arg == "--auto");
 
     let title = "ByeBanAsync v2.2 | centerepic";
     let title_with_prefix = format!("{} {}", "[?]".blue(), title);
@@ -47,7 +48,7 @@ fn main() {
                 "{} Could not get USERPROFILE environment variable.",
                 "[!!!]".red()
             );
-            exit_program();
+            exit_program(auto_exit);
             return;
         }
     };
@@ -177,12 +178,14 @@ fn main() {
         println!("{} Skipping MAC address change.", "[i]".blue());
     }
 
-    exit_program();
+    exit_program(auto_exit);
 }
 
-fn exit_program() {
-    println!("\n{} Press Enter to exit...", "[...]".dimmed());
-    let _ = io::stdin().read_line(&mut String::new());
+fn exit_program(should_pause: bool) {
+    if should_pause {
+        println!("\n{} Press Enter to exit...", "[...]".dimmed());
+        let _ = io::stdin().read_line(&mut String::new());
+    }
     process::exit(0);
 }
 

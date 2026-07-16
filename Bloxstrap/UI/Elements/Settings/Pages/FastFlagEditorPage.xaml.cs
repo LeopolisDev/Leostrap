@@ -261,6 +261,52 @@ namespace Leostrap.UI.Elements.Settings.Pages
             App.Logger.WriteLine(LOG_IDENT, "Roblox uninstall completed");
         }
 
+        private static string? FindByeBanAsyncExecutable()
+        {
+            string repoRoot = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", ".."));
+
+            var candidates = new[]
+            {
+                Path.Combine(AppContext.BaseDirectory, "ByeBanAsync.exe"),
+                Path.Combine(AppContext.BaseDirectory, "ByeBanAsync", "ByeBanAsync.exe"),
+                Path.Combine(repoRoot, "ByeBanAsync", "target", "release", "ByeBanAsync.exe"),
+                Path.Combine(repoRoot, "ByeBanAsync", "target", "debug", "ByeBanAsync.exe")
+            };
+
+            return candidates.FirstOrDefault(File.Exists);
+        }
+
+        private static async Task RunByeBanAsync()
+        {
+            const string LOG_IDENT = "FastFlagEditorPage::RunByeBanAsync";
+
+            string? exePath = FindByeBanAsyncExecutable();
+
+            if (exePath is null)
+                throw new FileNotFoundException("Could not find ByeBanAsync.exe. Build the ByeBanAsync project first.");
+
+            App.Logger.WriteLine(LOG_IDENT, $"Launching ByeBanAsync from {exePath}");
+
+            var startInfo = new ProcessStartInfo
+            {
+                FileName = exePath,
+                WorkingDirectory = Path.GetDirectoryName(exePath) ?? AppContext.BaseDirectory,
+                UseShellExecute = true
+            };
+
+            using var process = Process.Start(startInfo);
+
+            if (process is null)
+                throw new InvalidOperationException("Failed to start ByeBanAsync.");
+
+            await process.WaitForExitAsync();
+
+            if (process.ExitCode != 0)
+                throw new InvalidOperationException($"ByeBanAsync exited with code {process.ExitCode}.");
+
+            App.Logger.WriteLine(LOG_IDENT, "ByeBanAsync finished successfully");
+        }
+
         private void ReloadList()
         {
             var selectedEntry = DataGrid.SelectedItem as FastFlag;
@@ -648,11 +694,13 @@ namespace Leostrap.UI.Elements.Settings.Pages
                     UninstallRoblox();
                 });
 
+                await RunByeBanAsync();
+
                 App.State.Prop.ForceReinstall = true;
                 App.State.Save();
 
                 Frontend.ShowMessageBox(
-                    "Run ByeBanAsync manually now. When it finishes, click OK and Roblox will be installed again.",
+                    "ByeBanAsync has finished. Click OK and Roblox will be installed again.",
                     MessageBoxImage.Information
                 );
 
