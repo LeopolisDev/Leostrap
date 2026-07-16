@@ -19,8 +19,6 @@ namespace Leostrap.UI.ViewModels.Settings
 
         public ICommand OpenFastFlagEditorCommand => new RelayCommand(OpenFastFlagEditor);
 
-        public Visibility CanShowFastFlagEditor => App.IsStudioInstalled ? Visibility.Visible : Visibility.Collapsed;
-
         public bool UseFastFlagManager
         {
             get => App.Settings.Prop.UseFastFlagManager;
