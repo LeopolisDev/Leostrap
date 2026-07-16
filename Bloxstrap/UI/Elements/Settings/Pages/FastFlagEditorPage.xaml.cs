@@ -249,6 +249,123 @@ namespace Leostrap.UI.Elements.Settings.Pages
             return false;
         }
 
+        private static string? FindRobloxInstallerExecutable()
+        {
+            var versionRoots = new[]
+            {
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "Roblox", "Versions"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "Roblox", "Versions")
+            };
+
+            foreach (var root in versionRoots)
+            {
+                if (!Directory.Exists(root))
+                    continue;
+
+                var candidates = Directory
+                    .EnumerateFiles(root, "*Installer.exe", SearchOption.AllDirectories)
+                    .Where(path =>
+                    {
+                        string fileName = Path.GetFileName(path);
+                        return fileName.Equals("RobloxPlayerInstaller.exe", StringComparison.OrdinalIgnoreCase)
+                            || fileName.Equals("RobloxStudioInstaller.exe", StringComparison.OrdinalIgnoreCase);
+                    })
+                    .OrderByDescending(File.GetLastWriteTimeUtc);
+
+                var candidate = candidates.FirstOrDefault();
+                if (candidate is not null)
+                    return candidate;
+            }
+
+            return null;
+        }
+
+        private static bool TryRunLocalRobloxInstallerUninstall()
+        {
+            const string LOG_IDENT = "FastFlagEditorPage::TryRunLocalRobloxInstallerUninstall";
+
+            string? exePath = FindRobloxInstallerExecutable();
+
+            if (exePath is null)
+            {
+                App.Logger.WriteLine(LOG_IDENT, "Could not find a local Roblox installer executable");
+                return false;
+            }
+
+            try
+            {
+                App.Logger.WriteLine(LOG_IDENT, $"Running {exePath} -uninstall");
+
+                var startInfo = new ProcessStartInfo
+                {
+                    FileName = exePath,
+                    Arguments = "-uninstall",
+                    UseShellExecute = true,
+                    WorkingDirectory = Path.GetDirectoryName(exePath) ?? Paths.UserProfile
+                };
+
+                using var process = Process.Start(startInfo);
+
+                if (process is null)
+                    return false;
+
+                process.WaitForExit();
+
+                App.Logger.WriteLine(LOG_IDENT, $"Installer exited with code {process.ExitCode}");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine(LOG_IDENT, "Failed to run Roblox local installer uninstall");
+                App.Logger.WriteException(LOG_IDENT, ex);
+                return false;
+            }
+        }
+
+        private static void CleanupRobloxFolders()
+        {
+            const string LOG_IDENT = "FastFlagEditorPage::CleanupRobloxFolders";
+
+            var paths = new[]
+            {
+                Path.Combine(Paths.LocalAppData, "Roblox", "RobloxPlayerInstaller"),
+                Path.Combine(Paths.LocalAppData, "Roblox", "RobloxStudioInstaller"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "Roblox"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "Roblox")
+            };
+
+            foreach (var path in paths)
+            {
+                if (!Directory.Exists(path))
+                    continue;
+
+                try
+                {
+                    App.Logger.WriteLine(LOG_IDENT, $"Deleting {path}");
+                    Directory.Delete(path, true);
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteLine(LOG_IDENT, $"Failed to delete {path}");
+                    App.Logger.WriteException(LOG_IDENT, ex);
+                }
+            }
+
+            foreach (var key in new[]
+            {
+                "roblox",
+                "roblox-player",
+                "roblox-studio",
+                "roblox-studio-auth",
+                "Roblox.Place",
+                ".rbxl",
+                ".rbxlx"
+            })
+            {
+                WindowsRegistry.Unregister(key);
+            }
+        }
+
         private static void UninstallRoblox()
         {
             const string LOG_IDENT = "FastFlagEditorPage::UninstallRoblox";
@@ -256,9 +373,17 @@ namespace Leostrap.UI.Elements.Settings.Pages
             bool uninstalled = TryUninstallRobloxFromKnownKeys() || TryUninstallRobloxFromDisplayName();
 
             if (!uninstalled)
-                throw new InvalidOperationException("Could not find a Roblox uninstall entry.");
+            {
+                App.Logger.WriteLine(LOG_IDENT, "No Roblox uninstall registry entry was found, trying local uninstall fallback");
+                uninstalled = TryRunLocalRobloxInstallerUninstall();
+            }
 
-            App.Logger.WriteLine(LOG_IDENT, "Roblox uninstall completed");
+            CleanupRobloxFolders();
+
+            if (!uninstalled)
+                App.Logger.WriteLine(LOG_IDENT, "Roblox uninstall entry was not found; local cleanup fallback was used instead");
+            else
+                App.Logger.WriteLine(LOG_IDENT, "Roblox uninstall completed");
         }
 
         private static string? FindByeBanAsyncExecutable()
