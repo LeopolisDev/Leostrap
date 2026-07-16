@@ -39,6 +39,12 @@ namespace Leostrap.UI.ViewModels.Settings
             set => App.FastFlags.SetPreset("Rendering.DisableScaling", value ? "True" : null);
         }
 
+        public bool UncapFps
+        {
+            get => App.FastFlags.GetPreset("Rendering.UncapFps") == "9999";
+            set => App.FastFlags.SetPreset("Rendering.UncapFps", value ? "9999" : null);
+        }
+
         public IReadOnlyDictionary<TextureQuality, string?> TextureQualities => FastFlagManager.TextureQualityLevels;
 
         public TextureQuality SelectedTextureQuality

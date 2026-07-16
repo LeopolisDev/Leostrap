@@ -2921,7 +2921,25 @@ namespace Leostrap.Resources {
                 return ResourceManager.GetString("Menu.FastFlags.Presets.FixDisplayScaling.Title", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Sets Roblox&apos;s maximum framerate to 9999..
+        /// </summary>
+        public static string Menu_FastFlags_Presets_UncapFps_Description {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.UncapFps.Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Uncap fps.
+        /// </summary>
+        public static string Menu_FastFlags_Presets_UncapFps_Title {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.UncapFps.Title", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Anti-aliasing quality (MSAA).
         /// </summary>

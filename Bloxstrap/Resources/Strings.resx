@@ -574,6 +574,12 @@ Are you sure you want to continue?</value>
   <data name="Menu.FastFlags.Presets.FixDisplayScaling.Title" xml:space="preserve">
     <value>Preserve rendering quality with display scaling</value>
   </data>
+  <data name="Menu.FastFlags.Presets.UncapFps.Description" xml:space="preserve">
+    <value>Sets Roblox's maximum framerate to 9999.</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.UncapFps.Title" xml:space="preserve">
+    <value>Uncap fps</value>
+  </data>
   <data name="Menu.FastFlags.Title" xml:space="preserve">
     <value>Engine Settings</value>
   </data>

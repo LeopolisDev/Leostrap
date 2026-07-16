@@ -52,6 +52,13 @@
         </controls:OptionControl>
 
         <controls:OptionControl 
+            Header="{x:Static resources:Strings.Menu_FastFlags_Presets_UncapFps_Title}" 
+            Description="{x:Static resources:Strings.Menu_FastFlags_Presets_UncapFps_Description}"
+            HelpLink="https://bloxstraplabs.com/wiki/features/engine-settings/">
+            <ui:ToggleSwitch IsChecked="{Binding UncapFps, Mode=TwoWay}" />
+        </controls:OptionControl>
+
+        <controls:OptionControl 
             Header="{x:Static resources:Strings.Menu_FastFlags_Presets_TextureQuality_Title}">
             <ComboBox Margin="5,0,0,0" Padding="10,5,10,5" Width="200" ItemsSource="{Binding TextureQualities.Keys, Mode=OneTime}" Text="{Binding SelectedTextureQuality, Mode=TwoWay}">
                 <ComboBox.ItemTemplate>
