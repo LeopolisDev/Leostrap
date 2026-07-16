@@ -126,15 +126,15 @@ namespace Leostrap.UI.Elements.Settings.Pages
             return !String.IsNullOrWhiteSpace(fileName);
         }
 
-        private static bool TryRunRegistryUninstall(string uninstallKeyPath)
+        private static bool TryRunRegistryUninstall(RegistryKey rootKey, string uninstallKeyPath)
         {
             const string LOG_IDENT = "FastFlagEditorPage::TryRunRegistryUninstall";
 
-            using var uninstallKey = Registry.CurrentUser.OpenSubKey(uninstallKeyPath);
+            using var uninstallKey = rootKey.OpenSubKey(uninstallKeyPath);
 
             if (uninstallKey is null)
             {
-                App.Logger.WriteLine(LOG_IDENT, $"Uninstall key not found: {uninstallKeyPath}");
+                App.Logger.WriteLine(LOG_IDENT, $"Uninstall key not found: {rootKey.Name}\\{uninstallKeyPath}");
                 return false;
             }
 
@@ -173,14 +173,90 @@ namespace Leostrap.UI.Elements.Settings.Pages
             return true;
         }
 
+        private static bool TryUninstallRobloxFromKnownKeys()
+        {
+            var candidateKeys = new[]
+            {
+                @"Software\Microsoft\Windows\CurrentVersion\Uninstall\roblox-player",
+                @"Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\roblox-player",
+                @"Software\Microsoft\Windows\CurrentVersion\Uninstall\Roblox Player",
+                @"Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Roblox Player",
+                @"Software\Microsoft\Windows\CurrentVersion\Uninstall\roblox-studio",
+                @"Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\roblox-studio",
+                @"Software\Microsoft\Windows\CurrentVersion\Uninstall\roblox-studio-admin",
+                @"Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\roblox-studio-admin"
+            };
+
+            foreach (var rootKey in new[] { Registry.CurrentUser, Registry.LocalMachine })
+            {
+                foreach (var keyPath in candidateKeys)
+                {
+                    if (TryRunRegistryUninstall(rootKey, keyPath))
+                        return true;
+                }
+            }
+
+            return false;
+        }
+
+        private static bool TryUninstallRobloxFromDisplayName()
+        {
+            const string LOG_IDENT = "FastFlagEditorPage::TryUninstallRobloxFromDisplayName";
+
+            var uninstallRoots = new[]
+            {
+                (Registry.CurrentUser, @"Software\Microsoft\Windows\CurrentVersion\Uninstall"),
+                (Registry.CurrentUser, @"Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall"),
+                (Registry.LocalMachine, @"Software\Microsoft\Windows\CurrentVersion\Uninstall"),
+                (Registry.LocalMachine, @"Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall")
+            };
+
+            foreach (var (rootKey, rootPath) in uninstallRoots)
+            {
+                using var uninstallRoot = rootKey.OpenSubKey(rootPath);
+
+                if (uninstallRoot is null)
+                    continue;
+
+                foreach (var subKeyName in uninstallRoot.GetSubKeyNames())
+                {
+                    using var subKey = uninstallRoot.OpenSubKey(subKeyName);
+
+                    if (subKey is null)
+                        continue;
+
+                    string? displayName = subKey.GetValue("DisplayName") as string;
+                    string? publisher = subKey.GetValue("Publisher") as string;
+
+                    bool looksLikeRoblox =
+                        subKeyName.Contains("roblox", StringComparison.OrdinalIgnoreCase)
+                        || (!String.IsNullOrEmpty(displayName) && displayName.Contains("Roblox", StringComparison.OrdinalIgnoreCase))
+                        || (!String.IsNullOrEmpty(publisher) && publisher.Contains("Roblox", StringComparison.OrdinalIgnoreCase));
+
+                    if (!looksLikeRoblox)
+                        continue;
+
+                    string keyPath = $"{rootPath}\\{subKeyName}";
+
+                    if (TryRunRegistryUninstall(rootKey, keyPath))
+                    {
+                        App.Logger.WriteLine(LOG_IDENT, $"Used fallback uninstall key: {rootKey.Name}\\{keyPath}");
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
         private static void UninstallRoblox()
         {
             const string LOG_IDENT = "FastFlagEditorPage::UninstallRoblox";
 
-            bool uninstalled = TryRunRegistryUninstall(@"Software\Microsoft\Windows\CurrentVersion\Uninstall\roblox-player");
+            bool uninstalled = TryUninstallRobloxFromKnownKeys() || TryUninstallRobloxFromDisplayName();
 
             if (!uninstalled)
-                throw new InvalidOperationException("Could not find Roblox's uninstall entry.");
+                throw new InvalidOperationException("Could not find a Roblox uninstall entry.");
 
             App.Logger.WriteLine(LOG_IDENT, "Roblox uninstall completed");
         }
