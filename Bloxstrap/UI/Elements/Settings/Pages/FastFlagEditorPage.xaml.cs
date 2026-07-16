@@ -3,6 +3,8 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Collections.ObjectModel;
 
+using Microsoft.Win32;
+
 using Wpf.Ui.Mvvm.Contracts;
 
 using Leostrap.UI.Elements.Dialogs;
@@ -31,12 +33,156 @@ namespace Leostrap.UI.Elements.Settings.Pages
         private readonly Regex _intFilterPattern = new("^([\\d]{1,})?(;[\\d]{1,})+$", RegexOptions.IgnoreCase);
         private readonly Regex _stringFilterPattern = new("^[^;]*(;[\\d]{1,})+$", RegexOptions.IgnoreCase);
 
+        private const string RobloxCookiesFileName = @"Roblox\LocalStorage\RobloxCookies.dat";
+
         private bool _showPresets = false;
         private string _searchFilter = "";
+        private bool _apiResetInProgress = false;
 
         public FastFlagEditorPage()
         {
             InitializeComponent();
+        }
+
+        private static void CloseRobloxProcesses()
+        {
+            const string LOG_IDENT = "FastFlagEditorPage::CloseRobloxProcesses";
+
+            var processNames = new[]
+            {
+                App.RobloxPlayerAppName,
+                App.RobloxStudioAppName,
+                "RobloxCrashHandler"
+            };
+
+            foreach (var process in processNames.SelectMany(Process.GetProcessesByName).DistinctBy(x => x.Id))
+            {
+                try
+                {
+                    if (process.HasExited)
+                        continue;
+
+                    App.Logger.WriteLine(LOG_IDENT, $"Closing {process.ProcessName} ({process.Id})");
+                    process.Kill();
+                    process.WaitForExit(5000);
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteLine(LOG_IDENT, $"Failed to close {process.ProcessName} ({process.Id})");
+                    App.Logger.WriteException(LOG_IDENT, ex);
+                }
+                finally
+                {
+                    process.Close();
+                }
+            }
+        }
+
+        private static void ClearRobloxCookies()
+        {
+            const string LOG_IDENT = "FastFlagEditorPage::ClearRobloxCookies";
+
+            string cookiePath = Path.Combine(Paths.LocalAppData, RobloxCookiesFileName);
+
+            if (!File.Exists(cookiePath))
+            {
+                App.Logger.WriteLine(LOG_IDENT, $"Cookie file not found: {cookiePath}");
+                return;
+            }
+
+            App.Logger.WriteLine(LOG_IDENT, $"Deleting cookie file: {cookiePath}");
+            File.Delete(cookiePath);
+        }
+
+        private static bool TrySplitCommandLine(string commandLine, out string fileName, out string arguments)
+        {
+            fileName = "";
+            arguments = "";
+
+            commandLine = commandLine.Trim();
+            if (String.IsNullOrWhiteSpace(commandLine))
+                return false;
+
+            if (commandLine.StartsWith('\"'))
+            {
+                int endQuote = commandLine.IndexOf('\"', 1);
+                if (endQuote == -1)
+                    return false;
+
+                fileName = commandLine[1..endQuote];
+                arguments = commandLine[(endQuote + 1)..].Trim();
+                return !String.IsNullOrWhiteSpace(fileName);
+            }
+
+            int firstSpace = commandLine.IndexOf(' ');
+            if (firstSpace == -1)
+            {
+                fileName = commandLine;
+                return true;
+            }
+
+            fileName = commandLine[..firstSpace];
+            arguments = commandLine[(firstSpace + 1)..].Trim();
+            return !String.IsNullOrWhiteSpace(fileName);
+        }
+
+        private static bool TryRunRegistryUninstall(string uninstallKeyPath)
+        {
+            const string LOG_IDENT = "FastFlagEditorPage::TryRunRegistryUninstall";
+
+            using var uninstallKey = Registry.CurrentUser.OpenSubKey(uninstallKeyPath);
+
+            if (uninstallKey is null)
+            {
+                App.Logger.WriteLine(LOG_IDENT, $"Uninstall key not found: {uninstallKeyPath}");
+                return false;
+            }
+
+            string? commandLine =
+                uninstallKey.GetValue("QuietUninstallString") as string
+                ?? uninstallKey.GetValue("UninstallString") as string
+                ?? uninstallKey.GetValue("") as string;
+
+            if (String.IsNullOrWhiteSpace(commandLine))
+            {
+                App.Logger.WriteLine(LOG_IDENT, $"No uninstall command found in: {uninstallKeyPath}");
+                return false;
+            }
+
+            if (!TrySplitCommandLine(commandLine, out string fileName, out string arguments))
+            {
+                App.Logger.WriteLine(LOG_IDENT, $"Failed to parse uninstall command: {commandLine}");
+                return false;
+            }
+
+            App.Logger.WriteLine(LOG_IDENT, $"Starting uninstall command: {fileName} {arguments}".Trim());
+
+            var startInfo = new ProcessStartInfo
+            {
+                FileName = fileName,
+                Arguments = arguments,
+                UseShellExecute = true,
+                WorkingDirectory = Path.GetDirectoryName(fileName) ?? Paths.UserProfile
+            };
+
+            using var process = Process.Start(startInfo);
+            if (process is null)
+                return false;
+
+            process.WaitForExit();
+            return true;
+        }
+
+        private static void UninstallRoblox()
+        {
+            const string LOG_IDENT = "FastFlagEditorPage::UninstallRoblox";
+
+            bool uninstalled = TryRunRegistryUninstall(@"Software\Microsoft\Windows\CurrentVersion\Uninstall\roblox-player");
+
+            if (!uninstalled)
+                throw new InvalidOperationException("Could not find Roblox's uninstall entry.");
+
+            App.Logger.WriteLine(LOG_IDENT, "Roblox uninstall completed");
         }
 
         private void ReloadList()
@@ -393,6 +539,64 @@ namespace Leostrap.UI.Elements.Settings.Pages
             string json = JsonSerializer.Serialize(App.FastFlags.Prop, new JsonSerializerOptions { WriteIndented = true });
             Clipboard.SetDataObject(json);
             Frontend.ShowMessageBox(Strings.Menu_FastFlagEditor_JsonCopiedToClipboard, MessageBoxImage.Information);
+        }
+
+        private async void ApiResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            const string LOG_IDENT = "FastFlagEditorPage::ApiResetButton_Click";
+
+            if (_apiResetInProgress)
+                return;
+
+            var result = Frontend.ShowMessageBox(
+                "This will close all Roblox instances, clear your Roblox cookies, and uninstall Roblox. Continue?",
+                MessageBoxImage.Warning,
+                MessageBoxButton.YesNo,
+                MessageBoxResult.No
+            );
+
+            if (result != MessageBoxResult.Yes)
+                return;
+
+            _apiResetInProgress = true;
+            ApiResetButton.IsEnabled = false;
+
+            try
+            {
+                App.Logger.WriteLine(LOG_IDENT, "Beginning API reset flow");
+
+                await Task.Run(() =>
+                {
+                    CloseRobloxProcesses();
+                    ClearRobloxCookies();
+                    UninstallRoblox();
+                });
+
+                App.State.Prop.ForceReinstall = true;
+                App.State.Save();
+
+                Frontend.ShowMessageBox(
+                    "Run ByeBanAsync manually now. When it finishes, click OK and Roblox will be installed again.",
+                    MessageBoxImage.Information
+                );
+
+                LaunchHandler.LaunchRoblox(LaunchMode.Player);
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine(LOG_IDENT, "API reset failed");
+                App.Logger.WriteException(LOG_IDENT, ex);
+
+                Frontend.ShowMessageBox(
+                    $"Api Reset failed: {ex.Message}",
+                    MessageBoxImage.Error
+                );
+            }
+            finally
+            {
+                _apiResetInProgress = false;
+                ApiResetButton.IsEnabled = true;
+            }
         }
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
