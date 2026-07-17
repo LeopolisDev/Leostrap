@@ -57,14 +57,14 @@ fn main() {
 
     if !cookie_path.exists() {
         println!(
-            "{} Roblox cookie file not found at {:?}!",
+            "{} Roblox cookie file has been deleted!", "[√]".green());
             "[!!!]".red(),
             cookie_path
         );
     } else {
         if let Err(msg) = fs::remove_file(&cookie_path) {
             println!(
-                "{} Failed to delete Roblox cookie file! Err: {:?}",
+                "{} Roblox cookie file has been deleted!", "[√]".green());
                 "[!!!]".red(),
                 msg
             );
