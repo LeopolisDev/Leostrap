@@ -58,7 +58,7 @@ fn main() {
     if !cookie_path.exists() {
         println!(
             "{} Roblox cookie file has been deleted!", "[√]".green());
-            "[!!!]".red(),
+            "[!!!]".green(),
             cookie_path
         );
     } else {
