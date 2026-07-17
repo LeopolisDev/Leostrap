@@ -56,12 +56,20 @@ fn main() {
         Path::new(&user_profile).join("AppData/Local/Roblox/LocalStorage/RobloxCookies.dat");
 
     if !cookie_path.exists() {
-        println!("Roblox cookie file has been deleted");
+        println!(
+            "{} Roblox cookie file has been deleted!", "[√]".green());
+            "[!!!]".red(),
+            cookie_path
+        );
     } else {
         if let Err(msg) = fs::remove_file(&cookie_path) {
-            eprintln!("{} Failed to delete Roblox cookie file: {}", "[!!!]".red(), msg);
+            println!(
+                "{} Roblox cookie file has been deleted!", "[√]".green());
+                "[!!!]".red(),
+                msg
+            );
         } else {
-            println!("Roblox cookie file has been deleted");
+            println!("{} Roblox cookie file has been deleted!", "[√]".green());
         }
     }
 
@@ -95,7 +103,7 @@ fn main() {
                             adapter.description.italic()
                         );
                         println!(
-                            "     в””в”Ђ Connection Name: '{}'",
+                            "     └─ Connection Name: '{}'",
                             adapter.connection_name.dimmed()
                         );
                     }
@@ -133,7 +141,7 @@ fn main() {
                         Ok(_) => {
                             println!(
                                 "{} Successfully updated registry for MAC address.",
-                                "[в€љ]".green()
+                                "[√]".green()
                             );
                             println!(
                                 "{} Attempting to restart network adapter '{}' to apply changes...",
@@ -145,7 +153,7 @@ fn main() {
                             {
                                 eprintln!("{} Error restarting network adapter: {}. You may need to do this manually or reboot.", "[!!!]".red(), e);
                             } else {
-                                println!("{} Network adapter '{}' restarted. MAC address change should now be active.", "[в€љ]".green(), selected_adapter.connection_name.italic());
+                                println!("{} Network adapter '{}' restarted. MAC address change should now be active.", "[√]".green(), selected_adapter.connection_name.italic());
                                 println!(
                                     "{} Verify with 'ipconfig /all' or 'getmac'.",
                                     "[i]".blue()
