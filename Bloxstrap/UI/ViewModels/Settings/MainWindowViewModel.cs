@@ -9,6 +9,10 @@ namespace Leostrap.UI.ViewModels.Settings
     {
         public ICommand OpenAboutCommand => new RelayCommand(OpenAbout);
         
+        public ICommand CloseAllRobloxInstancesCommand => new RelayCommand(CloseAllRobloxInstances);
+
+        public ICommand SaveAndPlayCommand => new RelayCommand(SaveAndPlay);
+
         public ICommand SaveSettingsCommand => new RelayCommand(SaveSettings);
         
         public ICommand CloseWindowCommand => new RelayCommand(CloseWindow);
@@ -36,7 +40,47 @@ namespace Leostrap.UI.ViewModels.Settings
 
         private void OpenAbout() => new MainWindow().ShowDialog();
 
+        private static void CloseAllRobloxInstances()
+        {
+            const string LOG_IDENT = "MainWindowViewModel::CloseAllRobloxInstances";
+
+            var processNames = new[]
+            {
+                App.RobloxPlayerAppName,
+                App.RobloxStudioAppName,
+                "RobloxCrashHandler"
+            };
+
+            foreach (var process in processNames.SelectMany(Process.GetProcessesByName).DistinctBy(x => x.Id))
+            {
+                try
+                {
+                    if (process.HasExited)
+                        continue;
+
+                    App.Logger.WriteLine(LOG_IDENT, $"Closing {process.ProcessName} ({process.Id})");
+                    process.Kill();
+                    process.WaitForExit(5000);
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteLine(LOG_IDENT, $"Failed to close {process.ProcessName} ({process.Id})");
+                    App.Logger.WriteException(LOG_IDENT, ex);
+                }
+                finally
+                {
+                    process.Close();
+                }
+            }
+        }
+
         private void CloseWindow() => RequestCloseWindowEvent?.Invoke(this, EventArgs.Empty);
+
+        private void SaveAndPlay()
+        {
+            SaveSettings();
+            LaunchHandler.LaunchRoblox(LaunchMode.Player);
+        }
 
         private void SaveSettings()
         {
