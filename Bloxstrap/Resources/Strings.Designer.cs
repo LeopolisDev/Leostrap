@@ -2986,6 +2986,42 @@ namespace Leostrap.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to Removes Roblox&apos;s default grass textures. Note: This setting does not affect custom grass textures used by individual games..
+        /// </summary>
+        public static string Menu_FastFlags_Presets_DisableGrass_Description {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.DisableGrass.Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Disable Grass.
+        /// </summary>
+        public static string Menu_FastFlags_Presets_DisableGrass_Title {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.DisableGrass.Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Disables baked shadows to improve performance, but may cause lighting issues in some games..
+        /// </summary>
+        public static string Menu_FastFlags_Presets_PauseVoxelizer_Description {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.PauseVoxelizer.Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Pause Voxelizer.
+        /// </summary>
+        public static string Menu_FastFlags_Presets_PauseVoxelizer_Title {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.PauseVoxelizer.Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to Anti-aliasing quality (MSAA).
         /// </summary>
         public static string Menu_FastFlags_Presets_MSAA_Title {

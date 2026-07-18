@@ -132,4 +132,16 @@
   <data name="Menu.FastFlags.Presets.CloseCrashHandler.Title" xml:space="preserve">
     <value>Close Crash Handler</value>
   </data>
+  <data name="Menu.FastFlags.Presets.DisableGrass.Description" xml:space="preserve">
+    <value>Removes Roblox's default grass textures. Note: This setting does not affect custom grass textures used by individual games.</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.DisableGrass.Title" xml:space="preserve">
+    <value>Disable Grass</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.PauseVoxelizer.Description" xml:space="preserve">
+    <value>Disables baked shadows to improve performance, but may cause lighting issues in some games.</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.PauseVoxelizer.Title" xml:space="preserve">
+    <value>Pause Voxelizer</value>
+  </data>
 </root>

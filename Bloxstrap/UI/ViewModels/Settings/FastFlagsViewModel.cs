@@ -57,6 +57,32 @@ namespace Leostrap.UI.ViewModels.Settings
             set => App.FastFlags.SetPreset("Rendering.GraySky", value ? "True" : null);
         }
 
+        public bool DisableGrass
+        {
+            get =>
+                App.FastFlags.GetValue("FIntFRMMinGrassDistance") == "0" &&
+                App.FastFlags.GetValue("FIntFRMMaxGrassDistance") == "0" &&
+                App.FastFlags.GetValue("FIntRenderGrassDetailStrands") == "0";
+            set
+            {
+                App.FastFlags.SetValue("FIntFRMMinGrassDistance", value ? "0" : null);
+                App.FastFlags.SetValue("FIntFRMMaxGrassDistance", value ? "0" : null);
+                App.FastFlags.SetValue("FIntRenderGrassDetailStrands", value ? "0" : null);
+            }
+        }
+
+        public bool PauseVoxelizer
+        {
+            get =>
+                App.FastFlags.GetValue("DFFlagDebugPauseVoxelizer") == "True" &&
+                App.FastFlags.GetValue("FIntRenderShadowIntensity") == "0";
+            set
+            {
+                App.FastFlags.SetValue("DFFlagDebugPauseVoxelizer", value ? "True" : null);
+                App.FastFlags.SetValue("FIntRenderShadowIntensity", value ? "0" : null);
+            }
+        }
+
         public IReadOnlyDictionary<TextureQuality, string?> TextureQualities => FastFlagManager.TextureQualityLevels;
 
         public TextureQuality SelectedTextureQuality
