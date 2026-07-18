@@ -586,6 +586,12 @@ Are you sure you want to continue?</value>
   <data name="Menu.FastFlags.Presets.GraySky.Title" xml:space="preserve">
     <value>Gray sky</value>
   </data>
+  <data name="Menu.FastFlags.Presets.CloseCrashHandler.Description" xml:space="preserve">
+    <value>Automatically closes the RobloxCrashHandler.exe process on launch to free up some system usage.</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.CloseCrashHandler.Title" xml:space="preserve">
+    <value>Close Crash Handler</value>
+  </data>
   <data name="Menu.FastFlags.Title" xml:space="preserve">
     <value>Engine Settings</value>
   </data>

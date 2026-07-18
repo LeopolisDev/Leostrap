@@ -2968,6 +2968,24 @@ namespace Leostrap.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to Automatically closes the RobloxCrashHandler.exe process on launch to free up some system usage..
+        /// </summary>
+        public static string Menu_FastFlags_Presets_CloseCrashHandler_Description {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.CloseCrashHandler.Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Close Crash Handler.
+        /// </summary>
+        public static string Menu_FastFlags_Presets_CloseCrashHandler_Title {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.CloseCrashHandler.Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to Anti-aliasing quality (MSAA).
         /// </summary>
         public static string Menu_FastFlags_Presets_MSAA_Title {

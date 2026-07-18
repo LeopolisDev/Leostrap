@@ -16,6 +16,7 @@ namespace Leostrap.Models.Persistable
         public bool ConfirmLaunches { get; set; } = false;
         public string Locale { get; set; } = "nil";
         public bool UseFastFlagManager { get; set; } = true;
+        public bool CloseCrashHandler { get; set; } = true;
         public bool WPFSoftwareRender { get; set; } = false;
         public bool EnableAnalytics { get; set; } = true;
         public bool BackgroundUpdatesEnabled { get; set; } = false;

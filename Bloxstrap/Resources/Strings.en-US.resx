@@ -126,4 +126,10 @@
   <data name="About.Translators.Description" xml:space="preserve">
     <value>All of Leostrap's translations are crowdsourced through [Crowdin]({0}). Everyone listed here are people who generously volunteered their time and effort to help localize Leostrap. A massive thank you to everyone here!</value>
   </data>
+  <data name="Menu.FastFlags.Presets.CloseCrashHandler.Description" xml:space="preserve">
+    <value>Automatically closes the RobloxCrashHandler.exe process on launch to free up some system usage.</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.CloseCrashHandler.Title" xml:space="preserve">
+    <value>Close Crash Handler</value>
+  </data>
 </root>

@@ -25,6 +25,12 @@ namespace Leostrap.UI.ViewModels.Settings
             set => App.Settings.Prop.UseFastFlagManager = value;
         }
 
+        public bool CloseCrashHandler
+        {
+            get => App.Settings.Prop.CloseCrashHandler;
+            set => App.Settings.Prop.CloseCrashHandler = value;
+        }
+
         public IReadOnlyDictionary<MSAAMode, string?> MSAALevels => FastFlagManager.MSAAModes;
 
         public MSAAMode SelectedMSAALevel

@@ -588,6 +588,9 @@ namespace Leostrap
             if (!Directory.Exists(rbxLogDir))
                 Directory.CreateDirectory(rbxLogDir);
 
+            if (App.Settings.Prop.CloseCrashHandler)
+                KillRobloxCrashHandler();
+
             var logWatcher = new FileSystemWatcher()
             {
                 Path = rbxLogDir,
@@ -963,6 +966,24 @@ namespace Leostrap
             processes.AddRange(Process.GetProcessesByName("RobloxCrashHandler")); // roblox studio doesnt depend on crash handler being open, so this should be fine
 
             foreach (Process process in processes)
+            {
+                try
+                {
+                    process.Kill();
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteLine(LOG_IDENT, $"Failed to close process {process.Id}");
+                    App.Logger.WriteException(LOG_IDENT, ex);
+                }
+            }
+        }
+
+        private static void KillRobloxCrashHandler()
+        {
+            const string LOG_IDENT = "Bootstrapper::KillRobloxCrashHandler";
+
+            foreach (Process process in Process.GetProcessesByName("RobloxCrashHandler"))
             {
                 try
                 {
