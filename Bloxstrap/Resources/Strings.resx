@@ -586,6 +586,12 @@ Are you sure you want to continue?</value>
   <data name="Menu.FastFlags.Presets.GraySky.Title" xml:space="preserve">
     <value>Gray sky</value>
   </data>
+  <data name="Menu.FastFlags.Presets.RenderingMode.Description" xml:space="preserve">
+    <value>Configure the rendering API used for Roblox. Note: Press Alt + Enter to enter exclusive fullscreen when using Direct3D as the rendering API.</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.RenderingMode.Title" xml:space="preserve">
+    <value>Rendering Mode</value>
+  </data>
   <data name="Menu.FastFlags.Presets.CloseCrashHandler.Description" xml:space="preserve">
     <value>Automatically closes the RobloxCrashHandler.exe process on launch to free up some system usage.</value>
   </data>
@@ -603,6 +609,15 @@ Are you sure you want to continue?</value>
   </data>
   <data name="Menu.FastFlags.Presets.PauseVoxelizer.Title" xml:space="preserve">
     <value>Pause Voxelizer</value>
+  </data>
+  <data name="Enums.FlagPresets.RenderingMode.D3D11" xml:space="preserve">
+    <value>Direct3D 11</value>
+  </data>
+  <data name="Enums.FlagPresets.RenderingMode.OpenGL" xml:space="preserve">
+    <value>OpenGL</value>
+  </data>
+  <data name="Enums.FlagPresets.RenderingMode.Vulkan" xml:space="preserve">
+    <value>Vulkan</value>
   </data>
   <data name="Menu.FastFlags.Title" xml:space="preserve">
     <value>Engine Settings</value>

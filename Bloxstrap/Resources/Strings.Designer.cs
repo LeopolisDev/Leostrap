@@ -2912,6 +2912,24 @@ namespace Leostrap.Resources {
                 return ResourceManager.GetString("Menu.FastFlags.Presets.D3DExclusiveFullscreenInfo", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Configure the rendering API used for Roblox. Note: Press Alt + Enter to enter exclusive fullscreen when using Direct3D as the rendering API..
+        /// </summary>
+        public static string Menu_FastFlags_Presets_RenderingMode_Description {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.RenderingMode.Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Rendering Mode.
+        /// </summary>
+        public static string Menu_FastFlags_Presets_RenderingMode_Title {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.RenderingMode.Title", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Roblox reduces your rendering quality depending on how your display is scaled in Windows..

@@ -132,6 +132,12 @@
   <data name="Menu.FastFlags.Presets.CloseCrashHandler.Title" xml:space="preserve">
     <value>Close Crash Handler</value>
   </data>
+  <data name="Menu.FastFlags.Presets.RenderingMode.Description" xml:space="preserve">
+    <value>Configure the rendering API used for Roblox. Note: Press Alt + Enter to enter exclusive fullscreen when using Direct3D as the rendering API.</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.RenderingMode.Title" xml:space="preserve">
+    <value>Rendering Mode</value>
+  </data>
   <data name="Menu.FastFlags.Presets.DisableGrass.Description" xml:space="preserve">
     <value>Removes Roblox's default grass textures. Note: This setting does not affect custom grass textures used by individual games.</value>
   </data>
@@ -143,5 +149,14 @@
   </data>
   <data name="Menu.FastFlags.Presets.PauseVoxelizer.Title" xml:space="preserve">
     <value>Pause Voxelizer</value>
+  </data>
+  <data name="Enums.FlagPresets.RenderingMode.D3D11" xml:space="preserve">
+    <value>Direct3D 11</value>
+  </data>
+  <data name="Enums.FlagPresets.RenderingMode.OpenGL" xml:space="preserve">
+    <value>OpenGL</value>
+  </data>
+  <data name="Enums.FlagPresets.RenderingMode.Vulkan" xml:space="preserve">
+    <value>Vulkan</value>
   </data>
 </root>

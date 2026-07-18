@@ -57,6 +57,48 @@ namespace Leostrap.UI.ViewModels.Settings
             set => App.FastFlags.SetPreset("Rendering.GraySky", value ? "True" : null);
         }
 
+        public IReadOnlyList<RenderingMode> RenderingModes => Enum.GetValues<RenderingMode>();
+
+        public RenderingMode SelectedRenderingMode
+        {
+            get
+            {
+                if (App.FastFlags.GetValue("FFlagDebugGraphicsPreferVulkan") == "True")
+                    return RenderingMode.Vulkan;
+
+                if (App.FastFlags.GetValue("FFlagDebugGraphicsPreferOpenGL") == "True")
+                    return RenderingMode.OpenGL;
+
+                if (App.FastFlags.GetValue("FFlagDebugGraphicsPreferD3D11") == "True")
+                    return RenderingMode.D3D11;
+
+                return RenderingMode.Automatic;
+            }
+            set
+            {
+                App.FastFlags.SetValue("FFlagDebugGraphicsPreferD3D11", null);
+                App.FastFlags.SetValue("FFlagDebugGraphicsPreferD3D11FL10", null);
+                App.FastFlags.SetValue("FFlagDebugGraphicsPreferVulkan", null);
+                App.FastFlags.SetValue("FFlagDebugGraphicsPreferOpenGL", null);
+                App.FastFlags.SetValue("FFlagGraphicsEnableD3D10Compute", null);
+
+                switch (value)
+                {
+                    case RenderingMode.D3D11:
+                        App.FastFlags.SetValue("FFlagDebugGraphicsPreferD3D11", "True");
+                        break;
+
+                    case RenderingMode.Vulkan:
+                        App.FastFlags.SetValue("FFlagDebugGraphicsPreferVulkan", "True");
+                        break;
+
+                    case RenderingMode.OpenGL:
+                        App.FastFlags.SetValue("FFlagDebugGraphicsPreferOpenGL", "True");
+                        break;
+                }
+            }
+        }
+
         public bool DisableGrass
         {
             get =>
