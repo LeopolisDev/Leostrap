@@ -2553,6 +2553,42 @@ namespace Leostrap.Resources {
                 return ResourceManager.GetString("Menu.Behaviour.ConfirmLaunches.Title", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Allows for more than one Roblox instance to be opened simultaneously. May cause issues with the desktop app..
+        /// </summary>
+        public static string Menu_Behaviour_MultiInstanceLaunching_Description {
+            get {
+                return ResourceManager.GetString("Menu.Behaviour.MultiInstanceLaunching.Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Multi-Instance Launching.
+        /// </summary>
+        public static string Menu_Behaviour_MultiInstanceLaunching_Title {
+            get {
+                return ResourceManager.GetString("Menu.Behaviour.MultiInstanceLaunching.Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Selects the CPU priority for Roblox..
+        /// </summary>
+        public static string Menu_Behaviour_RobloxProcessPriority_Description {
+            get {
+                return ResourceManager.GetString("Menu.Behaviour.RobloxProcessPriority.Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Roblox Process Priority.
+        /// </summary>
+        public static string Menu_Behaviour_RobloxProcessPriority_Title {
+            get {
+                return ResourceManager.GetString("Menu.Behaviour.RobloxProcessPriority.Title", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Configure what Leostrap should do when launching Roblox..

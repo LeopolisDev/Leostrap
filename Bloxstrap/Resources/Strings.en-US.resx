@@ -159,4 +159,16 @@
   <data name="Enums.FlagPresets.RenderingMode.Vulkan" xml:space="preserve">
     <value>Vulkan</value>
   </data>
+  <data name="Menu.Behaviour.MultiInstanceLaunching.Description" xml:space="preserve">
+    <value>Allows for more than one Roblox instance to be opened simultaneously. May cause issues with the desktop app.</value>
+  </data>
+  <data name="Menu.Behaviour.MultiInstanceLaunching.Title" xml:space="preserve">
+    <value>Multi-Instance Launching</value>
+  </data>
+  <data name="Menu.Behaviour.RobloxProcessPriority.Description" xml:space="preserve">
+    <value>Selects the CPU priority for Roblox.</value>
+  </data>
+  <data name="Menu.Behaviour.RobloxProcessPriority.Title" xml:space="preserve">
+    <value>Roblox Process Priority</value>
+  </data>
 </root>

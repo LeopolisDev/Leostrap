@@ -29,6 +29,24 @@
             <ui:ToggleSwitch IsChecked="{Binding BackgroundUpdates, Mode=TwoWay}" />
         </controls:OptionControl>
 
+        <controls:OptionControl
+            Header="{x:Static resources:Strings.Menu_Behaviour_MultiInstanceLaunching_Title}"
+            Description="{x:Static resources:Strings.Menu_Behaviour_MultiInstanceLaunching_Description}">
+            <ui:ToggleSwitch IsChecked="{Binding AllowMultiInstanceLaunching, Mode=TwoWay}" />
+        </controls:OptionControl>
+
+        <controls:OptionControl
+            Header="{x:Static resources:Strings.Menu_Behaviour_RobloxProcessPriority_Title}"
+            Description="{x:Static resources:Strings.Menu_Behaviour_RobloxProcessPriority_Description}">
+            <ComboBox Margin="5,0,0,0" Padding="10,5,10,5" Width="200" ItemsSource="{Binding RobloxProcessPriorities, Mode=OneTime}" SelectedItem="{Binding SelectedRobloxProcessPriority, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=., Converter={StaticResource EnumNameConverter}}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </controls:OptionControl>
+
         <controls:OptionControl 
             Header="{x:Static resources:Strings.Menu_Behaviour_ForceRobloxReinstall_Title}"
             Description="{x:Static resources:Strings.Menu_Behaviour_ForceRobloxReinstall_Description}">

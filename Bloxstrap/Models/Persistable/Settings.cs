@@ -14,6 +14,8 @@ namespace Leostrap.Models.Persistable
         public bool DeveloperMode { get; set; } = false;
         public bool CheckForUpdates { get; set; } = true;
         public bool ConfirmLaunches { get; set; } = false;
+        public bool AllowMultiInstanceLaunching { get; set; } = false;
+        public RobloxProcessPriority RobloxProcessPriority { get; set; } = RobloxProcessPriority.Normal;
         public string Locale { get; set; } = "nil";
         public bool UseFastFlagManager { get; set; } = true;
         public bool CloseCrashHandler { get; set; } = true;

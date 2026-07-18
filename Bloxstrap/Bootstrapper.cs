@@ -572,9 +572,29 @@ namespace Leostrap
                 startInfo.Verb = "runas";
                 startInfo.UseShellExecute = true;
             }
-            else if (_launchMode == LaunchMode.StudioAuth)
+
+            using var multiInstanceMutex = App.Settings.Prop.AllowMultiInstanceLaunching && _launchMode == LaunchMode.Player
+                ? CreateMultiInstanceMutex()
+                : null;
+
+            if (_launchMode == LaunchMode.StudioAuth)
             {
-                Process.Start(startInfo);
+                try
+                {
+                    using var process = StartRobloxProcess(startInfo);
+                }
+                catch (Win32Exception ex) when (ex.NativeErrorCode == 1223)
+                {
+                    // 1223 = ERROR_CANCELLED, gets thrown if a UAC prompt is cancelled
+                    return;
+                }
+                catch (Exception)
+                {
+                    // attempt a reinstall on next launch
+                    File.Delete(AppData.ExecutablePath);
+                    throw;
+                }
+
                 return;
             }
 
@@ -610,7 +630,7 @@ namespace Leostrap
             // v2.2.0 - byfron will trip if we keep a process handle open for over a minute, so we're doing this now
             try
             {
-                using var process = Process.Start(startInfo)!;
+                using var process = StartRobloxProcess(startInfo);
                 _appPid = process.Id;
             }
             catch (Win32Exception ex) when (ex.NativeErrorCode == 1223)
@@ -703,6 +723,62 @@ namespace Leostrap
 
             // allow for window to show, since the log is created pretty far beforehand
             Thread.Sleep(1000);
+        }
+
+        private Process StartRobloxProcess(ProcessStartInfo startInfo)
+        {
+            const string LOG_IDENT = "Bootstrapper::StartRobloxProcess";
+
+            var process = Process.Start(startInfo)!;
+
+            try
+            {
+                switch (App.Settings.Prop.RobloxProcessPriority)
+                {
+                    case RobloxProcessPriority.Low:
+                        process.PriorityClass = ProcessPriorityClass.Idle;
+                        break;
+
+                    case RobloxProcessPriority.BelowNormal:
+                        process.PriorityClass = ProcessPriorityClass.BelowNormal;
+                        break;
+
+                    case RobloxProcessPriority.AboveNormal:
+                        process.PriorityClass = ProcessPriorityClass.AboveNormal;
+                        break;
+
+                    case RobloxProcessPriority.High:
+                        process.PriorityClass = ProcessPriorityClass.High;
+                        break;
+
+                    case RobloxProcessPriority.RealTime:
+                        process.PriorityClass = ProcessPriorityClass.RealTime;
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine(LOG_IDENT, $"Failed to set Roblox process priority to {App.Settings.Prop.RobloxProcessPriority}");
+                App.Logger.WriteException(LOG_IDENT, ex);
+            }
+
+            return process;
+        }
+
+        private Mutex? CreateMultiInstanceMutex()
+        {
+            const string LOG_IDENT = "Bootstrapper::CreateMultiInstanceMutex";
+
+            try
+            {
+                return new Mutex(false, "ROBLOX_SingletonEvent");
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine(LOG_IDENT, "Failed to create Roblox singleton event mutex");
+                App.Logger.WriteException(LOG_IDENT, ex);
+                return null;
+            }
         }
 
         private bool ShouldRunAsAdmin()
