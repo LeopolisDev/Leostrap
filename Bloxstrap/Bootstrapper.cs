@@ -640,43 +640,43 @@ namespace Leostrap
                 App.Logger.WriteLine(LOG_IDENT, $"Got log file as {logFileName}");
             }
 
-            _mutex?.ReleaseAsync();
-
-            if (IsStudioLaunch)
-                return;
-
             var autoclosePids = new List<int>();
 
-            // launch custom integrations now
-            foreach (var integration in App.Settings.Prop.CustomIntegrations)
+            _mutex?.ReleaseAsync();
+
+            if (!IsStudioLaunch)
             {
-                App.Logger.WriteLine(LOG_IDENT, $"Launching custom integration '{integration.Name}' ({integration.Location} {integration.LaunchArgs} - autoclose is {integration.AutoClose})");
-
-                int pid = 0;
-
-                try
+                // launch custom integrations now
+                foreach (var integration in App.Settings.Prop.CustomIntegrations)
                 {
-                    var process = Process.Start(new ProcessStartInfo
+                    App.Logger.WriteLine(LOG_IDENT, $"Launching custom integration '{integration.Name}' ({integration.Location} {integration.LaunchArgs} - autoclose is {integration.AutoClose})");
+
+                    int pid = 0;
+
+                    try
                     {
-                        FileName = integration.Location,
-                        Arguments = integration.LaunchArgs.Replace("\r\n", " "),
-                        WorkingDirectory = Path.GetDirectoryName(integration.Location),
-                        UseShellExecute = true
-                    })!;
+                        var process = Process.Start(new ProcessStartInfo
+                        {
+                            FileName = integration.Location,
+                            Arguments = integration.LaunchArgs.Replace("\r\n", " "),
+                            WorkingDirectory = Path.GetDirectoryName(integration.Location),
+                            UseShellExecute = true
+                        })!;
 
-                    pid = process.Id;
-                }
-                catch (Exception ex)
-                {
-                    App.Logger.WriteLine(LOG_IDENT, $"Failed to launch integration '{integration.Name}'!");
-                    App.Logger.WriteLine(LOG_IDENT, ex.Message);
-                }
+                        pid = process.Id;
+                    }
+                    catch (Exception ex)
+                    {
+                        App.Logger.WriteLine(LOG_IDENT, $"Failed to launch integration '{integration.Name}'!");
+                        App.Logger.WriteLine(LOG_IDENT, ex.Message);
+                    }
 
-                if (integration.AutoClose && pid != 0)
-                    autoclosePids.Add(pid);
+                    if (integration.AutoClose && pid != 0)
+                        autoclosePids.Add(pid);
+                }
             }
 
-            if (App.Settings.Prop.EnableActivityTracking || App.LaunchSettings.TestModeFlag.Active || autoclosePids.Any())
+            if (App.Settings.Prop.CloseCrashHandler || App.Settings.Prop.EnableActivityTracking || App.LaunchSettings.TestModeFlag.Active || autoclosePids.Any())
             {
                 using var ipl = new InterProcessLock("Watcher", TimeSpan.FromSeconds(5));
 
@@ -697,6 +697,9 @@ namespace Leostrap
                 if (ipl.IsAcquired)
                     Process.Start(Paths.Process, args);
             }
+
+            if (IsStudioLaunch)
+                return;
 
             // allow for window to show, since the log is created pretty far beforehand
             Thread.Sleep(1000);

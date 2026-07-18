@@ -73,6 +73,24 @@ namespace Leostrap
 
         public void KillRobloxProcess() => CloseProcess(_watcherData!.ProcessId, true);
 
+        private static void KillRobloxCrashHandler()
+        {
+            const string LOG_IDENT = "Watcher::KillRobloxCrashHandler";
+
+            foreach (Process process in Process.GetProcessesByName("RobloxCrashHandler"))
+            {
+                try
+                {
+                    process.Kill();
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteLine(LOG_IDENT, $"Failed to close process {process.Id}");
+                    App.Logger.WriteException(LOG_IDENT, ex);
+                }
+            }
+        }
+
         public void CloseProcess(int pid, bool force = false)
         {
             const string LOG_IDENT = "Watcher::CloseProcess";
@@ -109,13 +127,21 @@ namespace Leostrap
             ActivityWatcher?.Start();
 
             while (Utilities.GetProcessesSafe().Any(x => x.Id == _watcherData.ProcessId))
+            {
+                if (App.Settings.Prop.CloseCrashHandler)
+                    KillRobloxCrashHandler();
+
                 await Task.Delay(1000);
+            }
 
             if (_watcherData.AutoclosePids is not null)
             {
                 foreach (int pid in _watcherData.AutoclosePids)
                     CloseProcess(pid);
             }
+
+            if (App.Settings.Prop.CloseCrashHandler)
+                KillRobloxCrashHandler();
 
             if (App.LaunchSettings.TestModeFlag.Active)
                 Process.Start(Paths.Process, "-settings -testmode");
