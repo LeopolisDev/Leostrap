@@ -53,7 +53,7 @@ Alternatively, you can install Leostrap via [Winget](https://winstall.app/apps/p
 > winget install leostrap
 ```
 
-You will also need the [.NET 6 Desktop Runtime](https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=win11-x64&apphost_version=6.0.36&gui=true). If you don't already have it installed, you'll be prompted to install it anyway. Be sure to install Leostrap after you've installed this.
+The published Leostrap build is self-contained, so you should not need to install the .NET 6 Desktop Runtime separately. If you're building from source, make sure you have the [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) installed.
 
 It's not unlikely that Windows Smartscreen will show a popup when you run Leostrap for the first time. This happens because it's an unknown program, not because it's actually detected as being malicious. To dismiss it, just click on "More info" and then "Run anyway".
 
