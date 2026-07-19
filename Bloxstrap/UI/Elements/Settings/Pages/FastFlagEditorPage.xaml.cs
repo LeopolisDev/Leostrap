@@ -36,6 +36,7 @@ namespace Leostrap.UI.Elements.Settings.Pages
 
         private const string RobloxCookiesFileName = @"Roblox\LocalStorage\RobloxCookies.dat";
         private const string RobloxDomain = "roblox.com";
+        private const string RobloxWwwDomain = "www.roblox.com";
         private const string RobloxDomainSuffix = ".roblox.com";
 
         private bool _showPresets = false;
@@ -148,9 +149,11 @@ namespace Leostrap.UI.Elements.Settings.Pages
                 command.CommandText =
                     $"DELETE FROM {tableName} " +
                     $"WHERE {hostColumn} = $host " +
+                    $"OR {hostColumn} = $wwwHost " +
                     $"OR {hostColumn} = $dotHost " +
                     $"OR {hostColumn} LIKE $subdomainPattern;";
                 command.Parameters.AddWithValue("$host", RobloxDomain);
+                command.Parameters.AddWithValue("$wwwHost", RobloxWwwDomain);
                 command.Parameters.AddWithValue("$dotHost", RobloxDomainSuffix);
                 command.Parameters.AddWithValue("$subdomainPattern", $"%{RobloxDomainSuffix}");
 
