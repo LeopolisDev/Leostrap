@@ -3,6 +3,7 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Collections.ObjectModel;
 
+using Microsoft.Data.Sqlite;
 using Microsoft.Win32;
 
 using Wpf.Ui.Mvvm.Contracts;
@@ -34,6 +35,8 @@ namespace Leostrap.UI.Elements.Settings.Pages
         private readonly Regex _stringFilterPattern = new("^[^;]*(;[\\d]{1,})+$", RegexOptions.IgnoreCase);
 
         private const string RobloxCookiesFileName = @"Roblox\LocalStorage\RobloxCookies.dat";
+        private const string RobloxDomain = "roblox.com";
+        private const string RobloxDomainSuffix = ".roblox.com";
 
         private bool _showPresets = false;
         private string _searchFilter = "";
@@ -92,6 +95,104 @@ namespace Leostrap.UI.Elements.Settings.Pages
 
             App.Logger.WriteLine(LOG_IDENT, $"Deleting cookie file: {cookiePath}");
             File.Delete(cookiePath);
+        }
+
+        private static IEnumerable<(string BrowserName, string DatabasePath, string TableName, string HostColumn)> GetBrowserCookieDatabases()
+        {
+            string chromeUserDataRoot = Path.Combine(Paths.LocalAppData, "Google", "Chrome", "User Data");
+
+            if (Directory.Exists(chromeUserDataRoot))
+            {
+                foreach (string profileDirectory in Directory.EnumerateDirectories(chromeUserDataRoot))
+                {
+                    foreach (string databasePath in new[]
+                    {
+                        Path.Combine(profileDirectory, "Network", "Cookies"),
+                        Path.Combine(profileDirectory, "Cookies")
+                    }.Where(File.Exists).Distinct(StringComparer.OrdinalIgnoreCase))
+                    {
+                        yield return ("Chrome", databasePath, "cookies", "host_key");
+                    }
+                }
+            }
+
+            string firefoxProfilesRoot = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                "Mozilla",
+                "Firefox",
+                "Profiles"
+            );
+
+            if (!Directory.Exists(firefoxProfilesRoot))
+                yield break;
+
+            foreach (string profileDirectory in Directory.EnumerateDirectories(firefoxProfilesRoot))
+            {
+                string databasePath = Path.Combine(profileDirectory, "cookies.sqlite");
+
+                if (File.Exists(databasePath))
+                    yield return ("Firefox", databasePath, "moz_cookies", "host");
+            }
+        }
+
+        private static int TryClearRobloxCookiesFromDatabase(string browserName, string databasePath, string tableName, string hostColumn)
+        {
+            const string LOG_IDENT = "FastFlagEditorPage::TryClearRobloxCookiesFromDatabase";
+
+            try
+            {
+                using var connection = new SqliteConnection($"Data Source={databasePath};Mode=ReadWrite;");
+                connection.Open();
+
+                using var command = connection.CreateCommand();
+                command.CommandText =
+                    $"DELETE FROM {tableName} " +
+                    $"WHERE {hostColumn} = $host " +
+                    $"OR {hostColumn} = $dotHost " +
+                    $"OR {hostColumn} LIKE $subdomainPattern;";
+                command.Parameters.AddWithValue("$host", RobloxDomain);
+                command.Parameters.AddWithValue("$dotHost", RobloxDomainSuffix);
+                command.Parameters.AddWithValue("$subdomainPattern", $"%{RobloxDomainSuffix}");
+
+                int rowsRemoved = command.ExecuteNonQuery();
+
+                if (rowsRemoved > 0)
+                {
+                    App.Logger.WriteLine(
+                        LOG_IDENT,
+                        $"Removed {rowsRemoved} Roblox cookie entr{(rowsRemoved == 1 ? "y" : "ies")} from {browserName}: {databasePath}"
+                    );
+                }
+
+                return rowsRemoved;
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine(LOG_IDENT, $"Failed to clear Roblox cookies from {browserName}: {databasePath}");
+                App.Logger.WriteException(LOG_IDENT, ex);
+                return 0;
+            }
+        }
+
+        private static void ClearRobloxBrowserCookies()
+        {
+            const string LOG_IDENT = "FastFlagEditorPage::ClearRobloxBrowserCookies";
+
+            var cookieDatabases = GetBrowserCookieDatabases().ToList();
+
+            if (cookieDatabases.Count == 0)
+            {
+                App.Logger.WriteLine(LOG_IDENT, "No Chrome or Firefox cookie databases were found");
+                return;
+            }
+
+            int totalRemoved = 0;
+
+            foreach (var (browserName, databasePath, tableName, hostColumn) in cookieDatabases)
+                totalRemoved += TryClearRobloxCookiesFromDatabase(browserName, databasePath, tableName, hostColumn);
+
+            if (totalRemoved == 0)
+                App.Logger.WriteLine(LOG_IDENT, "No roblox.com cookies were found in browser databases");
         }
 
         private static bool TrySplitCommandLine(string commandLine, out string fileName, out string arguments)
@@ -828,7 +929,7 @@ namespace Leostrap.UI.Elements.Settings.Pages
                 return;
 
             var result = Frontend.ShowMessageBox(
-                "This will close all Roblox instances, clear your Roblox cookies, and uninstall Roblox. Continue?",
+                "This will close all Roblox instances, clear your Roblox cookies, remove roblox.com cookies from Chrome and Firefox, and uninstall Roblox. Continue?",
                 MessageBoxImage.Warning,
                 MessageBoxButton.YesNo,
                 MessageBoxResult.No
@@ -848,6 +949,7 @@ namespace Leostrap.UI.Elements.Settings.Pages
                 {
                     CloseRobloxProcesses();
                     ClearRobloxCookies();
+                    ClearRobloxBrowserCookies();
                     UninstallRoblox();
                 });
 
