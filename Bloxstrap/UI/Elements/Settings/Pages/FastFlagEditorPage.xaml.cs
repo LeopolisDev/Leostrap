@@ -48,17 +48,8 @@ namespace Leostrap.UI.Elements.Settings.Pages
             InitializeComponent();
         }
 
-        private static void CloseRobloxProcesses()
+        private static void CloseProcessesByName(string logIdent, params string[] processNames)
         {
-            const string LOG_IDENT = "FastFlagEditorPage::CloseRobloxProcesses";
-
-            var processNames = new[]
-            {
-                App.RobloxPlayerAppName,
-                App.RobloxStudioAppName,
-                "RobloxCrashHandler"
-            };
-
             foreach (var process in processNames.SelectMany(Process.GetProcessesByName).DistinctBy(x => x.Id))
             {
                 try
@@ -66,20 +57,39 @@ namespace Leostrap.UI.Elements.Settings.Pages
                     if (process.HasExited)
                         continue;
 
-                    App.Logger.WriteLine(LOG_IDENT, $"Closing {process.ProcessName} ({process.Id})");
+                    App.Logger.WriteLine(logIdent, $"Closing {process.ProcessName} ({process.Id})");
                     process.Kill();
                     process.WaitForExit(5000);
                 }
                 catch (Exception ex)
                 {
-                    App.Logger.WriteLine(LOG_IDENT, $"Failed to close {process.ProcessName} ({process.Id})");
-                    App.Logger.WriteException(LOG_IDENT, ex);
+                    App.Logger.WriteLine(logIdent, $"Failed to close {process.ProcessName} ({process.Id})");
+                    App.Logger.WriteException(logIdent, ex);
                 }
                 finally
                 {
                     process.Close();
                 }
             }
+        }
+
+        private static void CloseRobloxProcesses()
+        {
+            CloseProcessesByName(
+                "FastFlagEditorPage::CloseRobloxProcesses",
+                App.RobloxPlayerAppName,
+                App.RobloxStudioAppName,
+                "RobloxCrashHandler"
+            );
+        }
+
+        private static void CloseBrowserProcesses()
+        {
+            CloseProcessesByName(
+                "FastFlagEditorPage::CloseBrowserProcesses",
+                "chrome",
+                "firefox"
+            );
         }
 
         private static void ClearRobloxCookies()
@@ -932,7 +942,7 @@ namespace Leostrap.UI.Elements.Settings.Pages
                 return;
 
             var result = Frontend.ShowMessageBox(
-                "This will close all Roblox instances, clear your Roblox cookies, remove roblox.com cookies from Chrome and Firefox, and uninstall Roblox. Continue?",
+                "This will close all Roblox instances, temporarily close Chrome and Firefox if needed, clear your Roblox cookies, remove roblox.com cookies from Chrome and Firefox, and uninstall Roblox. Continue?",
                 MessageBoxImage.Warning,
                 MessageBoxButton.YesNo,
                 MessageBoxResult.No
@@ -951,6 +961,7 @@ namespace Leostrap.UI.Elements.Settings.Pages
                 await Task.Run(() =>
                 {
                     CloseRobloxProcesses();
+                    CloseBrowserProcesses();
                     ClearRobloxCookies();
                     ClearRobloxBrowserCookies();
                     UninstallRoblox();
