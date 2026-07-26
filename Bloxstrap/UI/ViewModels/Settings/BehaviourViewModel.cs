@@ -30,6 +30,12 @@ namespace Leostrap.UI.ViewModels.Settings
             set => App.Settings.Prop.BackgroundUpdatesEnabled = value;
         }
 
+        public bool CloseRobloxCompletely
+        {
+            get => App.Settings.Prop.CloseRobloxCompletely;
+            set => App.Settings.Prop.CloseRobloxCompletely = value;
+        }
+
         public bool IsRobloxInstallationMissing => !App.IsPlayerInstalled && !App.IsStudioInstalled;
 
         public bool ForceRobloxReinstallation

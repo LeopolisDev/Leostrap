@@ -30,6 +30,12 @@
         </controls:OptionControl>
 
         <controls:OptionControl
+            Header="{x:Static resources:Strings.Menu_Behaviour_CloseRobloxCompletely_Title}"
+            Description="{x:Static resources:Strings.Menu_Behaviour_CloseRobloxCompletely_Description}">
+            <ui:ToggleSwitch IsChecked="{Binding CloseRobloxCompletely, Mode=TwoWay}" />
+        </controls:OptionControl>
+
+        <controls:OptionControl
             Header="{x:Static resources:Strings.Menu_Behaviour_MultiInstanceLaunching_Title}"
             Description="{x:Static resources:Strings.Menu_Behaviour_MultiInstanceLaunching_Description}">
             <ui:ToggleSwitch IsChecked="{Binding AllowMultiInstanceLaunching, Mode=TwoWay}" />

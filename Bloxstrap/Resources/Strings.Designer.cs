@@ -2537,6 +2537,24 @@ namespace Leostrap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to When Roblox closes, fully end the process instead of leaving it running in the background..
+        /// </summary>
+        public static string Menu_Behaviour_CloseRobloxCompletely_Description {
+            get {
+                return ResourceManager.GetString("Menu.Behaviour.CloseRobloxCompletely.Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Close Roblox completely.
+        /// </summary>
+        public static string Menu_Behaviour_CloseRobloxCompletely_Title {
+            get {
+                return ResourceManager.GetString("Menu.Behaviour.CloseRobloxCompletely.Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to Prevent against closures of your existing game from accidentally launching another one..
         /// </summary>
         public static string Menu_Behaviour_ConfirmLaunches_Description {

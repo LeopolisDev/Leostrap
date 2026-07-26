@@ -54,13 +54,12 @@ namespace Leostrap
             {
                 ActivityWatcher = new(_watcherData.LogFile);
 
-                if (App.Settings.Prop.UseDisableAppPatch)
+                if (App.Settings.Prop.UseDisableAppPatch || App.Settings.Prop.CloseRobloxCompletely)
                 {
                     ActivityWatcher.OnAppClose += delegate
                     {
                         App.Logger.WriteLine(LOG_IDENT, "Received desktop app exit, closing Roblox");
-                        using var process = Process.GetProcessById(_watcherData.ProcessId);
-                        process.CloseMainWindow();
+                        CloseProcess(_watcherData.ProcessId, App.Settings.Prop.CloseRobloxCompletely);
                     };
                 }
 
