@@ -37,7 +37,11 @@ namespace Leostrap
 
                 using var gameClientProcess = Process.Start(path);
 
-                _watcherData = new() { ProcessId = gameClientProcess.Id };
+                _watcherData = new()
+                {
+                    ProcessId = gameClientProcess.Id,
+                    ProcessName = new RobloxPlayerData().ProcessName
+                };
 #else
                 throw new Exception("Watcher data not specified");
 #endif
@@ -49,6 +53,18 @@ namespace Leostrap
 
             if (_watcherData is null)
                 throw new Exception("Watcher data is invalid");
+
+            if (String.IsNullOrWhiteSpace(_watcherData.ProcessName))
+            {
+                try
+                {
+                    _watcherData.ProcessName = Process.GetProcessById(_watcherData.ProcessId).ProcessName;
+                }
+                catch
+                {
+                    _watcherData.ProcessName = new RobloxPlayerData().ProcessName;
+                }
+            }
 
             if (App.Settings.Prop.EnableActivityTracking)
             {
@@ -72,6 +88,27 @@ namespace Leostrap
 
         public void KillRobloxProcess() => CloseProcess(_watcherData!.ProcessId, true);
 
+        private static bool KillProcessesByName(string processName)
+        {
+            bool killedAny = false;
+
+            foreach (Process process in Process.GetProcessesByName(processName))
+            {
+                try
+                {
+                    killedAny = true;
+                    process.Kill();
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteLine("Watcher::KillProcessesByName", $"Failed to close process {process.Id} ({processName})");
+                    App.Logger.WriteException("Watcher::KillProcessesByName", ex);
+                }
+            }
+
+            return killedAny;
+        }
+
         private static void KillRobloxCrashHandler()
         {
             const string LOG_IDENT = "Watcher::KillRobloxCrashHandler";
@@ -87,6 +124,38 @@ namespace Leostrap
                     App.Logger.WriteLine(LOG_IDENT, $"Failed to close process {process.Id}");
                     App.Logger.WriteException(LOG_IDENT, ex);
                 }
+            }
+        }
+
+        private async Task KeepRobloxClosedAsync()
+        {
+            const string LOG_IDENT = "Watcher::KeepRobloxClosedAsync";
+            const int timeoutSeconds = 10;
+
+            if (!App.Settings.Prop.CloseRobloxCompletely || _watcherData is null)
+                return;
+
+            App.Logger.WriteLine(LOG_IDENT, "Watching for Roblox respawns after close");
+
+            int quietTicks = 0;
+            DateTime deadline = DateTime.UtcNow.AddSeconds(timeoutSeconds);
+
+            while (DateTime.UtcNow < deadline)
+            {
+                bool killedAny = KillProcessesByName(_watcherData.ProcessName);
+
+                if (App.Settings.Prop.CloseCrashHandler)
+                    killedAny |= KillProcessesByName("RobloxCrashHandler");
+
+                if (killedAny)
+                    quietTicks = 0;
+                else
+                    quietTicks += 1;
+
+                if (quietTicks >= 3)
+                    break;
+
+                await Task.Delay(1000);
             }
         }
 
@@ -141,6 +210,8 @@ namespace Leostrap
 
             if (App.Settings.Prop.CloseCrashHandler)
                 KillRobloxCrashHandler();
+
+            await KeepRobloxClosedAsync();
 
             if (App.LaunchSettings.TestModeFlag.Active)
                 Process.Start(Paths.Process, "-settings -testmode");

@@ -703,6 +703,7 @@ namespace Leostrap
                 var watcherData = new WatcherData 
                 { 
                     ProcessId = _appPid, 
+                    ProcessName = AppData.ProcessName,
                     LogFile = logFileName, 
                     AutoclosePids = autoclosePids
                 };
