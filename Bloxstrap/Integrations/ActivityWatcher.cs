@@ -28,6 +28,7 @@
         private int _logEntriesRead = 0;
         private bool _teleportMarker = false;
         private bool _reservedTeleportMarker = false;
+        private bool _hasJoinedGame = false;
         
         public event EventHandler<string>? OnLogEntry;
         public event EventHandler? OnGameJoin;
@@ -155,6 +156,12 @@
 
             if (logMessage.StartsWith(GameLeavingEntry))
             {
+                // Roblox can emit this line during startup / log replay before we've
+                // actually joined a game. Only treat it as a real app-close event once
+                // we've seen a proper game join in this session.
+                if (!_hasJoinedGame)
+                    return;
+
                 App.Logger.WriteLine(LOG_IDENT, "User is back into the desktop app");
                 
                 OnAppClose?.Invoke(this, EventArgs.Empty);
@@ -272,6 +279,7 @@
                     App.Logger.WriteLine(LOG_IDENT, $"Joined Game ({Data})");
 
                     InGame = true;
+                    _hasJoinedGame = true;
                     Data.TimeJoined = DateTime.Now;
 
                     OnGameJoin?.Invoke(this, EventArgs.Empty);
