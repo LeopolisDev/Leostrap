@@ -105,18 +105,37 @@
     </ItemGroup>
   </Target>
 
-  <Target Name="BuildByeBanAsync" BeforeTargets="Publish">
+  <Target Name="BuildByeBanAsync" BeforeTargets="Build;Publish">
     <PropertyGroup>
       <ByeBanAsyncProjectDir>$(MSBuildProjectDirectory)\ByeBanAsync</ByeBanAsyncProjectDir>
-      <ByeBanAsyncExe>$(ByeBanAsyncProjectDir)\target\release\ByeBanAsync.exe</ByeBanAsyncExe>
+      <ByeBanAsyncDebugExe>$(ByeBanAsyncProjectDir)\target\debug\ByeBanAsync.exe</ByeBanAsyncDebugExe>
+      <ByeBanAsyncReleaseExe>$(ByeBanAsyncProjectDir)\target\release\ByeBanAsync.exe</ByeBanAsyncReleaseExe>
       <_CargoExe>$(UserProfile)\.cargo\bin\cargo.exe</_CargoExe>
+      <_ByeBanAsyncCargoArgs Condition="'$(Configuration)' == 'Release'">build --release</_ByeBanAsyncCargoArgs>
+      <_ByeBanAsyncCargoArgs Condition="'$(_ByeBanAsyncCargoArgs)' == ''">build</_ByeBanAsyncCargoArgs>
     </PropertyGroup>
 
-    <Message Text="Building ByeBanAsync helper for publish" Importance="High" Condition="!Exists('$(ByeBanAsyncExe)')" />
+    <Message Text="Building ByeBanAsync helper" Importance="High" Condition="Exists('$(ByeBanAsyncProjectDir)\Cargo.toml') and Exists('$(_CargoExe)')" />
     <Exec
       WorkingDirectory="$(ByeBanAsyncProjectDir)"
-      Command="&quot;$(_CargoExe)&quot; build --release"
-      Condition="!Exists('$(ByeBanAsyncExe)') and Exists('$(_CargoExe)') and Exists('$(ByeBanAsyncProjectDir)\Cargo.toml')" />
+      Command="&quot;$(_CargoExe)&quot; $(_ByeBanAsyncCargoArgs)"
+      Condition="Exists('$(_CargoExe)') and Exists('$(ByeBanAsyncProjectDir)\Cargo.toml')" />
+    <Message Text="Skipping ByeBanAsync helper build because Cargo is unavailable or the project is missing." Importance="Low" Condition="!Exists('$(_CargoExe)') or !Exists('$(ByeBanAsyncProjectDir)\Cargo.toml')" />
+  </Target>
+
+  <Target Name="CopyByeBanAsyncToOutput" AfterTargets="Build">
+    <PropertyGroup>
+      <ByeBanAsyncProjectDir>$(MSBuildProjectDirectory)\ByeBanAsync</ByeBanAsyncProjectDir>
+      <ByeBanAsyncDebugExe>$(ByeBanAsyncProjectDir)\target\debug\ByeBanAsync.exe</ByeBanAsyncDebugExe>
+      <ByeBanAsyncReleaseExe>$(ByeBanAsyncProjectDir)\target\release\ByeBanAsync.exe</ByeBanAsyncReleaseExe>
+      <_ByeBanAsyncSourceExe Condition="'$(Configuration)' == 'Release'">$(ByeBanAsyncReleaseExe)</_ByeBanAsyncSourceExe>
+      <_ByeBanAsyncSourceExe Condition="'$(_ByeBanAsyncSourceExe)' == ''">$(ByeBanAsyncDebugExe)</_ByeBanAsyncSourceExe>
+    </PropertyGroup>
+
+    <Copy
+      SourceFiles="$(_ByeBanAsyncSourceExe)"
+      DestinationFiles="$(TargetDir)ByeBanAsync.exe"
+      Condition="Exists('$(_ByeBanAsyncSourceExe)') and '$(TargetDir)' != ''" />
   </Target>
 
   <Target Name="CopyByeBanAsyncToPublish" AfterTargets="Publish">
