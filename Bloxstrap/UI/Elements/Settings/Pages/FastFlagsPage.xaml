@@ -105,12 +105,6 @@
             <ui:ToggleSwitch IsChecked="{Binding CloseCrashHandler, Mode=TwoWay}" />
         </controls:OptionControl>
 
-        <controls:OptionControl
-            Header="{x:Static resources:Strings.Menu_FastFlags_Presets_Jumpy_Title}"
-            Description="{x:Static resources:Strings.Menu_FastFlags_Presets_Jumpy_Description}">
-            <ui:ToggleSwitch IsChecked="{Binding JumpyTask.NewState, Mode=TwoWay}" />
-        </controls:OptionControl>
-
         <controls:OptionControl 
             Margin="0,24,0,0"
             Header="{x:Static resources:Strings.Menu_FastFlags_Reset_Title}">

@@ -696,26 +696,16 @@ namespace Leostrap
                 }
             }
 
-            bool launchWatcher = App.Settings.Prop.CloseCrashHandler || App.Settings.Prop.EnableActivityTracking || App.LaunchSettings.TestModeFlag.Active || autoclosePids.Any() || App.Settings.Prop.EnableJumpy;
-
-            if (launchWatcher)
+            if (App.Settings.Prop.CloseCrashHandler || App.Settings.Prop.EnableActivityTracking || App.LaunchSettings.TestModeFlag.Active || autoclosePids.Any())
             {
                 using var ipl = new InterProcessLock("Watcher", TimeSpan.FromSeconds(5));
-
-                bool jumpyOnly =
-                    App.Settings.Prop.EnableJumpy &&
-                    !App.Settings.Prop.CloseCrashHandler &&
-                    !App.Settings.Prop.EnableActivityTracking &&
-                    !App.LaunchSettings.TestModeFlag.Active &&
-                    !autoclosePids.Any();
 
                 var watcherData = new WatcherData 
                 { 
                     ProcessId = _appPid, 
                     ProcessName = AppData.ProcessName,
                     LogFile = logFileName, 
-                    AutoclosePids = autoclosePids,
-                    ShowNotifyIcon = !jumpyOnly
+                    AutoclosePids = autoclosePids
                 };
 
                 string watcherDataArg = Convert.ToBase64String(Encoding.UTF8.GetBytes(JsonSerializer.Serialize(watcherData)));

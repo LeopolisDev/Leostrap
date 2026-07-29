@@ -132,12 +132,6 @@
   <data name="Menu.FastFlags.Presets.CloseCrashHandler.Title" xml:space="preserve">
     <value>Close Crash Handler</value>
   </data>
-  <data name="Menu.FastFlags.Presets.Jumpy.Description" xml:space="preserve">
-    <value>Moves Roblox up and then back down on Space, while nudging the cursor upward.</value>
-  </data>
-  <data name="Menu.FastFlags.Presets.Jumpy.Title" xml:space="preserve">
-    <value>Jumpy</value>
-  </data>
   <data name="Menu.FastFlags.Presets.RenderingMode.Description" xml:space="preserve">
     <value>Configure the rendering API used for Roblox. Note: Press Alt + Enter to enter exclusive fullscreen when using Direct3D as the rendering API.</value>
   </data>
