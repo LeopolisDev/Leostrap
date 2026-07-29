@@ -287,18 +287,14 @@ namespace Leostrap.UI.Elements.Settings.Pages
             return true;
         }
 
-        private static bool TryUninstallRobloxFromKnownKeys()
+        private static bool TryUninstallRobloxPlayerFromKnownKeys()
         {
             var candidateKeys = new[]
             {
                 @"Software\Microsoft\Windows\CurrentVersion\Uninstall\roblox-player",
                 @"Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\roblox-player",
                 @"Software\Microsoft\Windows\CurrentVersion\Uninstall\Roblox Player",
-                @"Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Roblox Player",
-                @"Software\Microsoft\Windows\CurrentVersion\Uninstall\roblox-studio",
-                @"Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\roblox-studio",
-                @"Software\Microsoft\Windows\CurrentVersion\Uninstall\roblox-studio-admin",
-                @"Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\roblox-studio-admin"
+                @"Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Roblox Player"
             };
 
             foreach (var rootKey in new[] { Registry.CurrentUser, Registry.LocalMachine })
@@ -313,9 +309,9 @@ namespace Leostrap.UI.Elements.Settings.Pages
             return false;
         }
 
-        private static bool TryUninstallRobloxFromDisplayName()
+        private static bool TryUninstallRobloxPlayerFromDisplayName()
         {
-            const string LOG_IDENT = "FastFlagEditorPage::TryUninstallRobloxFromDisplayName";
+            const string LOG_IDENT = "FastFlagEditorPage::TryUninstallRobloxPlayerFromDisplayName";
 
             var uninstallRoots = new[]
             {
@@ -340,14 +336,13 @@ namespace Leostrap.UI.Elements.Settings.Pages
                         continue;
 
                     string? displayName = subKey.GetValue("DisplayName") as string;
-                    string? publisher = subKey.GetValue("Publisher") as string;
 
-                    bool looksLikeRoblox =
-                        subKeyName.Contains("roblox", StringComparison.OrdinalIgnoreCase)
-                        || (!String.IsNullOrEmpty(displayName) && displayName.Contains("Roblox", StringComparison.OrdinalIgnoreCase))
-                        || (!String.IsNullOrEmpty(publisher) && publisher.Contains("Roblox", StringComparison.OrdinalIgnoreCase));
+                    bool looksLikeRobloxPlayer =
+                        subKeyName.Contains("roblox-player", StringComparison.OrdinalIgnoreCase)
+                        || (!String.IsNullOrEmpty(displayName) && displayName.Contains("Roblox Player", StringComparison.OrdinalIgnoreCase))
+                        || (!String.IsNullOrEmpty(displayName) && displayName.Contains("Roblox", StringComparison.OrdinalIgnoreCase) && !displayName.Contains("Studio", StringComparison.OrdinalIgnoreCase));
 
-                    if (!looksLikeRoblox)
+                    if (!looksLikeRobloxPlayer)
                         continue;
 
                     string keyPath = $"{rootPath}\\{subKeyName}";
@@ -363,7 +358,7 @@ namespace Leostrap.UI.Elements.Settings.Pages
             return false;
         }
 
-        private static string? FindRobloxInstallerExecutable()
+        private static string? FindRobloxPlayerInstallerExecutable()
         {
             var versionRoots = new[]
             {
@@ -381,8 +376,7 @@ namespace Leostrap.UI.Elements.Settings.Pages
                     .Where(path =>
                     {
                         string fileName = Path.GetFileName(path);
-                        return fileName.Equals("RobloxPlayerInstaller.exe", StringComparison.OrdinalIgnoreCase)
-                            || fileName.Equals("RobloxStudioInstaller.exe", StringComparison.OrdinalIgnoreCase);
+                        return fileName.Equals("RobloxPlayerInstaller.exe", StringComparison.OrdinalIgnoreCase);
                     })
                     .OrderByDescending(File.GetLastWriteTimeUtc);
 
@@ -394,11 +388,11 @@ namespace Leostrap.UI.Elements.Settings.Pages
             return null;
         }
 
-        private static bool TryRunLocalRobloxInstallerUninstall()
+        private static bool TryRunLocalRobloxPlayerInstallerUninstall()
         {
-            const string LOG_IDENT = "FastFlagEditorPage::TryRunLocalRobloxInstallerUninstall";
+            const string LOG_IDENT = "FastFlagEditorPage::TryRunLocalRobloxPlayerInstallerUninstall";
 
-            string? exePath = FindRobloxInstallerExecutable();
+            string? exePath = FindRobloxPlayerInstallerExecutable();
 
             if (exePath is null)
             {
@@ -436,16 +430,13 @@ namespace Leostrap.UI.Elements.Settings.Pages
             }
         }
 
-        private static void CleanupRobloxFolders()
+        private static void CleanupRobloxPlayerFolders()
         {
-            const string LOG_IDENT = "FastFlagEditorPage::CleanupRobloxFolders";
+            const string LOG_IDENT = "FastFlagEditorPage::CleanupRobloxPlayerFolders";
 
             var paths = new[]
             {
-                Path.Combine(Paths.LocalAppData, "Roblox", "RobloxPlayerInstaller"),
-                Path.Combine(Paths.LocalAppData, "Roblox", "RobloxStudioInstaller"),
-                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "Roblox"),
-                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "Roblox")
+                Path.Combine(Paths.LocalAppData, "Roblox", "RobloxPlayerInstaller")
             };
 
             foreach (var path in paths)
@@ -468,31 +459,26 @@ namespace Leostrap.UI.Elements.Settings.Pages
             foreach (var key in new[]
             {
                 "roblox",
-                "roblox-player",
-                "roblox-studio",
-                "roblox-studio-auth",
-                "Roblox.Place",
-                ".rbxl",
-                ".rbxlx"
+                "roblox-player"
             })
             {
                 WindowsRegistry.Unregister(key);
             }
         }
 
-        private static void UninstallRoblox()
+        private static void UninstallRobloxPlayer()
         {
-            const string LOG_IDENT = "FastFlagEditorPage::UninstallRoblox";
+            const string LOG_IDENT = "FastFlagEditorPage::UninstallRobloxPlayer";
 
-            bool uninstalled = TryUninstallRobloxFromKnownKeys() || TryUninstallRobloxFromDisplayName();
+            bool uninstalled = TryUninstallRobloxPlayerFromKnownKeys() || TryUninstallRobloxPlayerFromDisplayName();
 
             if (!uninstalled)
             {
                 App.Logger.WriteLine(LOG_IDENT, "No Roblox uninstall registry entry was found, trying local uninstall fallback");
-                uninstalled = TryRunLocalRobloxInstallerUninstall();
+                uninstalled = TryRunLocalRobloxPlayerInstallerUninstall();
             }
 
-            CleanupRobloxFolders();
+            CleanupRobloxPlayerFolders();
 
             if (!uninstalled)
                 App.Logger.WriteLine(LOG_IDENT, "Roblox uninstall entry was not found; local cleanup fallback was used instead");
@@ -964,7 +950,7 @@ namespace Leostrap.UI.Elements.Settings.Pages
                     CloseBrowserProcesses();
                     ClearRobloxCookies();
                     ClearRobloxBrowserCookies();
-                    UninstallRoblox();
+                    UninstallRobloxPlayer();
                 });
 
                 await RunByeBanAsync();

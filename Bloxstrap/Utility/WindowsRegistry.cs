@@ -38,6 +38,8 @@ namespace Leostrap.Utility
         {
             RegisterProtocol("roblox", "Roblox", handler, handlerParam);
             RegisterProtocol("roblox-player", "Roblox", handler, handlerParam);
+            RegisterExecutableAlias("RobloxPlayerBeta.exe", Paths.Application, "-player");
+            RegisterExecutableAlias("RobloxPlayerInstaller.exe", Paths.Application, "");
         }
 
         /// <summary>
@@ -118,6 +120,32 @@ namespace Leostrap.Utility
             {
                 App.Logger.WriteLine("Protocol::Unregister", $"Failed to unregister {key}: {ex}");
             }
+        }
+
+        private static void RegisterExecutableAlias(string executableName, string handler, string handlerArgs)
+        {
+            string command = String.IsNullOrWhiteSpace(handlerArgs)
+                ? $"\"{handler}\""
+                : $"\"{handler}\" {handlerArgs}";
+
+            using var applicationKey = Registry.CurrentUser.CreateSubKey($@"Software\Classes\Applications\{executableName}");
+            using var applicationIconKey = applicationKey.CreateSubKey("DefaultIcon");
+            using var applicationCommandKey = applicationKey.CreateSubKey(@"shell\open\command");
+
+            if (applicationCommandKey.GetValue("") as string != command)
+            {
+                applicationIconKey.SetValueSafe("", handler);
+                applicationCommandKey.SetValueSafe("", command);
+            }
+
+            using var appPathKey = Registry.CurrentUser.CreateSubKey($@"Software\Microsoft\Windows\CurrentVersion\App Paths\{executableName}");
+            string handlerDirectory = Path.GetDirectoryName(handler) ?? "";
+
+            if (appPathKey.GetValue("") as string != handler)
+                appPathKey.SetValueSafe("", handler);
+
+            if (appPathKey.GetValue("Path") as string != handlerDirectory)
+                appPathKey.SetValueSafe("Path", handlerDirectory);
         }
     }
 }
