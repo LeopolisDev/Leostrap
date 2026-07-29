@@ -3058,6 +3058,24 @@ namespace Leostrap.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to Moves Roblox up and then back down on Space, while nudging the cursor upward..
+        /// </summary>
+        public static string Menu_FastFlags_Presets_Jumpy_Description {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.Jumpy.Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Jumpy.
+        /// </summary>
+        public static string Menu_FastFlags_Presets_Jumpy_Title {
+            get {
+                return ResourceManager.GetString("Menu.FastFlags.Presets.Jumpy.Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to Removes Roblox&apos;s default grass textures. Note: This setting does not affect custom grass textures used by individual games..
         /// </summary>
         public static string Menu_FastFlags_Presets_DisableGrass_Description {

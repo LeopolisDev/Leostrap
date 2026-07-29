@@ -4,6 +4,7 @@ using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 
 using Leostrap.Enums.FlagPresets;
+using Leostrap.Models.SettingTasks;
 
 namespace Leostrap.UI.ViewModels.Settings
 {
@@ -30,6 +31,8 @@ namespace Leostrap.UI.ViewModels.Settings
             get => App.Settings.Prop.CloseCrashHandler;
             set => App.Settings.Prop.CloseCrashHandler = value;
         }
+
+        public JumpySettingTask JumpyTask { get; } = new();
 
         public IReadOnlyDictionary<MSAAMode, string?> MSAALevels => FastFlagManager.MSAAModes;
 
